@@ -6,7 +6,7 @@ import {
   ForgotPassword,
   ForgotPassword_Page,
   getCurrentUser,
-  Logout,
+  Logout,                                         
   newPassword,
   PasswordOTPVerify,
   ResetPassword,
@@ -25,7 +25,7 @@ import upload from "../middleware/multer.js";
 const AuthRoutes = express.Router();
 
 //SignUp POST
-AuthRoutes.post("/signup", isEmptyBody, ValidateBody(SignupSchema), Signup);
+AuthRoutes.post("/signup", isEmptyBody, ValidateBody(SignupSchema),upload.single("file"), Signup);
 
 //SignUp GET
 AuthRoutes.get("/login-page", (req, res) => {
@@ -74,7 +74,6 @@ AuthRoutes.post(
 
 //LOGOUT
 AuthRoutes.get("/logout", Authenticate, Logout);
-
 //GET CURRENT USER
 AuthRoutes.get("/get-current", Authenticate, getCurrentUser);
 

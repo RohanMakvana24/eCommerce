@@ -25,6 +25,7 @@ const SignupSchema = Joi.object({
         "Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character",
       "any.required": "Password is a required field",
     }),
+    file : Joi.string().required("The file is required")
 });
 
 export default SignupSchema;

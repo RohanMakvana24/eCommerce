@@ -11,38 +11,40 @@ export const Signup = async (req, res) => {
   try {
     const { firstname, lastname, email, password } = req.body;
 
+    console.log(req.file)
+    console.log(req.body)
     //Validaion
-    if (!firstname || !lastname || !email || !password) {
-      return res.status(404).send({
-        success: false,
-        message: "All field are required",
-      });
-    }
+    // if (!firstname || !lastname || !email || !password) {
+    //   return res.status(404).send({
+    //     success: false,
+    //     message: "All field are required",
+    //   });
+    // }
 
-    //Email Validation
-    const User = await UserModel.findOne({ email: email });
-    if (User) {
-      return res.status(404).send({
-        success: false,
-        message: "The Email is already ragistered try another email",
-      });
-    }
+    // //Email Validation
+    // const User = await UserModel.findOne({ email: email });
+    // if (User) {
+    //   return res.status(404).send({
+    //     success: false,
+    //     message: "The Email is already ragistered try another email",
+    //   });
+    // }
 
-    //password hasing
-    const hashPassword = await bcrypt.hash(password, 10);
-    console.log(hashPassword);
-    //store
-    const newUser = await UserModel.create({
-      firstname,
-      lastname,
-      email,
-      password: hashPassword,
-    });
+    // //password hasing
+    // const hashPassword = await bcrypt.hash(password, 10);
+    // console.log(hashPassword);
+    // //store
+    // const newUser = await UserModel.create({
+    //   firstname,
+    //   lastname,
+    //   email,
+    //   password: hashPassword,
+    // });
 
-    res.status(201).send({
-      success: true,
-      message: "The User Ragistered Succefully",
-    });
+    // res.status(201).send({
+    //   success: true,
+    //   message: "The User Ragistered Succefully",
+    // });
   } catch (error) {
     console.log(error);
     res.status(504).send({

@@ -1,77 +1,165 @@
 <%- include('../layout/header.ejs') %>
-    <main id="main-wrapper" class="main-wrapper">
-        <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
-                <div id="app-content">
+<main id="main-wrapper" class="main-wrapper">
+  <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+  <div id="app-content">
+    <!-- Container fluid -->
+    <div class="app-content-area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12">
+            <!-- Page header -->
+            <div class="mb-5">
+              <h3 class="mb-0">Add Admin</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- row -->
 
-                    <!-- Container fluid -->
-                    <div class="app-content-area">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-12">
-                                    <!-- Page header -->
-                                    <div class="mb-5">
-                                        <h3 class="mb-0 ">Add Admin</h3>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <!-- row -->
-
-                                <div class="row">
-                                    <div class="col-lg-12 col-12">
-                                        <!-- card -->
-                                        <div class="card mb-6">
-                                            <!-- card body -->
-                                            <form>
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label">First Name</label>
-                                                            <input type="text" class="form-control" id="firstname"
-                                                                name="firstname" placeholder="Enter First Name"
-                                                                required>
-                                                        </div>
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label">Last Name </label>
-                                                            <input type="text" class="form-control" id="lastname"
-                                                                name="lastname" placeholder="Enter Last Name" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label">Email</label>
-                                                            <input type="email" class="form-control" id="email"
-                                                                name="email" placeholder="Enter Email" required>
-                                                        </div>
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label">Password</label>
-                                                            <input type="text" class="form-control" id="password"
-                                                                name="password" placeholder="Enter Password" required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12 mb-3">
-                                                            <label class="form-label">Profile</label>
-                                                            <div class="fallback">
-                                                                <input name="file" type="file" multiple />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-12 mb-3">
-                                                            <button class="btn btn-primary">Add New </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <!-- card -->
+              <div class="card mb-6">
+                <!-- card body -->
+                <form id="AddAdminForm">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">First Name</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="firstname"
+                          name="firstname"
+                          placeholder="Enter First Name"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Last Name </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="lastname"
+                          name="lastname"
+                          placeholder="Enter Last Name"
+                          required
+                        />
+                      </div>
                     </div>
-                </div>
-    </main>
-    <%- include('../layout/footer.ejs') %><%- include('../layout/end.ejs') %>
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Email</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          name="email"
+                          placeholder="Enter Email"
+                          required
+                        />
+                      </div>
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Password</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="password"
+                          name="password"
+                          placeholder="Enter Password"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <label class="form-label">Profile</label>
+                        <div class="fallback">
+                          <input type="file" name="file" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <button type="submit" class="btn btn-primary">
+                          Add New
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<%- include('../layout/footer.ejs') %>
+<script>
+  $(document).ready(function () {
+    //add admin form validation
+    // Define custom password validation method
+    $.validator.addMethod(
+      "complexPassword",
+      function (value, element) {
+        return (
+          this.optional(element) ||
+          (/[A-Z]/.test(value) &&
+            /\d/.test(value) &&
+            /[!@#$%^&*(),.?":{}|<>]/.test(value))
+        );
+      },
+      "Password must contain at least one uppercase letter, one digit, and one special character."
+    );
+
+    // Function to convert FormData to a serialized array
+    function formDataToArray(formData) {
+      const dataArray = [];
+      formData.forEach((value, key) => {
+        dataArray.push({ name: key, value: value });
+      });
+      return dataArray;
+    }
+    $("#AddAdminForm").validate({
+      rules: {
+        firstname: {
+          required: true,
+        },
+        lastname: {
+          required: true,
+        },
+        email: {
+          required: true,
+          email: true,
+        },
+        password: {
+          required: true,
+        },
+        profile: {
+          required: true,
+          accept: "image/jpeg, image/pjpeg",
+        },
+      },
+      submitHandler: function (form) {
+        const formData = new FormData(form);
+        const serializeData  = formDataToArray(formData)
+        console.log(serializeData)
+        $.ajax({
+          url: "/api/v1/auth/signup",
+          type: "POST",
+          data: serializeData,
+          success: function (response) {
+            console.log("Success:", response);
+          },
+          error: function (xhr, status, error) {
+            console.error("Error:", error);
+          },
+        });
+      },
+    });
+  });
+</script>
+
+<%- include('../layout/end.ejs') %>

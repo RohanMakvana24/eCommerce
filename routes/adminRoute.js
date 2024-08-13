@@ -12,3 +12,7 @@ AdminRoute.get("/add-admin-page", add_admin_page);
 //Admin-manage-page : GET
 AdminRoute.get("/manage-admin-page", manage_admin);
 export default AdminRoute;
+
+
+
+
