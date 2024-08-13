@@ -1,165 +1,174 @@
 <%- include('../layout/header.ejs') %>
-<main id="main-wrapper" class="main-wrapper">
-  <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
-  <div id="app-content">
-    <!-- Container fluid -->
-    <div class="app-content-area">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-12">
-            <!-- Page header -->
-            <div class="mb-5">
-              <h3 class="mb-0">Add Admin</h3>
-            </div>
-          </div>
-        </div>
-        <div>
-          <!-- row -->
+  <main id="main-wrapper" class="main-wrapper">
+    <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+        <div id="app-content">
+          <!-- Container fluid -->
+          <div class="app-content-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <!-- Page header -->
+                  <div class="mb-5">
+                    <h3 class="mb-0">Add Admin</h3>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <!-- row -->
 
-          <div class="row">
-            <div class="col-lg-12 col-12">
-              <!-- card -->
-              <div class="card mb-6">
-                <!-- card body -->
-                <form id="AddAdminForm">
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label">First Name</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="firstname"
-                          name="firstname"
-                          placeholder="Enter First Name"
-                          required
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label">Last Name </label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="lastname"
-                          name="lastname"
-                          placeholder="Enter Last Name"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label">Email</label>
-                        <input
-                          type="email"
-                          class="form-control"
-                          id="email"
-                          name="email"
-                          placeholder="Enter Email"
-                          required
-                        />
-                      </div>
-                      <div class="col-md-6 mb-3">
-                        <label class="form-label">Password</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="password"
-                          name="password"
-                          placeholder="Enter Password"
-                          required
-                        />
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
-                        <label class="form-label">Profile</label>
-                        <div class="fallback">
-                          <input type="file" name="file" />
+                <div class="row">
+                  <div class="col-lg-12 col-12">
+                    <!-- card -->
+                    <div class="card mb-6">
+                      <!-- card body -->
+                      <form id="AddAdminForm" enctype="multipart/form-data">
+                        <div class="card-body">
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">First Name</label>
+                              <input type="text" class="form-control" id="firstname" name="firstname"
+                                placeholder="Enter First Name" required />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Last Name </label>
+                              <input type="text" class="form-control" id="lastname" name="lastname"
+                                placeholder="Enter Last Name" required />
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email"
+                                required />
+                            </div>
+                            <div class="col-md-6 mb-3">
+                              <label class="form-label">Password</label>
+                              <input type="text" class="form-control" id="password" name="password"
+                                placeholder="Enter Password" required />
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 mb-3">
+                              <label class="form-label">Profile</label>
+                              <div id="myDropzone" class="dropzone">
+                                <div class="dz-message">Drop files here or click to upload</div>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div class="row">
+                            <input type="hidden" id="public_id" name="public_id">
+                            <input type="hidden" id="url" name="url">
+
+                            <div class="col-12 mb-3">
+                              <input type="submit" class="btn btn-primary" value=" Add New">
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
-                        <button type="submit" class="btn btn-primary">
-                          Add New
-                        </button>
-                      </div>
+                      </form>
                     </div>
                   </div>
-                </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
-<%- include('../layout/footer.ejs') %>
-<script>
-  $(document).ready(function () {
-    //add admin form validation
-    // Define custom password validation method
-    $.validator.addMethod(
-      "complexPassword",
-      function (value, element) {
-        return (
-          this.optional(element) ||
-          (/[A-Z]/.test(value) &&
-            /\d/.test(value) &&
-            /[!@#$%^&*(),.?":{}|<>]/.test(value))
-        );
-      },
-      "Password must contain at least one uppercase letter, one digit, and one special character."
-    );
+  </main>
+  <%- include('../layout/footer.ejs') %>
 
-    // Function to convert FormData to a serialized array
-    function formDataToArray(formData) {
-      const dataArray = [];
-      formData.forEach((value, key) => {
-        dataArray.push({ name: key, value: value });
+    <!--Profile Uploading Start-->
+    <script>
+      const Token = localStorage.getItem("token");
+      const AuthToken = Token.slice(1, -1);
+      Dropzone.autoDiscover = false; // Prevent Dropzone from auto-initializing
+      const myDropzone = new Dropzone("#myDropzone", {
+        url: "/adminhandle/profile-upload", // URL where files will be uploaded
+        method: "post",
+        maxFilesize: 2, // Maximum file size in MB
+        acceptedFiles: "image/*", // Only allow image files
+        addRemoveLinks: true, // Add remove links to each file preview
+        paramName: "file", // Change the parameter name for the file
+        headers: {
+          "Authorization": `Bearer ${AuthToken}`, // Authorization header
+        },
+        success: function (file, response) {
+
+          document.getElementById("public_id").value = response.data.public_id;
+          document.getElementById("url").value = response.data.url;
+        },
+        error: function (file, response) {
+          console.error("Error uploading file:", response);
+        },
+        init: function () {
+          // Bind the removedfile event
+          this.on("removedfile", function (file) {
+            handleFileRemoval();
+          });
+        }
       });
-      return dataArray;
-    }
-    $("#AddAdminForm").validate({
-      rules: {
-        firstname: {
-          required: true,
-        },
-        lastname: {
-          required: true,
-        },
-        email: {
-          required: true,
-          email: true,
-        },
-        password: {
-          required: true,
-        },
-        profile: {
-          required: true,
-          accept: "image/jpeg, image/pjpeg",
-        },
-      },
-      submitHandler: function (form) {
-        const formData = new FormData(form);
-        const serializeData  = formDataToArray(formData)
-        console.log(serializeData)
+      function handleFileRemoval() {
+        const public_id = document.getElementById("public_id").value;
         $.ajax({
-          url: "/api/v1/auth/signup",
+          url: "/adminhandle/delete-temp-profile",
           type: "POST",
-          data: serializeData,
-          success: function (response) {
-            console.log("Success:", response);
+          headers: {
+            "Authorization": `Bearer ${AuthToken}`, // Authorization header
           },
-          error: function (xhr, status, error) {
-            console.error("Error:", error);
+          data: {
+            public_id: public_id
+          },
+          success: function (response) {
+            alert("deleted ")
+          },
+          error: function (error, status, xhr) {
+            console.log(error)
+          }
+        })
+      }
+    </script>
+    <!--Profile Uploading End -->
+    <script>
+      $(document).ready(function () {
+        // Define custom password validation method
+        $.validator.addMethod(
+          "complexPassword",
+          function (value, element) {
+            return (
+              this.optional(element) ||
+              (/[A-Z]/.test(value) &&
+                /\d/.test(value) &&
+                /[!@#$%^&*(),.?":{}|<>]/.test(value))
+            );
+          },
+          "Password must contain at least one uppercase letter, one digit, and one special character."
+        );
+        $("#AddAdminForm").validate({
+          rules: {
+            firstname: {
+              required: true,
+            },
+            lastname: {
+              required: true,
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+            password: {
+              required: true,
+              complexPassword: true
+            },
+
           },
         });
-      },
-    });
-  });
-</script>
+        $("#AddAdminForm").on("submit", function (event) {
+          event.preventDefault();
+          const formData = $(this).serializeArray();
+          // Send the FormData via AJA
 
-<%- include('../layout/end.ejs') %>
+        })
+
+      });
+    </script>
+
+    <%- include('../layout/end.ejs') %>

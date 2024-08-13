@@ -1,6 +1,9 @@
 <!-- Scripts -->
 
 <!-- Libs JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js"
+    integrity="sha512-U2WE1ktpMTuRBPoCFDzomoIorbOyUv0sP8B+INA3EzNAhehbzED1rOJg6bCqPf/Tuposxb5ja/MAUnC8THSbLQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="/assets/libs/jquery/dist/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
@@ -15,6 +18,7 @@
 
 <script src="/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
 <script src="/assets/js/vendors/chart.js"></script>
+
 <script>
     $(document).ready(function () {
         //User Check
@@ -38,7 +42,7 @@
                     Authorization: `Bearer ${AuthToken}`,
                 },
                 success: function (response) {
-                    $("#avatarUser").attr("src",response.data.profilePic[0].url);
+                    $("#avatarUser").attr("src", response.data.profilePic[0].url);
                 },
                 error: function (xhr, status, error) {
                     if (xhr.responseJSON && xhr.responseJSON.message) {

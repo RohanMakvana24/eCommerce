@@ -11,8 +11,7 @@ export const Signup = async (req, res) => {
   try {
     const { firstname, lastname, email, password } = req.body;
 
-    console.log(req.file)
-    console.log(req.body)
+    console.log(req.body);
     //Validaion
     // if (!firstname || !lastname || !email || !password) {
     //   return res.status(404).send({

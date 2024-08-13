@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import path from "path";
 import bodyParser from "body-parser";
 import morgan from "morgan";
+import cors from "cors";
 import AuthRoutes from "./routes/authRoutes.js";
 import DBConnect from "./config/database/dbConnect.js";
 import Authenticate from "./middleware/Authenticate.js";
@@ -14,7 +15,7 @@ import AdminRoute from "./routes/adminRoute.js";
 //DOTENV CONFIGURATION
 dotenv.config({ path: "./config/.env" });
 
-//DATABSE CONFIG
+//DATABSE CONFIGffff
 DBConnect();
 cloudinary.v2.config({
   cloud_name: "ds7xjkkhg",
@@ -26,13 +27,14 @@ const port = process.env.PORT;
 const server = express();
 
 //MIDDLEWARE
-server.use(express.json());
-server.use(bodyParser.urlencoded({ extended: false }));
+// Middleware to parse JSON bodies
 server.use(bodyParser.json());
+
+// Middleware to parse URL-encoded bodies
+server.use(bodyParser.urlencoded({ extended: true }));
+server.use(cors());
 server.use(cookieParser());
 server.use(express.static("public"));
-server.use(bodyParser.urlencoded({ extended: false }));
-server.use(bodyParser.json());
 server.use(morgan("dev"));
 
 //VIEW SETUP
