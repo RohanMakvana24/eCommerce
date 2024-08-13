@@ -11,7 +11,7 @@ import { Auth } from "./middleware/Auth.js";
 import DashboardRoute from "./routes/dashoboardRoute.js";
 import cloudinary from "cloudinary";
 import AdminRoute from "./routes/adminRoute.js";
-//DOTENV CONFIG
+//DOTENV CONFIGURATION
 dotenv.config({ path: "./config/.env" });
 
 //DATABSE CONFIG
