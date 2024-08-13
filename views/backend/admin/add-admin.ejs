@@ -1,0 +1,77 @@
+<%- include('../layout/header.ejs') %>
+    <main id="main-wrapper" class="main-wrapper">
+        <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+                <div id="app-content">
+
+                    <!-- Container fluid -->
+                    <div class="app-content-area">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Page header -->
+                                    <div class="mb-5">
+                                        <h3 class="mb-0 ">Add Admin</h3>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-12">
+                                        <!-- card -->
+                                        <div class="card mb-6">
+                                            <!-- card body -->
+                                            <form>
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">First Name</label>
+                                                            <input type="text" class="form-control" id="firstname"
+                                                                name="firstname" placeholder="Enter First Name"
+                                                                required>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">Last Name </label>
+                                                            <input type="text" class="form-control" id="lastname"
+                                                                name="lastname" placeholder="Enter Last Name" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">Email</label>
+                                                            <input type="email" class="form-control" id="email"
+                                                                name="email" placeholder="Enter Email" required>
+                                                        </div>
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">Password</label>
+                                                            <input type="text" class="form-control" id="password"
+                                                                name="password" placeholder="Enter Password" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label">Profile</label>
+                                                            <div class="fallback">
+                                                                <input name="file" type="file" multiple />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <button class="btn btn-primary">Add New </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <%- include('../layout/footer.ejs') %><%- include('../layout/end.ejs') %>

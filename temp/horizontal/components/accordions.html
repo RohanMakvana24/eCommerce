@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="horizontal">
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="author" content="Codescandy" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-M8S4MT3EYG');
+</script>
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon/favicon.ico" />
+
+<!-- Color modes -->
+<script src="../../assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="../../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../../assets/css/theme.min.css">
+
+  <link href="../../assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+  <title>Accordions | Dash UI - Bootstrap 5 Admin Dashboard Template</title>
+
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <main id="main-wrapper" class="main-wrapper">
+    <div class="header">
+	<!-- navbar -->
+	<div class="navbar-custom navbar navbar-expand-lg">
+		<div class="container-fluid px-0">
+			<a class="navbar-brand d-block d-md-none" href="../../index.html">
+				<img src="../../assets/images/brand/logo/logo-2.svg" alt="Image" />
+			</a>
+
+			<a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+					<path
+						d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+					/>
+				</svg>
+			</a>
+
+			<div class="d-none d-md-none d-lg-block">
+				<!-- Form -->
+				<form action="#">
+					<div class="input-group">
+						<input class="form-control rounded-3 bg-transparent ps-9" type="search" value="" id="searchInput" placeholder="Search" />
+						<span class="">
+							<button class="btn position-absolute start-0" type="button">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="15"
+									height="15"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather feather-search text-dark"
+								>
+									<circle cx="11" cy="11" r="8"></circle>
+									<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<!--Navbar nav -->
+			<ul class="navbar-nav navbar-right-wrap ms-lg-auto d-flex nav-top-wrap align-items-center ms-4 ms-lg-0">
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-ghost btn-icon rounded-circle" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+							<i class="bi theme-icon-active"></i>
+							<span class="visually-hidden bs-theme-text">Toggle theme</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+									<i class="bi theme-icon bi-sun-fill"></i>
+									<span class="ms-2">Light</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+									<i class="bi theme-icon bi-moon-stars-fill"></i>
+									<span class="ms-2">Dark</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+									<i class="bi theme-icon bi-circle-half"></i>
+									<span class="ms-2">Auto</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="dropdown stopevent ms-2">
+					<a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-xs" data-feather="bell"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="dropdownNotification">
+						<div>
+							<div class="border-bottom px-3 pt-2 pb-3 d-flex justify-content-between align-items-center">
+								<p class="mb-0 text-dark fw-medium fs-4">Notifications</p>
+								<a href="#!" class="text-muted">
+									<span>
+										<i class="me-1 icon-xs" data-feather="settings"></i>
+									</span>
+								</a>
+							</div>
+							<div data-simplebar style="height: 250px">
+								<!-- List group -->
+								<ul class="list-group list-group-flush notification-list-scroll">
+									<!-- List group item -->
+									<li class="list-group-item bg-light">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Rishi Chopra</h5>
+											<p class="mb-0">Mauris blandit erat id nunc blandit, ac eleifend dolor pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Neha Kannned</h5>
+											<p class="mb-0">Proin at elit vel est condimentum elementum id in ante. Maecenas et sapien metus.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Nirmala Chauhan</h5>
+											<p class="mb-0">Morbi maximus urna lobortis elit sollicitudin sollicitudieget elit vel pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Sina Ray</h5>
+											<p class="mb-0">Sed aliquam augue sit amet mauris volutpat hendrerit sed nunc eu diam.</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="border-top px-3 py-2 text-center">
+								<a href="#!" class="text-inherit">View all Notifications</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- List -->
+				<li class="dropdown ms-2">
+					<a class="rounded-circle" href="#!" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="avatar avatar-md avatar-indicators avatar-online">
+							<img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+						<div class="px-4 pb-0 pt-2">
+							<div class="lh-1">
+								<h5 class="mb-1">John E. Grainger</h5>
+								<a href="#!" class="text-inherit fs-6">View my profile</a>
+							</div>
+							<div class="dropdown-divider mt-3 mb-2"></div>
+						</div>
+
+						<ul class="list-unstyled">
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>
+									Edit Profile
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>
+									Activity Log
+								</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>
+									Settings
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../../index.html">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>
+									Sign Out
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    <!-- navbar vertical -->
+    <!-- navbar -->
+<div class="navbar-horizontal nav-dashboard">
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-default navbar-dropdown p-0 py-lg-2">
+			<div class="d-flex d-lg-block justify-content-between align-items-center w-100 w-lg-0 py-2 px-4 px-md-2 px-lg-0">
+				<span class="d-lg-none">Menu</span>
+				<!-- Button -->
+				<button
+					class="navbar-toggler collapsed ms-2"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar-default"
+					aria-controls="navbar-default"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="icon-bar top-bar mt-0"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+			</div>
+			<!-- Collapse -->
+			<div class="collapse navbar-collapse px-6 px-lg-0" id="navbar-default">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDashboard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-display="static">Dashboard</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarDashboard">
+							<li>
+								<a class="dropdown-item" href="../index.html">Project</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-analytics.html">Analytics</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-ecommerce.html">Ecommerce</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-crm.html">CRM</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-finance.html">Finance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-blog.html">Blog</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarApps" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apps</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarApps">
+							<li>
+								<a class="dropdown-item" href="../calendar.html">Calendar</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../apps-file-manager.html">File Manager</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../chat-app.html">Chat</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Kanban</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../task-kanban-grid.html" class="dropdown-item">Board</a>
+									</li>
+									<li>
+										<a href="../task-kanban-list.html" class="dropdown-item">List</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Email</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../mail.html" class="dropdown-item">Inbox</a>
+									</li>
+									<li>
+										<a href="../mail-details.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../mail-draft.html" class="dropdown-item">Draft</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Ecommerce</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../ecommerce-products.html" class="dropdown-item">Products</a>
+									</li>
+									<li>
+										<a href="../ecommerce-products-details.html" class="dropdown-item">Prouduct Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-product-edit.html" class="dropdown-item">Add Product</a>
+									</li>
+
+									<li>
+										<a href="../ecommerce-order-list.html" class="dropdown-item">Orders</a>
+									</li>
+									<li>
+										<a href="../ecommerce-order-detail.html" class="dropdown-item">Order Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-cart.html" class="dropdown-item">Shopping Cart</a>
+									</li>
+									<li>
+										<a href="../ecommerce-checkout.html" class="dropdown-item">Checkout</a>
+									</li>
+									<li>
+										<a href="../ecommerce-customer.html" class="dropdown-item">Customers</a>
+									</li>
+									<li>
+										<a href="../ecommerce-seller.html" class="dropdown-item">Seller</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Project</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-grid.html">Grid</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-list.html">List</a>
+									</li>
+
+									<li class="dropdown-submenu dropend">
+										<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Single</a>
+										<ul class="dropdown-menu">
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-overview.html">Overview</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-task.html">Task</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-budget.html">Budget</a>
+											</li>
+
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-files.html">File</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-team.html">Team</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">CRM</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../crm-company.html" class="dropdown-item">Company</a>
+									</li>
+									<li>
+										<a href="../crm-contacts.html" class="dropdown-item">Contacts</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals.html">
+											Deals
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals-single.html">
+											Deals Single
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Invoice</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../invoice-list.html" class="dropdown-item">List</a>
+									</li>
+									<li>
+										<a href="../invoice-detail.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../invoice-generator.html" class="dropdown-item">Create Invoice</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Profile</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../profile-overview.html" class="dropdown-item">Overview</a>
+									</li>
+									<li>
+										<a href="../profile-project.html" class="dropdown-item">Project</a>
+									</li>
+									<li>
+										<a href="../profile-file.html" class="dropdown-item">Files</a>
+									</li>
+									<li>
+										<a href="../profile-team.html" class="dropdown-item">Team</a>
+									</li>
+									<li>
+										<a href="../profile-followers.html" class="dropdown-item">Followers</a>
+									</li>
+									<li>
+										<a href="../profile-activity.html" class="dropdown-item">Activity</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../profile-settings.html">Settings</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Blog</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="../blog-author.html">Author</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../blog-author-detail.html">Detail</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../create-blog-post.html">Create Post</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarAuthentication" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Authentication</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarAuthentication">
+							<li>
+								<a class="dropdown-item" href="../sign-in.html">Sign In</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../sign-up.html">Sign Up</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../forget-password.html">Forgot Password</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layouts</a>
+						<ul class="dropdown-menu dropdown-menu-start" aria-labelledby="layoutsDropdown">
+							<li><span class="dropdown-header">Layouts</span></li>
+							<li class="nav-item">
+								<a class="dropdown-item" href="../../index.html">Default</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="dropdown-item" href="../index.html">Horizontal</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarPages">
+							<li>
+								<a class="dropdown-item" href="../pricing.html">Pricing</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../starter.html">Starter</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">Maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarBaseUI" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+						<div class="dropdown-menu dropdown-menu-xl" aria-labelledby="navbarBaseUI">
+							<div class="row">
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="accordions.html" class="dropdown-item">Accordions</a>
+										</li>
+										<li class="nav-item">
+											<a class="dropdown-item" href="alerts.html">Alert</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="badge.html" class="dropdown-item">Badge</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+										</li>
+										<li class="nav-item">
+											<a href="buttons.html" class="dropdown-item">Buttons</a>
+										</li>
+										<li class="nav-item">
+											<a href="button-group.html" class="dropdown-item">Button group</a>
+										</li>
+										<li class="nav-item">
+											<a href="card.html" class="dropdown-item">Card</a>
+										</li>
+										<li class="nav-item">
+											<a href="carousel.html" class="dropdown-item">Carousel</a>
+										</li>
+										<li class="nav-item">
+											<a href="close-button.html" class="dropdown-item">Close Button</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="collapse.html" class="dropdown-item">Collapse</a>
+										</li>
+										<li class="nav-item">
+											<a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+										</li>
+										<li class="nav-item">
+											<a href="forms.html" class="dropdown-item">Forms</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="list-group.html" class="dropdown-item">List group</a>
+										</li>
+										<li class="nav-item">
+											<a href="modal.html" class="dropdown-item">Modal</a>
+										</li>
+										<li class="nav-item">
+											<a href="navs-tabs.html" class="dropdown-item">Navs and tabs</a>
+										</li>
+										<li class="nav-item">
+											<a href="navbar.html" class="dropdown-item">Navbar</a>
+										</li>
+										<li class="nav-item">
+											<a href="offcanvas.html" class="dropdown-item">Offcanvas</a>
+										</li>
+										<li class="nav-item">
+											<a href="pagination.html" class="dropdown-item">Pagination</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="placeholders.html" class="dropdown-item">Placeholders</a>
+										</li>
+										<li class="nav-item">
+											<a href="popovers.html" class="dropdown-item">Popovers</a>
+										</li>
+										<li class="nav-item">
+											<a href="progress.html" class="dropdown-item">Progress</a>
+										</li>
+										<li class="nav-item">
+											<a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+										</li>
+										<li class="nav-item">
+											<a href="spinners.html" class="dropdown-item">Spinners</a>
+										</li>
+										<li class="nav-item">
+											<a href="tables.html" class="dropdown-item">Tables</a>
+										</li>
+										<li class="nav-item">
+											<a href="toasts.html" class="dropdown-item">Toasts</a>
+										</li>
+										<li class="nav-item">
+											<a href="tooltips.html" class="dropdown-item">Tooltips</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i data-feather="more-horizontal" class="icon-xxs"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
+							<div class="list-group">
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/index.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="file-text" class="icon-sm text-primary"></i>
+
+										<div class="ms-3">
+											<h5 class="mb-0">Documentations</h5>
+											<p class="mb-0 fs-6">Browse the all documentation</p>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/changelog.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="layers" class="icon-sm text-primary"></i>
+										<div class="ms-3">
+											<h5 class="mb-0">
+												Changelog
+												<span class="text-primary ms-1">v1.0.0</span>
+											</h5>
+											<p class="mb-0 fs-6">See what's new</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+
+
+
+    <!-- Page Content -->
+    <div id="app-content">
+      <div class="app-content-area">
+      <!-- Container fluid -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-9 col-md-12 col-sm-12 col-12 ">
+            <!-- Content -->
+            <div>
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div class="mb-8" id="intro">
+                    <h1 class="mb-0 h2">Accordion</h1>
+                    <p class="mb-3 text-muted">
+                      Build vertically collapsing accordions in combination with our Collapse JavaScript plugin.
+                    </p>Official <a href="https://getbootstrap.com/docs/5.1/components/accordion/" target="_blank" rel="">Bootstrap 5 Accordion.</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion example -->
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div id="accordion-example" class="mb-4">
+                    <h2 class="h3 mb-1">Example</h2>
+                    <p>
+                      Click the accordions below to expand/collapse the
+                      accordion content.
+                    </p>
+                  </div>
+                  <div>
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom nav-example mb-3" id="pills-tabTwo" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-accordions-design-tab" data-bs-toggle="pill"
+                            href="#pills-accordions-design" role="tab" aria-controls="pills-accordions-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-accordions-html-tab" data-bs-toggle="pill"
+                            href="#pills-accordions-html" role="tab" aria-controls="pills-accordions-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content p-4" id="pills-tabTwoContent">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-accordions-design"
+                          role="tabpanel" aria-labelledby="pills-accordions-design-tab">
+                          <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Accordion Item #1
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show"
+                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>This is the first item's accordion
+                                    body.</strong>
+                                  It is hidden by default, until the collapse
+                                  plugin adds the appropriate classes that we
+                                  use to style each element. These classes
+                                  control the overall appearance, as well as
+                                  the showing and hiding via CSS transitions.
+                                  You can modify any of this with custom CSS
+                                  or overriding our default variables. It's
+                                  also worth noting that just about any HTML
+                                  can go within the
+                                  <code>.accordion-body</code>, though the
+                                  transition does limit overflow.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Accordion Item #2
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>This is the second item's accordion
+                                    body.</strong>
+                                  It is hidden by default, until the collapse
+                                  plugin adds the appropriate classes that we
+                                  use to style each element. These classes
+                                  control the overall appearance, as well as
+                                  the showing and hiding via CSS transitions.
+                                  You can modify any of this with custom CSS
+                                  or overriding our default variables. It's
+                                  also worth noting that just about any HTML
+                                  can go within the
+                                  <code>.accordion-body</code>, though the
+                                  transition does limit overflow.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Accordion Item #3
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <strong>This is the third item's accordion
+                                    body.</strong>
+                                  It is hidden by default, until the collapse
+                                  plugin adds the appropriate classes that we
+                                  use to style each element. These classes
+                                  control the overall appearance, as well as
+                                  the showing and hiding via CSS transitions.
+                                  You can modify any of this with custom CSS
+                                  or overriding our default variables. It's
+                                  also worth noting that just about any HTML
+                                  can go within the
+                                  <code>.accordion-body</code>, though the
+                                  transition does limit overflow.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade" id="pills-accordions-html" role="tabpanel"
+                          aria-labelledby="pills-accordions-html-tab">
+
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Accordion Example --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordionExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingOne<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+          <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapseOne<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span> <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseOne<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       Accordion Item #1
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseOne<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse show<span class="token punctuation">"</span></span>
+       <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingOne<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>This is the first item's accordion
+          body.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+          It is hidden by default, until the collapse
+          plugin adds the appropriate classes that we
+          use to style each element. These classes
+          control the overall appearance, as well as
+          the showing and hiding via CSS transitions.
+          You can modify any of this with custom CSS
+          or overriding our default variables. It's
+          also worth noting that just about any HTML
+          can go within the
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-body<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>, though the
+          transition does limit overflow.
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingTwo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button collapsed<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+          <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapseTwo<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseTwo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       Accordion Item #2
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseTwo<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse<span class="token punctuation">"</span></span> <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingTwo<span class="token punctuation">"</span></span>
+       <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>This is the second item's accordion
+          body.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+          It is hidden by default, until the collapse
+          plugin adds the appropriate classes that we
+          use to style each element. These classes
+          control the overall appearance, as well as
+          the showing and hiding via CSS transitions.
+          You can modify any of this with custom CSS
+          or overriding our default variables. It's
+          also worth noting that just about any HTML
+          can go within the
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-body<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>, though the
+          transition does limit overflow.
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingThree<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button collapsed<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+          <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#collapseThree<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span> <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseThree<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       Accordion Item #3
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapseThree<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse<span class="token punctuation">"</span></span>
+       <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>headingThree<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>This is the third item's accordion
+          body.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span>
+          It is hidden by default, until the collapse
+          plugin adds the appropriate classes that we
+          use to style each element. These classes
+          control the overall appearance, as well as
+          the showing and hiding via CSS transitions.
+          You can modify any of this with custom CSS
+          or overriding our default variables. It's
+          also worth noting that just about any HTML
+          can go within the
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-body<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>, though the
+          transition does limit overflow.
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion example -->
+
+              <!-- Accordion example -->
+              <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                  <div id="accordion-flush" class="mb-4">
+                    <h2 class="h3 mb-1">Flush</h2>
+                    <p>
+                      Add <code>.accordion-flush</code> to remove the default
+                      <code>background-color</code>, some borders, and some
+                      rounded corners to render accordions edge-to-edge with
+                      their parent container.
+                    </p>
+                  </div>
+                  <div>
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom nav-example mb-3" id="pills-tabThree" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-accordions-flush-design-tab" data-bs-toggle="pill"
+                            href="#pills-accordions-flush-design" role="tab"
+                            aria-controls="pills-accordions-flush-design" aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-accordions-flush-html-tab" data-bs-toggle="pill"
+                            href="#pills-accordions-flush-html" role="tab" aria-controls="pills-accordions-flush-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <div class="tab-content p-4" id="pills-tabThreeContent">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-accordions-flush-design"
+                          role="tabpanel" aria-labelledby="pills-accordions-flush-design-tab">
+                          <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                  aria-controls="flush-collapseOne">
+                                  Accordion Item #1
+                                </button>
+                              </h2>
+                              <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  Placeholder content for this accordion,
+                                  which is intended to demonstrate the
+                                  <code>.accordion-flush</code> class. This is
+                                  the first item's accordion body.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                  aria-controls="flush-collapseTwo">
+                                  Accordion Item #2
+                                </button>
+                              </h2>
+                              <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  Placeholder content for this accordion,
+                                  which is intended to demonstrate the
+                                  <code>.accordion-flush</code> class. This is
+                                  the second item's accordion body. Let's
+                                  imagine this being filled with some actual
+                                  content.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                  data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                  aria-controls="flush-collapseThree">
+                                  Accordion Item #3
+                                </button>
+                              </h2>
+                              <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                  Placeholder content for this accordion,
+                                  which is intended to demonstrate the
+                                  <code>.accordion-flush</code> class. This is
+                                  the third item's accordion body. Nothing
+                                  more exciting happening here in terms of
+                                  content, but just filling up the space to
+                                  make it look, at least at first glance, a
+                                  bit more representative of how this would
+                                  look in a real-world application.
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade" id="pills-accordions-flush-html" role="tabpanel"
+                          aria-labelledby="pills-accordions-flush-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Accordion flush --&gt;</span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion accordion-flush<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordionFlushExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingOne<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button collapsed<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#flush-collapseOne<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
+                <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseOne<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             Accordion Item #1
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseOne<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse<span class="token punctuation">"</span></span>
+             <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingOne<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionFlushExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Placeholder content for this accordion, which is intended
+                to demonstrate the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-flush<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span> class. This is the first item's
+                accordion body.
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingTwo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button collapsed<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#flush-collapseTwo<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
+                <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseTwo<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             Accordion Item #2
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseTwo<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse<span class="token punctuation">"</span></span>
+             <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingTwo<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionFlushExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Placeholder content for this accordion, which is intended
+                to demonstrate the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-flush<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span> class. This is the second item's
+                accordion body. Let's imagine this being filled with
+                some actual content.
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-item<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-header<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingThree<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-button collapsed<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span>
+                <span class="token attr-name">data-bs-target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#flush-collapseThree<span class="token punctuation">"</span></span> <span class="token attr-name">aria-expanded</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>false<span class="token punctuation">"</span></span>
+                <span class="token attr-name">aria-controls</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseThree<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             Accordion Item #3
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-collapseThree<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-collapse collapse<span class="token punctuation">"</span></span>
+             <span class="token attr-name">aria-labelledby</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>flush-headingThree<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-parent</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#accordionFlushExample<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>accordion-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Placeholder content for this accordion, which is intended
+                to demonstrate the <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span>.accordion-flush<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span> class. This is the third item's
+                accordion body. Nothing more exciting happening here
+                in terms of content, but just filling up the space to make it look, at least at
+                first glance, a bit more representative of how this would look in a real-world
+                application.
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion example -->
+            </div>
+          </div>
+          <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
+            <!-- sidebar nav fixed -->
+            <div class="sidebar-nav-fixed">
+              <span class="px-4 mb-2 d-block text-uppercase ls-md h2 fs-6">Contents</span>
+
+              <ul class="list-unstyled">
+                <li><a href="#intro" class="active">Introduction</a></li>
+                <li><a href="#accordion-example">Example</a></li>
+                <li><a href="#accordion-flush">Flush</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <!-- Scripts -->
+  <script src="../../assets/libs/prismjs/prism.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <!-- Libs JS -->
+
+<script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../../assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../../assets/js/theme.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/accordions.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+</html>

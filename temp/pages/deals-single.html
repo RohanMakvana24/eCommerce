@@ -1,0 +1,4371 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/deals-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:32:22 GMT -->
+<head>
+		<!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="author" content="Codescandy" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-M8S4MT3EYG');
+</script>
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico" />
+
+<!-- Color modes -->
+<script src="../assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+
+
+		<title>Deals | Dash UI - Responsive Bootstrap 5 Admin Dashboard</title>
+	</head>
+
+	<body>
+		<!-- Wrapper -->
+		<main id="main-wrapper" class="main-wrapper">
+			<div class="header">
+	<!-- navbar -->
+	<div class="navbar-custom navbar navbar-expand-lg">
+		<div class="container-fluid px-0">
+			<a class="navbar-brand d-block d-md-none" href="../index.html">
+				<img src="../assets/images/brand/logo/logo-2.svg" alt="Image" />
+			</a>
+
+			<a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+					<path
+						d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+					/>
+				</svg>
+			</a>
+
+			<div class="d-none d-md-none d-lg-block">
+				<!-- Form -->
+				<form action="#">
+					<div class="input-group">
+						<input class="form-control rounded-3 bg-transparent ps-9" type="search" value="" id="searchInput" placeholder="Search" />
+						<span class="">
+							<button class="btn position-absolute start-0" type="button">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="15"
+									height="15"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather feather-search text-dark"
+								>
+									<circle cx="11" cy="11" r="8"></circle>
+									<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<!--Navbar nav -->
+			<ul class="navbar-nav navbar-right-wrap ms-lg-auto d-flex nav-top-wrap align-items-center ms-4 ms-lg-0">
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-ghost btn-icon rounded-circle" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+							<i class="bi theme-icon-active"></i>
+							<span class="visually-hidden bs-theme-text">Toggle theme</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+									<i class="bi theme-icon bi-sun-fill"></i>
+									<span class="ms-2">Light</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+									<i class="bi theme-icon bi-moon-stars-fill"></i>
+									<span class="ms-2">Dark</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+									<i class="bi theme-icon bi-circle-half"></i>
+									<span class="ms-2">Auto</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="dropdown stopevent ms-2">
+					<a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-xs" data-feather="bell"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="dropdownNotification">
+						<div>
+							<div class="border-bottom px-3 pt-2 pb-3 d-flex justify-content-between align-items-center">
+								<p class="mb-0 text-dark fw-medium fs-4">Notifications</p>
+								<a href="#!" class="text-muted">
+									<span>
+										<i class="me-1 icon-xs" data-feather="settings"></i>
+									</span>
+								</a>
+							</div>
+							<div data-simplebar style="height: 250px">
+								<!-- List group -->
+								<ul class="list-group list-group-flush notification-list-scroll">
+									<!-- List group item -->
+									<li class="list-group-item bg-light">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Rishi Chopra</h5>
+											<p class="mb-0">Mauris blandit erat id nunc blandit, ac eleifend dolor pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Neha Kannned</h5>
+											<p class="mb-0">Proin at elit vel est condimentum elementum id in ante. Maecenas et sapien metus.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Nirmala Chauhan</h5>
+											<p class="mb-0">Morbi maximus urna lobortis elit sollicitudin sollicitudieget elit vel pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Sina Ray</h5>
+											<p class="mb-0">Sed aliquam augue sit amet mauris volutpat hendrerit sed nunc eu diam.</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="border-top px-3 py-2 text-center">
+								<a href="#!" class="text-inherit">View all Notifications</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- List -->
+				<li class="dropdown ms-2">
+					<a class="rounded-circle" href="#!" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="avatar avatar-md avatar-indicators avatar-online">
+							<img alt="avatar" src="../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+						<div class="px-4 pb-0 pt-2">
+							<div class="lh-1">
+								<h5 class="mb-1">John E. Grainger</h5>
+								<a href="#!" class="text-inherit fs-6">View my profile</a>
+							</div>
+							<div class="dropdown-divider mt-3 mb-2"></div>
+						</div>
+
+						<ul class="list-unstyled">
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>
+									Edit Profile
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>
+									Activity Log
+								</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>
+									Settings
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../index.html">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>
+									Sign Out
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+			<!-- navbar vertical -->
+
+			<!-- Sidebar -->
+
+<div class="navbar-vertical navbar nav-dashboard">
+	<div class="h-100" data-simplebar>
+		<!-- Brand logo -->
+		<a class="navbar-brand" href="../index.html">
+			<img src="../assets/images/brand/logo/logo-2.svg" alt="dash ui - bootstrap 5 admin dashboard template" />
+		</a>
+		<!-- Navbar nav -->
+		<ul class="navbar-nav flex-column" id="sideNavbar">
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navDashboard"
+					aria-expanded="false"
+					aria-controls="navDashboard"
+				>
+					<i data-feather="home" class="nav-icon me-2 icon-xxs"></i>
+					Dashboard
+				</a>
+
+				<div id="navDashboard" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="dashboard-analytics.html">Analytics</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="../index.html">Project</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="dashboard-ecommerce.html">Ecommerce</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="dashboard-crm.html">CRM</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="dashboard-finance.html">Finance</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="dashboard-blog.html">Blog</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- Nav item -->
+			<li class="nav-item">
+				<div class="navbar-heading">Apps</div>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link has-arrow " href="calendar.html">Calendar</a>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link has-arrow " href="chat-app.html">
+					<i data-feather="message-square" class="nav-icon me-2 icon-xxs"></i>
+					Chat
+				</a>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navecommerce"
+					aria-expanded="false"
+					aria-controls="navecommerce"
+				>
+					<i data-feather="shopping-cart" class="nav-icon me-2 icon-xxs"></i>
+					Ecommerce
+				</a>
+
+				<div id="navecommerce" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-products.html">Products</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-products-details.html">Product Detail</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-product-edit.html">Add Product</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-order-list.html">Orders</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-order-detail.html">Orders Detail</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-cart.html">Shopping cart</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-checkout.html">Checkout</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-customer.html">Customer</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="ecommerce-seller.html">Seller</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navEmail" aria-expanded="false" aria-controls="navEmail">
+					<i data-feather="mail" class="nav-icon me-2 icon-xxs"></i>
+					Email
+				</a>
+
+				<div id="navEmail" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="mail.html">Inbox</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="mail-details.html">Details</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="mail-draft.html">Draft</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navKanban"
+					aria-expanded="false"
+					aria-controls="navKanban"
+				>
+					<i data-feather="layout" class="nav-icon me-2 icon-xxs"></i>
+					Kanban
+				</a>
+
+				<div id="navKanban" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="task-kanban-grid.html">Grid</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="task-kanban-list.html">List</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- Nav item -->
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navProject" aria-expanded="false" aria-controls="navProject">
+					<i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
+					Project
+				</a>
+				<div id="navProject" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="project-grid.html">Grid</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="project-list.html">List</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link  collapsed "
+								href="#!"
+								data-bs-toggle="collapse"
+								data-bs-target="#navprojectSingle"
+								aria-expanded="false"
+								aria-controls="navprojectSingle"
+							>
+								Single
+							</a>
+							<div id="navprojectSingle" class="collapse " data-bs-parent="#navProject">
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a class="nav-link " href="project-overview.html">Overview</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="project-task.html">Task</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="project-budget.html">Budget</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link " href="project-files.html">Files</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="project-team.html">Team</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="add-project.html">Create Project</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link " href="apps-file-manager.html">
+					<i data-feather="folder-plus" class="nav-icon me-2 icon-xxs"></i>
+					File Manager
+				</a>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link has-arrow " href="#!" data-bs-toggle="collapse" data-bs-target="#navCRM" aria-expanded="false" aria-controls="navCRM">
+					<i data-feather="pie-chart" class="nav-icon me-2 icon-xxs"></i>
+
+					CRM
+				</a>
+
+				<div id="navCRM" class="collapse  show " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="crm-contacts.html">Contacts</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="crm-company.html">Company</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="deals.html">
+								Deals
+								<span class="badge text-bg-primary ms-2">New</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow  active " href="deals-single.html">
+								Deals Single
+								<span class="badge text-bg-primary ms-2">New</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navinvoice"
+					aria-expanded="false"
+					aria-controls="navinvoice"
+				>
+					<i data-feather="clipboard" class="nav-icon me-2 icon-xxs"></i>
+					Invoice
+				</a>
+
+				<div id="navinvoice" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="invoice-list.html">List</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="invoice-detail.html">Detail</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="invoice-generator.html">Invoice Generator</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a
+					class="nav-link  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navprofilePages"
+					aria-expanded="false"
+					aria-controls="navprofilePages"
+				>
+					<i data-feather="user" class="nav-icon me-2 icon-xxs"></i>
+					Profile
+				</a>
+				<div id="navprofilePages" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="profile-overview.html">Overview</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="profile-project.html">Project</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="profile-files.html">Files</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link " href="profile-team.html">Team</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="profile-followers.html">Followers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="profile-activity.html">Activity</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="profile-settings.html">Settings</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navblog" aria-expanded="false" aria-controls="navblog">
+					<i data-feather="edit" class="nav-icon me-2 icon-xxs"></i>
+					Blog
+				</a>
+
+				<div id="navblog" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="blog-author.html">Author</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="blog-author-detail.html">Detail</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link has-arrow " href="create-blog-post.html">Create Post</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- Nav item -->
+			<li class="nav-item">
+				<div class="navbar-heading">Layouts & Pages</div>
+			</li>
+
+			<li class="nav-item">
+				<a
+					class="nav-link  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navlayoutPage"
+					aria-expanded="false"
+					aria-controls="navlayoutPage"
+				>
+					<i class="nav-icon me-2 icon-xxs" data-feather="file"></i>
+					Pages
+				</a>
+				<div id="navlayoutPage" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="starter.html">Starter</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link " href="pricing.html">Pricing</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="maintenance.html">Maintenance</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="404-error.html">404 Error</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- Nav item -->
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navAuthentication"
+					aria-expanded="false"
+					aria-controls="navAuthentication"
+				>
+					<i data-feather="lock" class="nav-icon me-2 icon-xxs"></i>
+					Authentication
+				</a>
+				<div id="navAuthentication" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="sign-in.html">Sign In</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="sign-up.html">Sign Up</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="forget-password.html">Forget Password</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navLayouts"
+					aria-expanded="false"
+					aria-controls="navLayouts"
+				>
+					<i data-feather="sidebar" class="nav-icon me-2 icon-xxs"></i>
+					Layouts
+				</a>
+				<div id="navLayouts" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a class="nav-link " href="../index.html">Default</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link " href="../horizontal/index.html">Horizontal</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- Nav item -->
+			<li class="nav-item">
+				<div class="navbar-heading">UI Components</div>
+			</li>
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navComponents"
+					aria-expanded="false"
+					aria-controls="navComponents"
+				>
+					<i data-feather="package" class="nav-icon me-2 icon-xxs"></i>
+					Components
+				</a>
+				<div id="navComponents" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a href="components/accordions.html" class="nav-link ">Accordions</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link " href="components/alerts.html">Alert</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="components/badge.html" class="nav-link ">Badge</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="components/breadcrumb.html" class="nav-link ">Breadcrumb</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/buttons.html" class="nav-link ">Buttons</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/button-group.html" class="nav-link ">Button group</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/card.html" class="nav-link ">Card</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/carousel.html" class="nav-link ">Carousel</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/close-button.html" class="nav-link ">Close Button</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/collapse.html" class="nav-link ">Collapse</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/dropdowns.html" class="nav-link ">Dropdowns</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/forms.html" class="nav-link ">Forms</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="components/list-group.html" class="nav-link ">List group</a>
+						</li>
+
+						<li class="nav-item">
+							<a href="components/modal.html" class="nav-link ">Modal</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/navs-tabs.html" class="nav-link ">Navs and tabs</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/navbar.html" class="nav-link ">Navbar</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/offcanvas.html" class="nav-link ">Offcanvas</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/pagination.html" class="nav-link ">Pagination</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/placeholders.html" class="nav-link ">Placeholders</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/popovers.html" class="nav-link ">Popovers</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/progress.html" class="nav-link ">Progress</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/scrollspy.html" class="nav-link ">Scrollspy</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/spinners.html" class="nav-link ">Spinners</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/tables.html" class="nav-link ">Tables</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/toasts.html" class="nav-link ">Toasts</a>
+						</li>
+						<li class="nav-item">
+							<a href="components/tooltips.html" class="nav-link ">Tooltips</a>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<li class="nav-item">
+				<a
+					class="nav-link has-arrow  collapsed "
+					href="#!"
+					data-bs-toggle="collapse"
+					data-bs-target="#navMenuLevel"
+					aria-expanded="false"
+					aria-controls="navMenuLevel"
+				>
+					<i data-feather="corner-left-down" class="nav-icon me-2 icon-xxs"></i>
+					Menu Level
+				</a>
+				<div id="navMenuLevel" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item">
+							<a
+								class="nav-link has-arrow "
+								href="#!"
+								data-bs-toggle="collapse"
+								data-bs-target="#navMenuLevelSecond"
+								aria-expanded="false"
+								aria-controls="navMenuLevelSecond"
+							>
+								Two Level
+							</a>
+							<div id="navMenuLevelSecond" class="collapse" data-bs-parent="#navMenuLevel">
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a class="nav-link " href="#!">NavItem 1</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="#!">NavItem 2</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link has-arrow  collapsed "
+								href="#!"
+								data-bs-toggle="collapse"
+								data-bs-target="#navMenuLevelThree"
+								aria-expanded="false"
+								aria-controls="navMenuLevelThree"
+							>
+								Three Level
+							</a>
+							<div id="navMenuLevelThree" class="collapse " data-bs-parent="#navMenuLevel">
+								<ul class="nav flex-column">
+									<li class="nav-item">
+										<a
+											class="nav-link  collapsed "
+											href="#!"
+											data-bs-toggle="collapse"
+											data-bs-target="#navMenuLevelThreeOne"
+											aria-expanded="false"
+											aria-controls="navMenuLevelThreeOne"
+										>
+											NavItem 1
+										</a>
+										<div id="navMenuLevelThreeOne" class="collapse collapse " data-bs-parent="#navMenuLevelThree">
+											<ul class="nav flex-column">
+												<li class="nav-item">
+													<a class="nav-link " href="#!">NavChild Item 1</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link " href="#!">Nav Item 2</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</li>
+
+			<!-- Nav item -->
+			<li class="nav-item">
+				<div class="navbar-heading">Documentation</div>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link has-arrow  collapsed " href="#!" data-bs-toggle="collapse" data-bs-target="#navDocs" aria-expanded="false" aria-controls="navDocs">
+					<i data-feather="package" class="nav-icon me-2 icon-xxs"></i>
+					Docs
+				</a>
+				<div id="navDocs" class="collapse " data-bs-parent="#sideNavbar">
+					<ul class="nav flex-column">
+						<li class="nav-item"><a href="../docs/index.html" class="nav-link ">Introduction</a></li>
+						<li class="nav-item"><a href="../docs/environment-setup.html" class="nav-link ">Environment setup</a></li>
+						<li class="nav-item"><a href="../docs/working-with-gulp.html" class="nav-link ">Working with Gulp</a></li>
+						<li class="nav-item"><a href="../docs/compiled-files.html" class="nav-link ">Compiled Files</a></li>
+						<li class="nav-item"><a href="../docs/file-structure.html" class="nav-link ">File Structure</a></li>
+						<li class="nav-item"><a href="../docs/resources-assets.html" class="nav-link ">Resources & assets</a></li>
+						<li class="nav-item"><a href="../docs/changelog.html" class="nav-link ">Changelog</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="card bg-light shadow-none text-center mx-4 my-8">
+			<div class="card-body py-6">
+				<img src="../assets/images/background/giftbox.png" alt="dash ui - admin dashboard template" />
+				<div class="mt-4">
+					<h5>Unlimited Access</h5>
+					<p class="fs-6 mb-4">Upgrade your plan from a Free trial, to select Business Plan. Start Now</p>
+					<a href="#" class="btn btn-secondary btn-sm">Upgrade Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+			<!-- Page Content -->
+			<div id="app-content">
+				<!-- Container fluid -->
+				<div class="app-content-area">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-lg-12 col-md-12 col-12">
+								<!-- Page header -->
+								<div class="mb-6 d-md-flex flex-row justify-content-between">
+									<h3 class="mb-2 mb-md-0">Deals Details</h3>
+									<div class="d-flex gap-2">
+										<a href="#!" class="btn btn-outline-secondary d-flex flex-row align-items-center gap-2">
+											<i data-feather="edit" class="icon-xxs"></i>
+											Edit
+										</a>
+										<a href="#!" class="btn btn-outline-danger d-flex flex-row gap-2 align-items-center">
+											<i data-feather="trash-2" class="icon-xxs"></i>
+											Delete Deal
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row mb-6">
+							<div class="col-12">
+								<div class="card">
+									<div class="card-body d-flex flex-column gap-4">
+										<div class="d-md-flex flex-row justify-content-between align-items-center">
+											<div class="d-flex flex-column gap-1 mb-3 mb-md-0">
+												<h3 class="mb-0">Figma to Bootstrap</h3>
+												<small>Deal Category</small>
+											</div>
+											<div class="d-flex gap-2">
+												<span class="badge badge-danger-soft border border-danger rounded-pill">Loss</span>
+												<span class="badge badge-success-soft border border-success rounded-pill">Won</span>
+												<span class="badge badge-secondary-soft border border-secondary rounded-pill">Close</span>
+											</div>
+										</div>
+										<div class="row row-cols-5">
+											<div class="col">
+												<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+													<div class="progress-bar bg-success" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+													<div class="progress-bar bg-success" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+													<div class="progress-bar bg-success" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+													<div class="progress-bar bg-gray-300" style="width: 100%"></div>
+												</div>
+											</div>
+											<div class="col">
+												<div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height: 8px">
+													<div class="progress-bar bg-gray-300" style="width: 100%"></div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex flex-row gap-2">
+											<small><a href="#!">Pipeline Stage</a></small>
+
+											<small><i data-feather="arrow-right" class="icon-xxs text-gray-400"></i></small>
+											<small>Proposal</small>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row gy-5">
+							<aside class="col-xxl-3 col-xl-4 col-12">
+								<div class="card mb-6">
+									<div class="card-body d-flex flex-column gap-5">
+										<h4 class="mb-0">Deal Owner</h4>
+										<div class="d-flex flex-row justify-content-between align-items-center">
+											<div class="d-flex flex-row gap-4 align-items-center">
+												<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-md rounded-circle" />
+												<h5 class="mb-0">Johnny Emond</h5>
+											</div>
+											<div>
+												<select class="form-select border-0" aria-label="Default select example">
+													<option selected>Owner</option>
+													<option value="John Smith">John Smith</option>
+													<option value="Jane Doe">Jane Doe</option>
+													<option value="Alex Johnson">Alex Johnson</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card mb-6">
+									<div class="card-body d-flex flex-column gap-4">
+										<h4 class="mb-0">Deal Info</h4>
+										<table class="table table-borderless mb-0 text-nowrap table-sm">
+											<tbody>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="dollar-sign" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Deal Value:</span>
+													</td>
+
+													<td class="px-0 fw-semi-bold text-end text-gray-900">$100,000.00</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="hash" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Deal ID:</span>
+													</td>
+
+													<td class="px-0 text-end">#001</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="headphones" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Deal Type:</span>
+													</td>
+
+													<td class="px-0 text-end">#Renewal1</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Created Date:</span>
+													</td>
+
+													<td class="px-0 text-end">Oct 03, 2025</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Last Updated:</span>
+													</td>
+
+													<td class="px-0 text-end">Nav 21, 2025</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="flag" class="icon-xs text-gray-400"></i>
+														<span class="text-gray-600">Close Date:</span>
+													</td>
+
+													<td class="px-0 text-end">Dec 30, 2025</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="card mb-6">
+									<div class="card-body d-flex flex-column gap-4">
+										<h4 class="mb-0">Deal Start</h4>
+										<table class="table table-borderless mb-0 text-nowrap table-sm">
+											<tbody>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="bar-chart" class="icon-xs text-warning"></i>
+														<span class="text-gray-600">Probability (%)</span>
+													</td>
+
+													<td class="px-0 fw-semi-bold text-end text-gray-900">15.5</td>
+												</tr>
+												<tr>
+													<td class="px-0 d-flex align-items-center gap-2">
+														<i data-feather="trending-up" class="icon-xs text-success"></i>
+														<span class="text-gray-600">Revenue</span>
+													</td>
+
+													<td class="px-0 fw-semi-bold text-end text-gray-900">$25,000.00</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="card">
+									<div class="card-body d-flex flex-column gap-4">
+										<div class="d-flex flex-row justify-content-between">
+											<h4 class="mb-0">Contact Person</h4>
+											<a href="#!">View Details</a>
+										</div>
+										<div class="d-flex flex-column gap-4">
+											<div class="d-flex flex-row gap-4 align-items-center">
+												<img src="../assets/images/avatar/avatar-8.jpg" alt="avatar" class="avatar avatar-md rounded-circle" />
+												<div>
+													<h5 class="mb-0">Sandip Chauhan</h5>
+													<small>
+														Client -
+														<a href="#!">Code Persistent</a>
+													</small>
+												</div>
+											</div>
+
+											<table class="table table-borderless mb-0 text-nowrap table-sm">
+												<tbody>
+													<tr>
+														<td class="px-0 d-flex align-items-center gap-2">
+															<i data-feather="phone" class="icon-xs text-gray-400"></i>
+															<span class="text-gray-600">Phone</span>
+														</td>
+
+														<td class="px-0 text-end">+01 123 456 789</td>
+													</tr>
+													<tr>
+														<td class="px-0 d-flex align-items-center gap-2">
+															<i data-feather="mail" class="icon-xs text-gray-400"></i>
+															<span class="text-gray-600">Email</span>
+														</td>
+
+														<td class="px-0 text-end">
+															<a href="#!" class="text-inherit">sandipchaua@email.com</a>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</aside>
+							<div class="col-xxl-9 col-xl-8 col-12">
+								<ul class="nav nav-line-bottom mb-6 text-nowrap" id="tab" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active py-2" id="activity-tab" data-bs-toggle="pill" href="#activity" role="tab" aria-controls="activity" aria-selected="true">
+											<i data-feather="activity" class="icon-xs me-1"></i>
+											Activity
+										</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link py-2" id="notes-tab" data-bs-toggle="pill" href="#notes" role="tab" aria-controls="notes" aria-selected="true">
+											<i data-feather="file-text" class="icon-xs me-1"></i>
+											Notes
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link py-2" id="email-tab" data-bs-toggle="pill" href="#email" role="tab" aria-controls="email" aria-selected="true">
+											<i data-feather="mail" class="icon-xs me-1"></i>
+											Emails
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link py-2" id="call-tab" data-bs-toggle="pill" href="#call" role="tab" aria-controls="call" aria-selected="true">
+											<i data-feather="phone" class="icon-xs me-1"></i>
+											Call
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link py-2" id="task-tab" data-bs-toggle="pill" href="#task" role="tab" aria-controls="task" aria-selected="true">
+											<i data-feather="list" class="icon-xs me-1"></i>
+											Task
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link py-2" id="meetings-tab" data-bs-toggle="pill" href="#meetings" role="tab" aria-controls="meetings" aria-selected="true">
+											<i data-feather="video" class="icon-xs me-1"></i>
+											Meetings
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link py-2" id="attachments-tab" data-bs-toggle="pill" href="#attachments" role="tab" aria-controls="attachments" aria-selected="true">
+											<i data-feather="paperclip" class="icon-xs me-1"></i>
+											Attachments
+										</a>
+									</li>
+								</ul>
+
+								<div class="tab-content" id="tabContent">
+									<div class="tab-pane fade show active" id="activity" role="tabpanel" aria-labelledby="activity-tab">
+										<div class="d-md-flex flex-row justify-content-between mb-6">
+											<div class="mb-2 mb-md-0">
+												<form>
+													<div class="input-group">
+														<input class="form-control rounded-3" type="search" value="" id="searchInput" placeholder="Search" />
+														<span class="input-group-append">
+															<button class="btn ms-n10 rounded-0 rounded-end" type="button">
+																<svg
+																	xmlns="http://www.w3.org/2000/svg"
+																	width="15"
+																	height="15"
+																	viewBox="0 0 24 24"
+																	fill="none"
+																	stroke="currentColor"
+																	stroke-width="2"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	class="feather feather-search text-dark"
+																>
+																	<circle cx="11" cy="11" r="8"></circle>
+																	<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																</svg>
+															</button>
+														</span>
+													</div>
+												</form>
+											</div>
+											<div class="row align-items-center gx-0">
+												<div class="col-md-4 col-3">
+													<span>Filter by:</span>
+												</div>
+												<div class="col-md-8 col-9">
+													<select class="form-select" aria-label="Default select example">
+														<option selected>Filter Activity</option>
+														<option value="Logged Call">Logged Call</option>
+														<option value="Deal Activity">Deal Activity</option>
+														<option value="Task">Task</option>
+														<option value="Email">Email</option>
+														<option value="Meetings">Meetings</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex flex-row flex-column gap-3 mb-10">
+											<div>
+												<h4 class="mb-0">Upcoming</h4>
+											</div>
+											<div class="card">
+												<div class="card-body d-flex flex-column">
+													<div class="d-flex flex-column">
+														<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+															<div>
+																<a data-bs-toggle="collapse" class="d-flex flex-row gap-2 text-inherit" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+																	<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																	<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																		<h4 class="mb-0">Logged call - Connected</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Jitu Chauhan</span>
+																	</div>
+																</a>
+															</div>
+															<div class="d-flex flex-row gap-2">
+																<span class="">Feb 22, 2025</span>
+																<span class="">at 6:17 PM EST</span>
+															</div>
+														</div>
+														<div class="collapse" id="collapseExample">
+															<div class="d-flex flex-column gap-6 ms-xl-6 mt-6">
+																<div class="border rounded py-3 px-6 d-flex flex-lg-row flex-column gap-3 justify-content-between">
+																	<div class="d-flex flex-column gap-1">
+																		<span class="text-gray-500">Due Date</span>
+																		<div class="d-flex flex-row gap-3">
+																			<div class="d-flex flex-row gap-2 align-items-center">
+																				<i data-feather="calendar" class="icon-xxs text-gray-400"></i>
+																				<span>Feb 22, 2025</span>
+																			</div>
+																			<div class="d-flex flex-row gap-2 align-items-center">
+																				<i data-feather="clock" class="icon-xxs text-gray-400"></i>
+																				<span>at 6:17 PM EST</span>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="d-flex flex-column gap-1">
+																		<span class="text-gray-500">Type</span>
+																		<span>Meeting</span>
+																	</div>
+																	<div class="d-flex flex-column gap-1">
+																		<span class="text-gray-500">Contacted</span>
+																		<span>0 Contacts</span>
+																	</div>
+																</div>
+																<div class="d-flex flex-row gap-3">
+																	<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-xs rounded-circle" />
+																	<div class="d-flex flex-row align-items-center gap-2">
+																		<h4 class="mb-0">Jitu Chauhan</h4>
+																		<span class="text-gray-500">logged a call</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="d-flex flex-row flex-column gap-3">
+											<div>
+												<h4 class="mb-0">January 2024</h4>
+											</div>
+											<div>
+												<ul class="timeline list-unstyled d-flex flex-column">
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-info-emphasis bg-info-subtle rounded-circle">
+																<i data-feather="phone" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample1">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row gap-2 collapsed text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseOne"
+																				aria-expanded="false"
+																				aria-controls="collapseOne"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Logged call - Connected</h4>
+																					<span class="text-gray-500">by</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample1">
+																		<div class="d-flex flex-column gap-6 ms-xl-6 mt-6">
+																			<div class="border rounded py-3 px-6 d-flex flex-md-row flex-column gap-3 justify-content-between">
+																				<div class="d-flex flex-column gap-1">
+																					<span class="text-gray-500">Due Date</span>
+																					<div class="d-flex flex-lg-row flex-column gap-1 gap-lg-3">
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="calendar" class="icon-xxs text-gray-400"></i>
+																							<span>Feb 22, 2025</span>
+																						</div>
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="clock" class="icon-xxs text-gray-400"></i>
+																							<span>at 6:17 PM EST</span>
+																						</div>
+																					</div>
+																				</div>
+																				<div class="d-flex flex-column gap-1">
+																					<span class="text-gray-500">Type</span>
+																					<span>Meeting</span>
+																				</div>
+																				<div class="d-flex flex-column gap-1">
+																					<span class="text-gray-500">Contacted</span>
+																					<span>0 Contacts</span>
+																				</div>
+																			</div>
+																			<div class="d-flex flex-row gap-3">
+																				<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-xs rounded-circle" />
+																				<div class="d-flex flex-row align-items-center gap-2">
+																					<h4 class="mb-0">Jitu Chauhan</h4>
+																					<span class="text-gray-500">logged a call</span>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-danger-emphasis bg-danger-subtle rounded-circle">
+																<i data-feather="tag" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample2">
+																	<div class="d-flex flex-lg-row flex-column align-items-xxl-center gap-3 justify-content-between">
+																		<div class="">
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseTwo"
+																				aria-expanded="false"
+																				aria-controls="collapseTwo"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-xxl-row flex-column align-items-xxl-center gap-xl-2">
+																					<h4 class="mb-0">Deal Activity</h4>
+																					<div>
+																						<span>Jitu chauhan</span>
+																						<span class="text-gray-500">moved deal to Qualification</span>
+																					</div>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample2">
+																		<div class="d-flex flex-lg-row flex-column gap-lg-4 gap-2 ms-xl-6 mt-6">
+																			<div>
+																				<h5 class="mb-0">
+																					<span class="text-primary">Jitu chauhan</span>
+																					<span class="text-gray-500">moved deal to</span>
+																					<span class="text-dark">Qualification</span>
+																				</h5>
+																			</div>
+																			<div>
+																				<a href="#!">
+																					View Details
+																					<i data-feather="external-link" class="icon-xxs"></i>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-warning-emphasis bg-warning-subtle rounded-circle">
+																<i data-feather="list" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample3">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-2 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseThree"
+																				aria-expanded="false"
+																				aria-controls="collapseThree"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Task</h4>
+																					<span class="text-gray-500">assigned to</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample3">
+																		<div class="d-flex flex-column gap-5 ms-xl-6 mt-6">
+																			<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+																				<li class="d-flex flex-row gap-2">
+																					<span><i data-feather="check-circle" class="icon-xs text-success"></i></span>
+																					<span>Follow up with brian product demo</span>
+																				</li>
+																				<li class="d-flex flex-row gap-2">
+																					<span><i data-feather="check-circle" class="icon-xs text-success"></i></span>
+																					<span>Share the demo video</span>
+																				</li>
+																			</ul>
+
+																			<div class="border rounded py-3 px-6 d-flex flex-lg-row flex-column gap-3 justify-content-between">
+																				<div class="d-flex flex-column gap-2">
+																					<span class="text-gray-500">Assigned to</span>
+																					<div class="d-flex flex-row align-items-center gap-2">
+																						<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-xs rounded-circle" />
+
+																						<h5 class="mb-0 text-primary">Jitu Chauhan</h5>
+																					</div>
+																				</div>
+																				<div class="d-flex flex-column gap-1">
+																					<span class="text-gray-500">Due Date</span>
+																					<div class="d-flex flex-md-row flex-column gap-lg-3 gap-2">
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="calendar" class="icon-xxs"></i>
+																							<span class="text-dark">Feb 22, 2025</span>
+																						</div>
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="clock" class="icon-xxs"></i>
+																							<span class="text-dark">at 6:17 PM EST</span>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div>
+																				<p class="mb-0">
+																					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+																					an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-success-emphasis bg-success-subtle rounded-circle">
+																<i data-feather="mail" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample4">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseFour"
+																				aria-expanded="false"
+																				aria-controls="collapseFour"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Email</h4>
+																					<span class="text-gray-500">assigned to</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample4">
+																		<div class="d-flex flex-column gap-5 ms-xl-6 mt-6">
+																			<ul class="list-unstyled mb-0 d-flex flex-column gap-3">
+																				<li class="d-flex flex-row gap-2">
+																					<span><i data-feather="check-circle" class="icon-xs text-success"></i></span>
+																					<span>Follow up with brian product demo</span>
+																				</li>
+																				<li class="d-flex flex-row gap-2">
+																					<span><i data-feather="check-circle" class="icon-xs text-success"></i></span>
+																					<span>Share the demo video</span>
+																				</li>
+																			</ul>
+
+																			<div class="border rounded py-3 px-6 d-flex flex-lg-row flex-column gap-3 justify-content-between">
+																				<div class="d-flex flex-column gap-2">
+																					<span class="text-gray-500">Assigned to</span>
+																					<div class="d-flex flex-row align-items-center gap-2">
+																						<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-xs rounded-circle" />
+
+																						<h5 class="mb-0 text-primary">Jitu Chauhan</h5>
+																					</div>
+																				</div>
+																				<div class="d-flex flex-column gap-1">
+																					<span class="text-gray-500">Due Date</span>
+																					<div class="d-flex flex-md-row flex-column gap-lg-3 gap-2">
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="calendar" class="icon-xxs"></i>
+																							<span class="text-dark">Feb 22, 2025</span>
+																						</div>
+																						<div class="d-flex flex-row gap-2 align-items-center">
+																							<i data-feather="clock" class="icon-xxs"></i>
+																							<span class="text-dark">at 6:17 PM EST</span>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div>
+																				<p class="mb-0">
+																					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+																					an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+																				</p>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-info-emphasis bg-info-subtle rounded-circle">
+																<i data-feather="video" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample5">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseFive"
+																				aria-expanded="false"
+																				aria-controls="collapseFive"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Mettings</h4>
+																					<span class="text-gray-500">assigned to</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample5">
+																		<div class="d-flex flex-column gap-3 ms-xl-6 mt-6">
+																			<h5>
+																				Onboarding with
+																				<a href="#!">Sandeep Chauhan</a>
+																			</h5>
+
+																			<div class="border rounded py-3 px-6">
+																				<div class="row gy-4">
+																					<div class="col-xxl-5 col-md-6">
+																						<div class="d-flex flex-column gap-1">
+																							<div>
+																								<span class="text-gray-500">Start Time</span>
+																							</div>
+																							<div class="d-flex flex-xl-row flex-column gap-xl-4 gap-2">
+																								<div>
+																									<i data-feather="calendar" class="icon-xxs"></i>
+																									<span class="text-dark">Feb 22, 2025</span>
+																								</div>
+																								<div>
+																									<i data-feather="clock" class="icon-xxs"></i>
+																									<span class="text-dark">at 6:17 PM EST</span>
+																								</div>
+																							</div>
+																						</div>
+																					</div>
+																					<div class="col-xxl-3 col-md-6">
+																						<div class="d-flex flex-column gap-1">
+																							<span class="text-gray-500">Duration</span>
+																							<span class="text-dark">1 Hour 30 minutes</span>
+																						</div>
+																					</div>
+																					<div class="col-xxl-2 col-md-6">
+																						<div class="d-flex flex-column gap-1">
+																							<span class="text-gray-500">Attendees</span>
+																							<span class="text-dark">2 Attendees</span>
+																						</div>
+																					</div>
+																					<div class="col-xxl-2 col-md-6">
+																						<div class="d-flex flex-column gap-1">
+																							<span class="text-gray-500">Via</span>
+																							<span class="text-dark">Zoom Meeting</span>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-secondary-emphasis bg-secondary-subtle rounded-circle">
+																<i data-feather="paperclip" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample6">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseSix"
+																				aria-expanded="false"
+																				aria-controls="collapseSix"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Attachments</h4>
+																					<span class="text-gray-500">assigned to</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample6">
+																		<div class="border rounded p-4 d-flex flex-lg-row flex-column gap-3 justify-content-between align-items-lg-center ms-xl-6 mt-6">
+																			<div class="d-flex flex-column gap-2">
+																				<div class="d-flex flex-row gap-2 align-items-center">
+																					<i data-feather="file" class="icon-xs"></i>
+																					<h4 class="mb-0">Proposal.pdf</h4>
+																				</div>
+																				<div class="fs-5">
+																					<span>1.03mb</span>
+																					<div class="vr mx-1"></div>
+																					<span>March 19, 2025 11:53 AM</span>
+																					<div class="vr mx-1"></div>
+																					<span>
+																						Uploaded by:
+																						<span class="text-primary">Anita Parmar</span>
+																					</span>
+																				</div>
+																			</div>
+																			<div class="d-flex flex-row">
+																				<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle">
+																					<svg
+																						xmlns="http://www.w3.org/2000/svg"
+																						width="24"
+																						height="24"
+																						viewBox="0 0 24 24"
+																						fill="none"
+																						stroke="currentColor"
+																						stroke-width="2"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																						class="feather feather-download icon-xs text-gray-500"
+																					>
+																						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+																						<polyline points="7 10 12 15 17 10"></polyline>
+																						<line x1="12" y1="15" x2="12" y2="3"></line>
+																					</svg>
+																				</a>
+																				<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle">
+																					<svg
+																						xmlns="http://www.w3.org/2000/svg"
+																						width="24"
+																						height="24"
+																						viewBox="0 0 24 24"
+																						fill="none"
+																						stroke="currentColor"
+																						stroke-width="2"
+																						stroke-linecap="round"
+																						stroke-linejoin="round"
+																						class="feather feather-trash-2 icon-xs text-gray-500"
+																					>
+																						<polyline points="3 6 5 6 21 6"></polyline>
+																						<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+																						<line x1="10" y1="11" x2="10" y2="17"></line>
+																						<line x1="14" y1="11" x2="14" y2="17"></line>
+																					</svg>
+																				</a>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-primary-emphasis bg-primary-subtle rounded-circle">
+																<i data-feather="file-text" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="accordion d-flex flex-column" id="accordionExample7">
+																	<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+																		<div>
+																			<a
+																				href="#"
+																				class="d-flex flex-row collapsed gap-2 text-inherit"
+																				data-bs-toggle="collapse"
+																				data-bs-target="#collapseSeven"
+																				aria-expanded="false"
+																				aria-controls="collapseSeven"
+																			>
+																				<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																				<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																					<h4 class="mb-0">Notes</h4>
+																					<span class="text-gray-500">assigned to</span>
+																					<span>Jitu Chauhan</span>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="d-flex flex-row gap-2">
+																			<span class="">Feb 22, 2025</span>
+																			<span class="">at 6:17 PM EST</span>
+																		</div>
+																	</div>
+																	<div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample7">
+																		<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+																			<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+																			<div class="d-flex flex-column gap-2">
+																				<h6 class="mb-0">Summary:</h6>
+																				<ul class="list-unstyled mb-0">
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						Discussed upcoming product launch event.
+																					</li>
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						John expressed interest in attending and requested more information about the agenda.
+																					</li>
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						Promised to send John an email with event details and registration link by end of day.
+																					</li>
+
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						Agreed to follow up with John next week to confirm attendance.
+																					</li>
+																				</ul>
+																			</div>
+																			<div class="d-flex flex-column gap-2">
+																				<h6 class="mb-0">Follow-Up Actions:</h6>
+																				<ul class="list-unstyled mb-0">
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						Send email to John with event details and registration link.
+																					</li>
+																					<li class="d-flex gap-2">
+																						<svg
+																							xmlns="http://www.w3.org/2000/svg"
+																							width="5"
+																							height="5"
+																							viewBox="0 0 24 24"
+																							fill="#334155"
+																							stroke="#334155"
+																							stroke-width="2"
+																							stroke-linecap="round"
+																							stroke-linejoin="round"
+																							class="feather feather-circle mt-2"
+																						>
+																							<circle cx="12" cy="12" r="10"></circle>
+																						</svg>
+																						Schedule follow-up call with John for next week.
+																					</li>
+																				</ul>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+													<li class="timeline-event">
+														<div class="timeline-event-icon">
+															<div class="icon-shape icon-md text-secondary-emphasis bg-secondary-subtle rounded-circle">
+																<i data-feather="send" class="icon-xs"></i>
+															</div>
+														</div>
+														<div class="card timeline-event-card">
+															<div class="card-body">
+																<div class="d-lg-flex flex-row justify-content-between align-items-center">
+																	<div class="d-flex flex-row gap-2">
+																		<span class="text-gray-500">
+																			This deal was created by
+																			<a href="#!">Jitu Chauhan</a>
+																		</span>
+																	</div>
+
+																	<div class="d-flex flex-row gap-2">
+																		<span class="">Jan 3, 2024</span>
+																		<span class="">at 12:15 PM EST</span>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+										<div>
+											<h3 class="mb-5">Notes</h3>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample8">
+													<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseEight"
+																aria-expanded="false"
+																aria-controls="collapseEight"
+															>
+																<svg
+																	xmlns="http://www.w3.org/2000/svg"
+																	width="24"
+																	height="24"
+																	viewBox="0 0 24 24"
+																	fill="none"
+																	stroke="currentColor"
+																	stroke-width="2"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	class="feather feather-chevron-right icon-xs chevron-down mt-1 text-primary"
+																>
+																	<polyline points="9 18 15 12 9 6"></polyline>
+																</svg>
+
+																<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																	<h4 class="mb-0">Notes</h4>
+																	<span class="text-gray-500">by</span>
+																	<span>Jitu Chauhan</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample8">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample9">
+													<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseNine"
+																aria-expanded="false"
+																aria-controls="collapseNine"
+															>
+																<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																	<div class="d-flex flex-md-row align-items-md-center gap-2">
+																		<h4 class="mb-0">Notes</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Jitu Chauhan</span>
+																	</div>
+																	<span class="text-gray-800 fw-semi-bold">Follow-up Call with Client XYZ</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample9">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample10">
+													<div class="d-flex flex-lg-row flex-column align-items-xxl-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseTen"
+																aria-expanded="false"
+																aria-controls="collapseTen"
+															>
+																<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																<div class="d-flex flex-xxl-row flex-column align-items-xxl-center gap-xl-2">
+																	<div class="d-flex flex-row align-items-md-center gap-2">
+																		<h4 class="mb-0">Notes</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Jitu Chauhan</span>
+																	</div>
+																	<span class="text-gray-800 fw-semi-bold">Follow-up Email Sent to Prospect ABC</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseTen" class="accordion-collapse collapse" data-bs-parent="#accordionExample10">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample11">
+													<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseEleven"
+																aria-expanded="false"
+																aria-controls="collapseEleven"
+															>
+																<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																	<div class="d-flex flex-md-row align-items-md-center gap-2">
+																		<h4 class="mb-0">Notes</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Anita Parmar</span>
+																	</div>
+																	<span class="text-gray-800 fw-semi-bold">Meeting with Client XYZ</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseEleven" class="accordion-collapse collapse" data-bs-parent="#accordionExample11">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample12">
+													<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseTwelve"
+																aria-expanded="false"
+																aria-controls="collapseTwelve"
+															>
+																<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																	<div class="d-flex flex-md-row align-items-md-center gap-2">
+																		<h4 class="mb-0">Notes</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Sandip Chauhan</span>
+																	</div>
+																	<span class="text-gray-800 fw-semi-bold">Lead Follow-up Call</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseTwelve" class="accordion-collapse collapse" data-bs-parent="#accordionExample12">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="card mb-4">
+											<div class="card-body">
+												<div class="accordion d-flex flex-column" id="accordionExample13">
+													<div class="d-flex flex-lg-row flex-column align-items-lg-center gap-3 justify-content-between">
+														<div>
+															<a
+																href="#"
+																class="d-flex flex-row collapsed gap-2 text-inherit"
+																data-bs-toggle="collapse"
+																data-bs-target="#collapseThirteen"
+																aria-expanded="false"
+																aria-controls="collapseThirteen"
+															>
+																<i data-feather="chevron-right" class="icon-xs chevron-down mt-1 text-primary"></i>
+
+																<div class="d-flex flex-md-row flex-column align-items-md-center gap-md-2">
+																	<div class="d-flex flex-md-row align-items-md-center gap-2">
+																		<h4 class="mb-0">Notes</h4>
+																		<span class="text-gray-500">by</span>
+																		<span>Manasvi Suthar</span>
+																	</div>
+																	<span class="text-gray-800 fw-semi-bold">Support Ticket Resolution</span>
+																</div>
+															</a>
+														</div>
+														<div class="d-flex flex-row gap-2">
+															<span class="">Feb 22, 2025</span>
+															<span class="">at 6:17 PM EST</span>
+														</div>
+													</div>
+													<div id="collapseThirteen" class="accordion-collapse collapse" data-bs-parent="#accordionExample13">
+														<div class="d-flex flex-column gap-4 ms-xl-5 mt-6">
+															<h5 class="mb-0">Interaction Type: Phone Call</h5>
+
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Summary:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Discussed upcoming product launch event.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		John expressed interest in attending and requested more information about the agenda.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Promised to send John an email with event details and registration link by end of day.
+																	</li>
+
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Agreed to follow up with John next week to confirm attendance.
+																	</li>
+																</ul>
+															</div>
+															<div class="d-flex flex-column gap-2">
+																<h6 class="mb-0">Follow-Up Actions:</h6>
+																<ul class="list-unstyled mb-0">
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Send email to John with event details and registration link.
+																	</li>
+																	<li class="d-flex gap-2">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="5"
+																			height="5"
+																			viewBox="0 0 24 24"
+																			fill="#334155"
+																			stroke="#334155"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-circle mt-2"
+																		>
+																			<circle cx="12" cy="12" r="10"></circle>
+																		</svg>
+																		Schedule follow-up call with John for next week.
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane" id="email" role="tabpanel" aria-labelledby="email-tab">
+										<div>
+											<h3 class="mb-5">Emails</h3>
+										</div>
+										<div class="d-flex flex-column gap-3 mb-4">
+											<div>
+												<ul class="nav nav-line-bottom" id="tab" role="tablist">
+													<li class="nav-item">
+														<a class="nav-link active py-2" id="mail-tab" data-bs-toggle="pill" href="#mail" role="tab" aria-controls="mail" aria-selected="true">Mails (5)</a>
+													</li>
+
+													<li class="nav-item">
+														<a class="nav-link py-2" id="draft-tab" data-bs-toggle="pill" href="#draft" role="tab" aria-controls="draft" aria-selected="true">Drafts (3)</a>
+													</li>
+													<li class="nav-item">
+														<a class="nav-link py-2" id="schedule-tab" data-bs-toggle="pill" href="#schedule" role="tab" aria-controls="schedule" aria-selected="true">Scheduled (12)</a>
+													</li>
+												</ul>
+											</div>
+											<div>
+												<form>
+													<div class="input-group">
+														<input class="form-control rounded-3" type="search" value="" id="searchInput" placeholder="Search" />
+														<span class="input-group-append">
+															<button class="btn ms-n10 rounded-0 rounded-end" type="button">
+																<svg
+																	xmlns="http://www.w3.org/2000/svg"
+																	width="15"
+																	height="15"
+																	viewBox="0 0 24 24"
+																	fill="none"
+																	stroke="currentColor"
+																	stroke-width="2"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	class="feather feather-search text-dark"
+																>
+																	<circle cx="11" cy="11" r="8"></circle>
+																	<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																</svg>
+															</button>
+														</span>
+													</div>
+												</form>
+											</div>
+										</div>
+
+										<div class="tab-content" id="tabContent">
+											<div class="tab-pane fade show active" id="mail" role="tabpanel" aria-labelledby="mail-tab">
+												<div class="card">
+													<div class="card-body p-0">
+														<div class="table-responsive">
+															<table class="table text-nowrap mb-0 table-centered">
+																<thead class="">
+																	<tr>
+																		<th class="pe-0 rounded-start-3">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" />
+																			<label class="form-check-label" for="flexCheckDefault1"></label>
+																		</th>
+																		<th class="ps-0">Subject</th>
+																		<th>Sender</th>
+																		<th>Date & Time</th>
+																		<th>Status</th>
+																		<th class="rounded-end-3">Actions</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+																				<label class="form-check-label" for="flexCheckDefault2"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Follow-up on Proposal</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 26, 2024 | 6:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+																				<label class="form-check-label" for="flexCheckDefault3"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Proposal for Partnership</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+
+																		<td>Anita parmar</td>
+																		<td>March 23, 2024 | 3:00 PM</td>
+																		<td>
+																			<span class="badge badge-warning-soft border border-warning rounded-pill">Unread</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+																				<label class="form-check-label" for="flexCheckDefault4"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Pricing Inquiry</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Sandip Chauhan</td>
+																		<td>March 20, 2024 | 2:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+																				<label class="form-check-label" for="flexCheckDefault5"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Feedback on Demo</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Manasvi Suthar</td>
+																		<td>March 19, 2024 | 01:20 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" />
+																				<label class="form-check-label" for="flexCheckDefault6"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Meeting Confirmation</h5>
+																				<span class="">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 19, 2024 | 11:35 AM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="card-footer d-md-flex justify-content-between align-items-center">
+														<span>Showing 1 to 5 of 12 entries</span>
+
+														<ul class="pagination mb-0 mt-2">
+															<li class="page-item">
+																<a class="page-link" href="#!">Prev</a>
+															</li>
+															<li class="page-item active">
+																<a class="page-link" href="#!">1</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">2</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">3</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">Next</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+
+											<div class="tab-pane" id="draft" role="tabpanel" aria-labelledby="draft-tab">
+												<div class="card">
+													<div class="card-body p-0">
+														<div class="table-responsive">
+															<table class="table text-nowrap mb-0 table-centered">
+																<thead class="">
+																	<tr>
+																		<th class="pe-0 rounded-start-3">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" />
+																			<label class="form-check-label" for="flexCheckDefault1"></label>
+																		</th>
+																		<th class="ps-0">Subject</th>
+																		<th>Sender</th>
+																		<th>Date & Time</th>
+																		<th>Status</th>
+																		<th class="rounded-end-3">Actions</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+																				<label class="form-check-label" for="flexCheckDefault2"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Follow-up on Proposal</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 26, 2024 | 6:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+																				<label class="form-check-label" for="flexCheckDefault3"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Proposal for Partnership</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+
+																		<td>Anita parmar</td>
+																		<td>March 23, 2024 | 3:00 PM</td>
+																		<td>
+																			<span class="badge badge-warning-soft border border-warning rounded-pill">Unread</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+																				<label class="form-check-label" for="flexCheckDefault4"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Pricing Inquiry</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Sandip Chauhan</td>
+																		<td>March 20, 2024 | 2:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+																				<label class="form-check-label" for="flexCheckDefault5"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Feedback on Demo</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Manasvi Suthar</td>
+																		<td>March 19, 2024 | 01:20 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" />
+																				<label class="form-check-label" for="flexCheckDefault6"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Meeting Confirmation</h5>
+																				<span class="">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 19, 2024 | 11:35 AM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="card-footer d-md-flex justify-content-between align-items-center">
+														<span>Showing 1 to 5 of 12 entries</span>
+
+														<ul class="pagination mb-0 mt-2">
+															<li class="page-item">
+																<a class="page-link" href="#!">Prev</a>
+															</li>
+															<li class="page-item active">
+																<a class="page-link" href="#!">1</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">2</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">3</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">Next</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="tab-pane" id="schedule" role="tabpanel" aria-labelledby="schedule-tab">
+												<div class="card">
+													<div class="card-body p-0">
+														<div class="table-responsive">
+															<table class="table text-nowrap mb-0 table-centered">
+																<thead class="">
+																	<tr>
+																		<th class="pe-0 rounded-start-3">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" />
+																			<label class="form-check-label" for="flexCheckDefault1"></label>
+																		</th>
+																		<th class="ps-0">Subject</th>
+																		<th>Sender</th>
+																		<th>Date & Time</th>
+																		<th>Status</th>
+																		<th class="rounded-end-3">Actions</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" />
+																				<label class="form-check-label" for="flexCheckDefault2"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Follow-up on Proposal</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 26, 2024 | 6:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" />
+																				<label class="form-check-label" for="flexCheckDefault3"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Proposal for Partnership</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+
+																		<td>Anita parmar</td>
+																		<td>March 23, 2024 | 3:00 PM</td>
+																		<td>
+																			<span class="badge badge-warning-soft border border-warning rounded-pill">Unread</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4" />
+																				<label class="form-check-label" for="flexCheckDefault4"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Pricing Inquiry</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Sandip Chauhan</td>
+																		<td>March 20, 2024 | 2:00 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" />
+																				<label class="form-check-label" for="flexCheckDefault5"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Feedback on Demo</h5>
+																				<span class="text-gray-500">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Manasvi Suthar</td>
+																		<td>March 19, 2024 | 01:20 PM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td class="pe-0">
+																			<div class="form-check">
+																				<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6" />
+																				<label class="form-check-label" for="flexCheckDefault6"></label>
+																			</div>
+																		</td>
+																		<td class="ps-0">
+																			<div class="d-flex flex-column gap-1 ms-2">
+																				<h5 class="mb-0">Meeting Confirmation</h5>
+																				<span class="">jane@example.com</span>
+																			</div>
+																		</td>
+																		<td>Jitu Chauhan</td>
+																		<td>March 19, 2024 | 11:35 AM</td>
+																		<td>
+																			<span class="badge badge-success-soft border border-success rounded-pill">Read</span>
+																		</td>
+																		<td>
+																			<a href="#!">View</a>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="card-footer d-md-flex justify-content-between align-items-center">
+														<span>Showing 1 to 5 of 12 entries</span>
+
+														<ul class="pagination mb-0 mt-2">
+															<li class="page-item">
+																<a class="page-link" href="#!">Prev</a>
+															</li>
+															<li class="page-item active">
+																<a class="page-link" href="#!">1</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">2</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">3</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">Next</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade show" id="call" role="tabpanel" aria-labelledby="call-tab">
+										<div>
+											<h3 class="mb-5">Calls</h3>
+										</div>
+										<div class="d-flex flex-column gap-4">
+											<div class="d-flex flex-row justify-content-between">
+												<div>
+													<select class="form-select" aria-label="Default select example">
+														<option selected>All Call</option>
+														<option value="Outbound">Outbound</option>
+														<option value="Inbound">Inbound</option>
+														<option value="Sales">Sales</option>
+														<option value="Follow up">Follow up</option>
+														<option value="Feedback">Feedback</option>
+													</select>
+												</div>
+												<div>
+													<a href="#!" class="btn btn-primary">
+														<i data-feather="plus" class="icon-xxs me-1"></i>
+														Add new Call
+													</a>
+												</div>
+											</div>
+
+											<div class="card">
+												<div class="card-body p-0">
+													<div class="table-responsive">
+														<table class="table text-nowrap mb-0 table-centered">
+															<thead>
+																<tr>
+																	<th class="rounded-start-3 pe-0">
+																		<input class="form-check-input" type="checkbox" value="" id="checkAll" />
+																		<label class="form-check-label" for="checkAll"></label>
+																	</th>
+																	<th class="ps-0">Caller Name</th>
+																	<th>Call Type</th>
+																	<th>Date & Time</th>
+																	<th>Created by</th>
+																	<th class="rounded-end-3">Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+																	<td class="ps-0">
+																		<div class="d-flex flex-row gap-2 align-items-center ms-2">
+																			<img src="../assets/images/avatar/avatar-1.jpg" alt="avatar" class="avatar avatar-sm rounded-circle" />
+																			<h5 class="mb-0">
+																				<a href="#!" class="text-inherit">John Smith</a>
+																			</h5>
+																		</div>
+																	</td>
+																	<td>Outbound</td>
+																	<td>March 26, 2024 | 6:00 PM</td>
+																	<td>Jitu Chauhan</td>
+																	<td>
+																		<a href="#!">View</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault21" />
+																			<label class="form-check-label" for="flexCheckDefault21"></label>
+																		</div>
+																	</td>
+																	<td class="ps-0">
+																		<div class="d-flex flex-row gap-2 align-items-center ms-2">
+																			<img src="../assets/images/avatar/avatar-2.jpg" alt="avatar" class="avatar avatar-sm rounded-circle" />
+																			<h5 class="mb-0">
+																				<a href="#!" class="text-inherit">Jane Doe</a>
+																			</h5>
+																		</div>
+																	</td>
+																	<td>Inbound</td>
+																	<td>March 26, 2024 | 6:00 PM</td>
+																	<td>Jitu Chauhan</td>
+																	<td>
+																		<a href="#!">View</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault22" />
+																			<label class="form-check-label" for="flexCheckDefault22"></label>
+																		</div>
+																	</td>
+																	<td class="ps-0">
+																		<div class="d-flex flex-row gap-2 align-items-center ms-2">
+																			<img src="../assets/images/avatar/avatar-3.jpg" alt="avatar" class="avatar avatar-sm rounded-circle" />
+																			<h5 class="mb-0"><a href="#!" class="text-inherit">Alex Johnson</a></h5>
+																		</div>
+																	</td>
+																	<td>Sales</td>
+																	<td>March 26, 2024 | 6:00 PM</td>
+																	<td>Anita Parmar</td>
+																	<td>
+																		<a href="#!">View</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault23" />
+																			<label class="form-check-label" for="flexCheckDefault23"></label>
+																		</div>
+																	</td>
+																	<td class="ps-0">
+																		<div class="d-flex flex-row gap-2 align-items-center ms-2">
+																			<img src="../assets/images/avatar/avatar-4.jpg" alt="avatar" class="avatar avatar-sm rounded-circle" />
+																			<h5 class="mb-0"><a href="#!" class="text-inherit">Emily Brown</a></h5>
+																		</div>
+																	</td>
+																	<td>Follow-up</td>
+																	<td>March 26, 2024 | 6:00 PM</td>
+																	<td>Sandip Chauhan</td>
+																	<td>
+																		<a href="#!">View</a>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault24" />
+																			<label class="form-check-label" for="flexCheckDefault24"></label>
+																		</div>
+																	</td>
+																	<td class="ps-0">
+																		<div class="d-flex flex-row gap-2 align-items-center ms-2">
+																			<img src="../assets/images/avatar/avatar-5.jpg" alt="avatar" class="avatar avatar-sm rounded-circle" />
+																			<h5 class="mb-0"><a href="#!" class="text-inherit">Mark Thompson</a></h5>
+																		</div>
+																	</td>
+																	<td>Feedback</td>
+																	<td>March 26, 2024 | 6:00 PM</td>
+																	<td>
+																		<span>Manasvi Suthar</span>
+																	</td>
+																	<td>
+																		<a href="#!">View</a>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="card-footer d-flex justify-content-between align-items-center">
+													<span>Showing 1 to 5 of 12 entries</span>
+
+													<ul class="pagination mb-0 mt-2">
+														<li class="page-item">
+															<a class="page-link" href="#!">Prev</a>
+														</li>
+														<li class="page-item active">
+															<a class="page-link" href="#!">1</a>
+														</li>
+														<li class="page-item">
+															<a class="page-link" href="#!">2</a>
+														</li>
+														<li class="page-item">
+															<a class="page-link" href="#!">3</a>
+														</li>
+														<li class="page-item">
+															<a class="page-link" href="#!">Next</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade show" id="task" role="tabpanel" aria-labelledby="task-tab">
+										<div>
+											<h3 class="mb-5">Tasks</h3>
+										</div>
+										<div class="d-flex flex-column gap-6">
+											<div class="d-flex flex-md-row flex-column gap-2 justify-content-between">
+												<div class="d-flex flex-row gap-3 align-items-center">
+													<div>
+														<form>
+															<div class="input-group">
+																<input class="form-control rounded-3" type="search" value="" id="searchInput" placeholder="Search" />
+																<span class="input-group-append">
+																	<button class="btn ms-n10 rounded-0 rounded-end" type="button">
+																		<svg
+																			xmlns="http://www.w3.org/2000/svg"
+																			width="15"
+																			height="15"
+																			viewBox="0 0 24 24"
+																			fill="none"
+																			stroke="currentColor"
+																			stroke-width="2"
+																			stroke-linecap="round"
+																			stroke-linejoin="round"
+																			class="feather feather-search text-dark"
+																		>
+																			<circle cx="11" cy="11" r="8"></circle>
+																			<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																		</svg>
+																	</button>
+																</span>
+															</div>
+														</form>
+													</div>
+													<a href="#!" class="text-inherit">
+														<span>
+															<i data-feather="sliders" class="icon-xs me-1"></i>
+														</span>
+														<span class="">Filter</span>
+													</a>
+												</div>
+												<div>
+													<a href="#!" class="btn btn-primary">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="none"
+															stroke="currentColor"
+															stroke-width="2"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															class="feather feather-plus icon-xxs me-1"
+														>
+															<line x1="12" y1="5" x2="12" y2="19"></line>
+															<line x1="5" y1="12" x2="19" y2="12"></line>
+														</svg>
+														Create Task
+													</a>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<div class="table-responsive">
+														<table class="table text-nowrap mb-0 table-centered">
+															<thead>
+																<tr>
+																	<th class="rounded-start-3">Status</th>
+																	<th>Task Title</th>
+																	<th>Task type</th>
+																	<th>Assigned To</th>
+																	<th>Due Date</th>
+																	<th>Priority</th>
+																	<th class="rounded-end-3">Actions</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+
+																	<td><a href="#!">Follow-up Call</a></td>
+																	<td class="text-gray-600">Call</td>
+																	<td>
+																		<a href="#!">Jitu Chauhan</a>
+																	</td>
+																	<td class="text-gray-600">Mar 16,2024 10:00 AM</td>
+																	<td><span class="badge badge-danger-soft border-danger border rounded-pill">High</span></td>
+																	<td class="text-center">
+																		<div class="dropdown">
+																			<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+																				<i data-feather="more-horizontal" class="icon-xs text-gray-400"></i>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Action</a></li>
+																				<li><a class="dropdown-item" href="#">Another action</a></li>
+																				<li><a class="dropdown-item" href="#">Something else here</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+
+																	<td><a href="#!">Send Proposal</a></td>
+																	<td class="text-gray-600">Email</td>
+																	<td>
+																		<a href="#!">Anita parmar</a>
+																	</td>
+																	<td class="text-gray-600">Mar 16,2024 10:00 AM</td>
+																	<td><span class="badge badge-warning-soft border-warning border rounded-pill">Medium</span></td>
+																	<td class="text-center">
+																		<div class="dropdown">
+																			<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+																				<i data-feather="more-horizontal" class="icon-xs text-gray-400"></i>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Action</a></li>
+																				<li><a class="dropdown-item" href="#">Another action</a></li>
+																				<li><a class="dropdown-item" href="#">Something else here</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+
+																	<td><a href="#!">Schedule Demo</a></td>
+																	<td class="text-gray-600">Call</td>
+																	<td>
+																		<a href="#!">Sandip Chauhan</a>
+																	</td>
+																	<td class="text-gray-600">Mar 16,2024 10:00 AM</td>
+																	<td><span class="badge badge-info-soft border-info border rounded-pill">Low</span></td>
+																	<td class="text-center">
+																		<div class="dropdown">
+																			<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+																				<i data-feather="more-horizontal" class="icon-xs text-gray-400"></i>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Action</a></li>
+																				<li><a class="dropdown-item" href="#">Another action</a></li>
+																				<li><a class="dropdown-item" href="#">Something else here</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+
+																	<td><a href="#!">Follow-up Email</a></td>
+																	<td class="text-gray-600">Email</td>
+																	<td>
+																		<a href="#!">Sandip Chauhan</a>
+																	</td>
+																	<td class="text-gray-600">Mar 16,2024 10:00 AM</td>
+																	<td><span class="badge badge-info-soft border-info border rounded-pill">Low</span></td>
+																	<td class="text-center">
+																		<div class="dropdown">
+																			<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+																				<i data-feather="more-horizontal" class="icon-xs text-gray-400"></i>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Action</a></li>
+																				<li><a class="dropdown-item" href="#">Another action</a></li>
+																				<li><a class="dropdown-item" href="#">Something else here</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+																<tr>
+																	<td class="pe-0">
+																		<div class="form-check">
+																			<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault20" />
+																			<label class="form-check-label" for="flexCheckDefault20"></label>
+																		</div>
+																	</td>
+
+																	<td><a href="#!">Review Contract</a></td>
+																	<td class="text-gray-600">To Do</td>
+																	<td>
+																		<a href="#!">Sandip Chauhan</a>
+																	</td>
+																	<td class="text-gray-600">Mar 16,2024 10:00 AM</td>
+																	<td><span class="badge badge-info-soft border-info border rounded-pill">Low</span></td>
+																	<td class="text-center">
+																		<div class="dropdown">
+																			<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
+																				<i data-feather="more-horizontal" class="icon-xs text-gray-400"></i>
+																			</a>
+																			<ul class="dropdown-menu">
+																				<li><a class="dropdown-item" href="#">Action</a></li>
+																				<li><a class="dropdown-item" href="#">Another action</a></li>
+																				<li><a class="dropdown-item" href="#">Something else here</a></li>
+																			</ul>
+																		</div>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+
+													<div class="card-footer d-md-flex justify-content-between align-items-center">
+														<span>Showing 1 to 5 of 12 entries</span>
+
+														<ul class="pagination mb-0 mt-2">
+															<li class="page-item">
+																<a class="page-link" href="#!">Prev</a>
+															</li>
+															<li class="page-item active">
+																<a class="page-link" href="#!">1</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">2</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">3</a>
+															</li>
+															<li class="page-item">
+																<a class="page-link" href="#!">Next</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="tab-pane fade show" id="meetings" role="tabpanel" aria-labelledby="meetings-tab">
+										<div>
+											<h3 class="mb-5">Meetings</h3>
+										</div>
+										<div class="d-flex flex-column gap-6">
+											<div class="d-flex flex-md-row flex-column gap-2 justify-content-between">
+												<div>
+													<form>
+														<div class="input-group">
+															<input class="form-control rounded-3" type="search" value="" id="searchInput" placeholder="Search" />
+															<span class="input-group-append">
+																<button class="btn ms-n10 rounded-0 rounded-end" type="button">
+																	<svg
+																		xmlns="http://www.w3.org/2000/svg"
+																		width="15"
+																		height="15"
+																		viewBox="0 0 24 24"
+																		fill="none"
+																		stroke="currentColor"
+																		stroke-width="2"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		class="feather feather-search text-dark"
+																	>
+																		<circle cx="11" cy="11" r="8"></circle>
+																		<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																	</svg>
+																</button>
+															</span>
+														</div>
+													</form>
+												</div>
+												<div>
+													<a href="#!" class="btn btn-primary">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="none"
+															stroke="currentColor"
+															stroke-width="2"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															class="feather feather-plus icon-xxs me-1"
+														>
+															<line x1="12" y1="5" x2="12" y2="19"></line>
+															<line x1="5" y1="12" x2="19" y2="12"></line>
+														</svg>
+														Add Meeting
+													</a>
+												</div>
+											</div>
+											<div>
+												<div class="row g-5">
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Monthly Pipeline Analysis</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-1.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-14.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-15.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-13.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-info-soft border border-info">Scheduled</span></div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="d-flex flex-row gap-2 align-items-center">
+																		<span><img src="../assets/images/svg/zoom.svg" alt="zoom" /></span>
+																		<span>Virtual (Zoom Meeting)</span>
+																	</div>
+																	<div>
+																		<a href="#!" class="btn btn-primary-soft btn-sm">Join now</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Strategy Session for Lead Generation</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-16.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-15.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-info-soft border border-info">Scheduled</span></div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="d-flex flex-row gap-2 align-items-center">
+																		<span><img src="../assets/images/svg/google-meet.svg" alt="google" /></span>
+																		<span>Virtual (Google Meet)</span>
+																	</div>
+																	<div>
+																		<a href="#!" class="btn btn-primary-soft btn-sm">Join now</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Marketing Campaign Planning</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-16.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-15.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-info-soft border border-info">Scheduled</span></div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="d-flex flex-row gap-2 align-items-center">
+																		<span><img src="../assets/images/svg/google-meet.svg" alt="google" /></span>
+																		<span>Virtual (Google Meet)</span>
+																	</div>
+																	<div>
+																		<a href="#!" class="btn btn-primary-soft btn-sm">Join now</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Customer Success Review</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-2.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-3.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-16.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-15.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-info-soft border border-info">Scheduled</span></div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="d-flex flex-row gap-2 align-items-center">
+																		<span><img src="../assets/images/svg/zoom.svg" alt="zoom" /></span>
+																		<span>Virtual (Zoom Meeting)</span>
+																	</div>
+																	<div>
+																		<a href="#!" class="btn btn-primary-soft btn-sm">Join now</a>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Quarterly Business Review</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-6.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-7.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-success-soft border border-success">Meeting Completed</span></div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="card">
+															<div class="card-body d-flex flex-column gap-6">
+																<div class="d-flex flex-column gap-2">
+																	<div><h4 class="mb-0">Product Demo Request</h4></div>
+																	<div class="d-flex flex-column flex-xxl-row gap-1 gap-xxl-4">
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="calendar" class="icon-xs text-gray-400"></i>
+																			<span>March 15, 2024</span>
+																		</div>
+																		<div class="d-flex flex-row gap-2 align-items-center">
+																			<i data-feather="clock" class="icon-xs text-gray-400"></i>
+																			<span>10:00 AM - 11:30 AM</span>
+																		</div>
+																	</div>
+																</div>
+																<div class="d-flex flex-row justify-content-between">
+																	<div class="avatar-group">
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-4.jpg" class="rounded-circle" />
+																		</span>
+																		<span class="avatar avatar-sm">
+																			<img alt="avatar" src="../assets/images/avatar/avatar-5.jpg" class="rounded-circle" />
+																		</span>
+
+																		<span class="avatar avatar-sm avatar-primary">
+																			<span class="avatar-initials rounded-circle">2+</span>
+																		</span>
+																	</div>
+																	<div><span class="badge badge-danger-soft border border-danger">Canceled</span></div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="tab-pane fade show" id="attachments" role="tabpanel" aria-labelledby="attachments-tab">
+										<div>
+											<h3 class="mb-5">Attachments</h3>
+										</div>
+										<div>
+											<div class="d-flex flex-md-row flex-column gap-2 justify-content-between mb-6">
+												<div>
+													<form>
+														<div class="input-group">
+															<input class="form-control rounded-3" type="search" value="" id="searchInput" placeholder="Search" />
+															<span class="input-group-append">
+																<button class="btn ms-n10 rounded-0 rounded-end" type="button">
+																	<svg
+																		xmlns="http://www.w3.org/2000/svg"
+																		width="15"
+																		height="15"
+																		viewBox="0 0 24 24"
+																		fill="none"
+																		stroke="currentColor"
+																		stroke-width="2"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		class="feather feather-search text-dark"
+																	>
+																		<circle cx="11" cy="11" r="8"></circle>
+																		<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+																	</svg>
+																</button>
+															</span>
+														</div>
+													</form>
+												</div>
+												<div>
+													<a href="#!" class="btn btn-primary">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="24"
+															height="24"
+															viewBox="0 0 24 24"
+															fill="none"
+															stroke="currentColor"
+															stroke-width="2"
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															class="feather feather-plus icon-xxs me-1"
+														>
+															<line x1="12" y1="5" x2="12" y2="19"></line>
+															<line x1="5" y1="12" x2="19" y2="12"></line>
+														</svg>
+														Upload new
+													</a>
+												</div>
+											</div>
+											<div>
+												<div class="card">
+													<div class="card-body">
+														<div class="d-flex flex-lg-row flex-column gap-3 justify-content-between align-items-lg-center border-bottom pb-5">
+															<div class="d-flex flex-column gap-lg-2 gap-1">
+																<div class="d-flex flex-row gap-2 align-items-center">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf text-gray-500" viewBox="0 0 16 16">
+																		<path
+																			fill-rule="evenodd"
+																			d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"
+																		/>
+																	</svg>
+																	<h4 class="mb-0">Proposal.pdf</h4>
+																</div>
+																<div class="fs-5">
+																	<span>1.03mb</span>
+																	<div class="vr mx-1"></div>
+																	<span>March 19, 2025 11:53 AM</span>
+																	<div class="vr mx-1"></div>
+																	<span>
+																		Uploaded by:
+																		<a href="#!">Jitu Chauhan</a>
+																	</span>
+																</div>
+															</div>
+															<div class="d-flex flex-row">
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="download" class="icon-xs text-gray-500"></i></a>
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="trash-2" class="icon-xs text-gray-500"></i></a>
+															</div>
+														</div>
+
+														<div class="d-flex flex-lg-row flex-column gap-3 justify-content-between align-items-lg-center border-bottom py-5">
+															<div class="d-flex flex-column gap-lg-2 gap-1">
+																<div class="d-flex flex-row gap-2 align-items-center">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-word-fill text-gray-500" viewBox="0 0 16 16">
+																		<path
+																			d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M5.485 6.879l1.036 4.144.997-3.655a.5.5 0 0 1 .964 0l.997 3.655 1.036-4.144a.5.5 0 0 1 .97.242l-1.5 6a.5.5 0 0 1-.967.01L8 9.402l-1.018 3.73a.5.5 0 0 1-.967-.01l-1.5-6a.5.5 0 1 1 .97-.242z"
+																		/>
+																	</svg>
+																	<h4 class="mb-0">MeetingNotes.docx</h4>
+																</div>
+																<div class="fs-5">
+																	<span>836kb</span>
+																	<div class="vr mx-1"></div>
+																	<span>March 19, 2025 11:53 AM</span>
+																	<div class="vr mx-1"></div>
+																	<span>
+																		Uploaded by:
+																		<a href="#!">Sandip Chauhan</a>
+																	</span>
+																</div>
+															</div>
+															<div class="d-flex flex-row">
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="download" class="icon-xs text-gray-500"></i></a>
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="trash-2" class="icon-xs text-gray-500"></i></a>
+															</div>
+														</div>
+
+														<div class="d-flex flex-lg-row flex-column gap-3 justify-content-between align-items-lg-center border-bottom py-5">
+															<div class="d-flex flex-column gap-lg-2 gap-1">
+																<div class="d-flex flex-row gap-2 align-items-center">
+																	<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-ppt-fill text-gray-500" viewBox="0 0 16 16">
+																		<path d="M8.188 10H7V6.5h1.188a1.75 1.75 0 1 1 0 3.5" />
+																		<path
+																			d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2zM7 5.5a1 1 0 0 0-1 1V13a.5.5 0 0 0 1 0v-2h1.188a2.75 2.75 0 0 0 0-5.5z"
+																		/>
+																	</svg>
+																	<h4 class="mb-0">Presentation.pptx</h4>
+																</div>
+																<div class="fs-5">
+																	<span>2.21mb</span>
+																	<div class="vr mx-1"></div>
+																	<span>March 19, 2025 11:53 AM</span>
+																	<div class="vr mx-1"></div>
+																	<span>
+																		Uploaded by:
+																		<a href="#!">Anita parmar</a>
+																	</span>
+																</div>
+															</div>
+															<div class="d-flex flex-row">
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="download" class="icon-xs text-gray-500"></i></a>
+																<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="trash-2" class="icon-xs text-gray-500"></i></a>
+															</div>
+														</div>
+
+														<div class="d-flex flex-column gap-5 pt-5">
+															<div class="d-flex flex-lg-row flex-column gap-3 justify-content-between align-items-lg-center">
+																<div class="d-flex flex-column gap-lg-2 gap-1">
+																	<div class="d-flex flex-row gap-2 align-items-center">
+																		<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-ppt-fill text-gray-500" viewBox="0 0 16 16">
+																			<path d="M8.188 10H7V6.5h1.188a1.75 1.75 0 1 1 0 3.5" />
+																			<path
+																				d="M4 0h5.293A1 1 0 0 1 10 .293L13.707 4a1 1 0 0 1 .293.707V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2m5.5 1.5v2a1 1 0 0 0 1 1h2zM7 5.5a1 1 0 0 0-1 1V13a.5.5 0 0 0 1 0v-2h1.188a2.75 2.75 0 0 0 0-5.5z"
+																			/>
+																		</svg>
+																		<h4 class="mb-0">DashUI-Preview.jpg</h4>
+																	</div>
+																	<div class="fs-5">
+																		<span>2.3mb</span>
+																		<div class="vr mx-1"></div>
+																		<span>March 19, 2025 11:53 AM</span>
+																		<div class="vr mx-1"></div>
+																		<span>
+																			Uploaded by:
+																			<a href="#!">Jitu Chauhan</a>
+																		</span>
+																	</div>
+																</div>
+																<div class="d-flex flex-row">
+																	<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="download" class="icon-xs text-gray-500"></i></a>
+																	<a href="#!" class="btn btn-icon btn-ghost btn-sm rounded-circle"><i data-feather="trash-2" class="icon-xs text-gray-500"></i></a>
+																</div>
+															</div>
+															<div>
+																<img src="../assets/images/png/bootstrap-5-admin-dashboard-template%201.png" alt="bootstrap 5 admin dashboard template" class="img-fluid rounded" />
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- Modal -->
+		<div class="modal fade" id="add-edit-modal" tabindex="-1" aria-labelledby="add-edit-modal-label" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header border-0">
+						<h4 class="modal-title" id="add-edit-modal-label">Add New Contact</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btn-close-modal"></button>
+					</div>
+					<div class="modal-body">
+						<div>
+							<form>
+								<div>
+									<div class="d-flex align-items-center mb-4">
+										<div>
+											<img class="image avatar avatar-lg" src="../assets/images/avatar/avatar-1.jpg" id="company-logo" alt="Image" />
+										</div>
+										<div class="file-upload btn btn-outline-white ms-4">
+											<input type="file" class="file-input opacity-0" />
+											Upload Photo
+										</div>
+									</div>
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="company-name-field">Company</label>
+									<input type="text" class="form-control" placeholder="Enter Company Name" id="company-name-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="company-owner-field">Owner's Name</label>
+									<input type="text" class="form-control" placeholder="Enter Owner's Name" id="company-owner-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="category-field">Category</label>
+									<input type="text" class="form-control" placeholder="Enter Category" id="category-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="rating-field">Rating</label>
+									<input type="number" step=".01" class="form-control" placeholder="Enter Rating" id="rating-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="email-field">Email</label>
+									<input type="email" class="form-control" placeholder="Enter Email" id="email-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="location-field">Location</label>
+									<input type="text" class="form-control" placeholder="Location" id="location-field" required />
+								</div>
+								<div class="mb-3">
+									<label class="form-label" for="about-company-field">About Company</label>
+									<textarea type="text" class="form-control" placeholder="Enter About Company" id="about-company-field" required rows="3"></textarea>
+								</div>
+								<div class="d-flex justify-content-end">
+									<button type="submit" class="btn btn-primary" id="add-btn">+ Add Company</button>
+									<button type="submit" class="btn btn-primary" id="update-btn">Update</button>
+									<input type="hidden" class="form-control" placeholder="ID" id="id-field" />
+									<button class="btn btn-light ms-2" data-bs-dismiss="modal" aria-label="Close">Close</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<!-- flatpickr -->
+		<script src="../assets/libs/flatpickr/dist/flatpickr.min.js"></script>
+		<!-- Libs JS -->
+
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../assets/js/theme.min.js"></script>
+
+
+		<!-- popper js -->
+		<script src="../assets/libs/%40popperjs/core/dist/umd/popper.min.js"></script>
+
+		<!-- tippy js -->
+		<script src="../assets/libs/tippy.js/dist/tippy-bundle.umd.min.js"></script>
+		<script src="../assets/js/vendors/tooltip.js"></script>
+
+		<!-- Listjs required js scripts -->
+	</body>
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/deals-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:32:29 GMT -->
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:32:40 GMT -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="https://img.icons8.com/?size=100&id=ixEVm6F0REs_&format=png&color=7950F2"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+        integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="author" content="Codescandy" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-M8S4MT3EYG");
+    </script>
+
+    <!-- Color modes -->
+    <script src="/assets/js/vendors/color-modes.js"></script>
+
+    <!-- Libs CSS -->
+    <link href="/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+    <link href="/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/assets/css/theme.min.css" />
+    <title>Forgot Password | eCommerce</title>
+    <style>
+        .error {
+            color: red;
+        }
+
+        .otp-field {
+            flex-direction: row;
+            column-gap: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .otp-field input {
+            height: 45px;
+            width: 42px;
+            border-radius: 6px;
+            outline: none;
+            font-size: 1.125rem;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        .otp-field input:focus {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .otp-field input::-webkit-inner-spin-button,
+        .otp-field input::-webkit-outer-spin-button {
+            display: none;
+        }
+
+        .resend {
+            font-size: 12px;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: black;
+            font-size: 12px;
+            text-align: right;
+            font-family: monospace;
+        }
+
+        .footer a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- container -->
+    <main class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center g-0 min-vh-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xxl-4 py-8 py-xl-0">
+
+                <!-- Card -->
+                <div class="card smooth-shadow-md">
+                    <!-- Card body -->
+                    <div class="card-body p-6">
+                        <div class="mb-4">
+                            <a href="../index.html"><img src="/assets/images/brand/logo/logo-2.svg"
+                                    class="mb-2 text-inverse" alt="Image" /></a>
+                            <p class="mb-6">
+                                Please enter your OTP That is send in your email.
+                            </p>
+
+
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="card bg-white mb-5 mt-5 border-0"
+                                style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
+                                <div class="card-body p-5 text-center">
+                                    <h4>Verify</h4>
+                                    <p>Your code was sent to you via email</p>
+                                    <p id="email" class="mb-6"> </p>
+
+                                    <div class="otp-field mb-4">
+                                        <input type="number" />
+                                        <input type="number" disabled />
+                                        <input type="number" disabled />
+                                        <input type="number" disabled />
+                                        <input type="number" disabled />
+                                        <input type="number" disabled />
+                                    </div>
+
+                                    <button class="btn btn-primary mb-3">
+                                        Verify
+                                    </button>
+
+                                    <p class="resend text-muted mb-0">
+                                        Didn't receive code? <a href="">Request again</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+        integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
+        integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/libs/feather-icons/dist/feather.min.js"></script>
+    <script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+    <!-- Theme JS -->
+    <script src="/assets/js/theme.min.js"></script>
+    <script>
+
+        function obscureEmail(email, visibleLength = 2) {
+            // Split the email into username and domain parts
+            const [username, domain] = email.split('@');
+
+            // Ensure the visible length is not more than the actual length of username or domain
+            const usernameVisibleLength = Math.min(visibleLength, username.length);
+            const domainVisibleLength = Math.min(visibleLength, domain.length);
+
+            // Obscure the username and domain, keeping only the last 'visibleLength' characters visible
+            const obscureUsername = username.length > visibleLength
+                ? '*'.repeat(username.length - usernameVisibleLength) + username.slice(-usernameVisibleLength)
+                : username;
+
+            const obscureDomain = domain.length > visibleLength
+                ? '*'.repeat(domain.length - domainVisibleLength) + domain.slice(-domainVisibleLength)
+                : domain;
+
+            // Return the obscured email
+            return `${obscureUsername}@${obscureDomain}`;
+        }
+
+
+        // Get URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const data = params.get('data');
+        const email = obscureEmail(data, 9);
+        document.getElementById("email").innerText = email
+
+
+        const inputs = document.querySelectorAll(".otp-field > input");
+        const button = document.querySelector(".btn");
+
+        window.addEventListener("load", () => inputs[0].focus());
+        button.setAttribute("disabled", "disabled");
+
+        inputs[0].addEventListener("paste", function (event) {
+            event.preventDefault();
+
+            const pastedValue = (event.clipboardData || window.clipboardData).getData(
+                "text"
+            );
+            const otpLength = inputs.length;
+
+            for (let i = 0; i < otpLength; i++) {
+                if (i < pastedValue.length) {
+                    inputs[i].value = pastedValue[i];
+                    inputs[i].removeAttribute("disabled");
+                    inputs[i].focus;
+                } else {
+                    inputs[i].value = ""; // Clear any remaining inputs
+                    inputs[i].focus;
+                }
+            }
+        });
+
+        inputs.forEach((input, index1) => {
+            input.addEventListener("keyup", (e) => {
+                const currentInput = input;
+                const nextInput = input.nextElementSibling;
+                const prevInput = input.previousElementSibling;
+
+                if (currentInput.value.length > 1) {
+                    currentInput.value = "";
+                    return;
+                }
+
+                if (
+                    nextInput &&
+                    nextInput.hasAttribute("disabled") &&
+                    currentInput.value !== ""
+                ) {
+                    nextInput.removeAttribute("disabled");
+                    nextInput.focus();
+                }
+
+                if (e.key === "Backspace") {
+                    inputs.forEach((input, index2) => {
+                        if (index1 <= index2 && prevInput) {
+                            input.setAttribute("disabled", true);
+                            input.value = "";
+                            prevInput.focus();
+                        }
+                    });
+                }
+
+                button.classList.remove("active");
+                button.setAttribute("disabled", "disabled");
+
+                const inputsNo = inputs.length;
+                if (!inputs[inputsNo - 1].disabled && inputs[inputsNo - 1].value !== "") {
+                    button.classList.add("active");
+                    button.removeAttribute("disabled");
+
+                    return;
+                }
+
+
+            });
+        });
+
+        // Function to check if all OTP fields are filled
+        function checkAllFieldsFilled() {
+            const allFilled = Array.from(inputs).every(input => input.value !== "");
+            if (allFilled) {
+                button.removeAttribute("disabled");
+                button.classList.add("active");
+            } else {
+                button.setAttribute("disabled", "disabled");
+                button.classList.remove("active");
+            }
+        }
+
+        // Handle Verify button click
+        button.addEventListener("click", function () {
+            if (Array.from(inputs).some(input => input.value === "")) {
+                $.toast({
+                    heading: "Error",
+                    text: "Please enter all OTP fields.",
+                    showHideTransition: "slide",
+                    icon: "error",
+                    position: "top-right",
+                });
+                return;
+            }
+
+            // Proceed with OTP verification
+            const otpValue = Array.from(inputs).map(input => input.value).join("");
+
+            //ajax to form submit
+            $.ajax({
+                url: "/api/v1/auth/verify-otp",
+                type: "POST",
+                data: { OTP: otpValue },
+                success: function (response) {
+                    if (response.success) {
+                        $.toast({
+                            heading: "Success",
+                            text: response.message,
+                            showHideTransition: "slide",
+                            icon: "success",
+                            position: "top-right",
+                        });
+                        window.location.href = `/api/v1/auth/newPasssword-page?data=${encodeURIComponent(
+                            response.data
+                        )}`;
+                    }
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.responseJSON || xhr.responseJSON.message) {
+                        $.toast({
+                            heading: "Error",
+                            text: xhr.responseJSON.message,
+                            showHideTransition: "slide",
+                            icon: "error",
+                            position: "top-right",
+                        });
+                    } else {
+                        $.toast({
+                            heading: "Error",
+                            text: "Something Went Wrong",
+                            showHideTransition: "slide",
+                            icon: "error",
+                            position: "top-right",
+                        });
+                    }
+                }
+
+            })
+        });
+    </script>
+
+</body>
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/pages/sign-in.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:32:40 GMT -->
+
+</html>

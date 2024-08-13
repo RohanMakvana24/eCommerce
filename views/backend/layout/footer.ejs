@@ -1,0 +1,113 @@
+<!-- Scripts -->
+
+<!-- Libs JS -->
+<script src="/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+    integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="/assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="/assets/js/theme.min.js"></script>
+
+<script src="/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="/assets/js/vendors/chart.js"></script>
+<script>
+    $(document).ready(function () {
+        //User Check
+        const token = localStorage.getItem("token");
+        if (!token) {
+            window.location.href = "/api/v1/auth/login-page";
+        }
+
+        //Set User Information 
+        const ParseUser = localStorage.getItem("user");
+        const User = JSON.parse(ParseUser);
+        $("#User_name").html(User.firstname + " " + User.lastname)
+        function fetchUser() {
+            const Token = localStorage.getItem("token");
+            const AuthToken = Token.slice(1, -1);
+            //set values
+            $.ajax({
+                url: "/api/v1/auth/get-current",
+                type: "GET",
+                headers: {
+                    Authorization: `Bearer ${AuthToken}`,
+                },
+                success: function (response) {
+                    $("#avatarUser").attr("src",response.data.profilePic[0].url);
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        iziToast.error({
+                            title: "Error",
+                            message: xhr.responseJSON.message,
+                            position: "topRight", // Position of the toast
+                            timeout: 3000, // Duration in milliseconds
+                        });
+                    } else {
+                        iziToast.error({
+                            title: "Error",
+                            message: "Internal Server Error",
+                            position: "topRight", // Position of the toast
+                            timeout: 3000, // Duration in milliseconds
+                        });
+                    }
+                },
+            });
+        }
+        fetchUser();
+
+
+
+        //Logut User
+        $(document).on("click", "#SignOut", function () {
+            LogoutUser();
+
+        });
+        function LogoutUser() {
+            const Token = localStorage.getItem("token");
+            const AuthToken = Token.slice(1, -1);
+            $.ajax({
+                url: "/api/v1/auth/logout",
+                type: "GET",
+                headers: {
+                    Authorization: `Bearer ${AuthToken}`,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        iziToast.success({
+                            title: "Success",
+                            message: response.message,
+                            position: "topRight", // Position of the toast
+                            timeout: 3000, // Duration in milliseconds
+                        });
+                        localStorage.removeItem("user");
+                        localStorage.removeItem("token");
+                        window.location.href = "/api/v1/auth/login-page";
+                    }
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        iziToast.error({
+                            title: "Error",
+                            message: xhr.responseJSON.message,
+                            position: "topRight", // Position of the toast
+                            timeout: 3000, // Duration in milliseconds
+                        });
+                    } else {
+                        iziToast.error({
+                            title: "Error",
+                            message: "Internal Server Error",
+                            position: "topRight", // Position of the toast
+                            timeout: 3000, // Duration in milliseconds
+                        });
+                    }
+                },
+            });
+        }
+    });
+</script>

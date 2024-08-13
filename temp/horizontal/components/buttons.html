@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="horizontal">
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/buttons.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="author" content="Codescandy" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-M8S4MT3EYG');
+</script>
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon/favicon.ico" />
+
+<!-- Color modes -->
+<script src="../../assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="../../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../../assets/css/theme.min.css">
+
+  <link href="../../assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+  <title>Buttons | Dash UI - Bootstrap 5 Admin Dashboard Template</title>
+
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <main id="main-wrapper" class="main-wrapper">
+    <div class="header">
+	<!-- navbar -->
+	<div class="navbar-custom navbar navbar-expand-lg">
+		<div class="container-fluid px-0">
+			<a class="navbar-brand d-block d-md-none" href="../../index.html">
+				<img src="../../assets/images/brand/logo/logo-2.svg" alt="Image" />
+			</a>
+
+			<a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+					<path
+						d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+					/>
+				</svg>
+			</a>
+
+			<div class="d-none d-md-none d-lg-block">
+				<!-- Form -->
+				<form action="#">
+					<div class="input-group">
+						<input class="form-control rounded-3 bg-transparent ps-9" type="search" value="" id="searchInput" placeholder="Search" />
+						<span class="">
+							<button class="btn position-absolute start-0" type="button">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="15"
+									height="15"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather feather-search text-dark"
+								>
+									<circle cx="11" cy="11" r="8"></circle>
+									<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<!--Navbar nav -->
+			<ul class="navbar-nav navbar-right-wrap ms-lg-auto d-flex nav-top-wrap align-items-center ms-4 ms-lg-0">
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-ghost btn-icon rounded-circle" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+							<i class="bi theme-icon-active"></i>
+							<span class="visually-hidden bs-theme-text">Toggle theme</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+									<i class="bi theme-icon bi-sun-fill"></i>
+									<span class="ms-2">Light</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+									<i class="bi theme-icon bi-moon-stars-fill"></i>
+									<span class="ms-2">Dark</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+									<i class="bi theme-icon bi-circle-half"></i>
+									<span class="ms-2">Auto</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="dropdown stopevent ms-2">
+					<a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-xs" data-feather="bell"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="dropdownNotification">
+						<div>
+							<div class="border-bottom px-3 pt-2 pb-3 d-flex justify-content-between align-items-center">
+								<p class="mb-0 text-dark fw-medium fs-4">Notifications</p>
+								<a href="#!" class="text-muted">
+									<span>
+										<i class="me-1 icon-xs" data-feather="settings"></i>
+									</span>
+								</a>
+							</div>
+							<div data-simplebar style="height: 250px">
+								<!-- List group -->
+								<ul class="list-group list-group-flush notification-list-scroll">
+									<!-- List group item -->
+									<li class="list-group-item bg-light">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Rishi Chopra</h5>
+											<p class="mb-0">Mauris blandit erat id nunc blandit, ac eleifend dolor pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Neha Kannned</h5>
+											<p class="mb-0">Proin at elit vel est condimentum elementum id in ante. Maecenas et sapien metus.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Nirmala Chauhan</h5>
+											<p class="mb-0">Morbi maximus urna lobortis elit sollicitudin sollicitudieget elit vel pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Sina Ray</h5>
+											<p class="mb-0">Sed aliquam augue sit amet mauris volutpat hendrerit sed nunc eu diam.</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="border-top px-3 py-2 text-center">
+								<a href="#!" class="text-inherit">View all Notifications</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- List -->
+				<li class="dropdown ms-2">
+					<a class="rounded-circle" href="#!" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="avatar avatar-md avatar-indicators avatar-online">
+							<img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+						<div class="px-4 pb-0 pt-2">
+							<div class="lh-1">
+								<h5 class="mb-1">John E. Grainger</h5>
+								<a href="#!" class="text-inherit fs-6">View my profile</a>
+							</div>
+							<div class="dropdown-divider mt-3 mb-2"></div>
+						</div>
+
+						<ul class="list-unstyled">
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>
+									Edit Profile
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>
+									Activity Log
+								</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>
+									Settings
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../../index.html">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>
+									Sign Out
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+   <!-- navbar horizontal -->
+   <!-- navbar -->
+<div class="navbar-horizontal nav-dashboard">
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-default navbar-dropdown p-0 py-lg-2">
+			<div class="d-flex d-lg-block justify-content-between align-items-center w-100 w-lg-0 py-2 px-4 px-md-2 px-lg-0">
+				<span class="d-lg-none">Menu</span>
+				<!-- Button -->
+				<button
+					class="navbar-toggler collapsed ms-2"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar-default"
+					aria-controls="navbar-default"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="icon-bar top-bar mt-0"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+			</div>
+			<!-- Collapse -->
+			<div class="collapse navbar-collapse px-6 px-lg-0" id="navbar-default">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDashboard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-display="static">Dashboard</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarDashboard">
+							<li>
+								<a class="dropdown-item" href="../index.html">Project</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-analytics.html">Analytics</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-ecommerce.html">Ecommerce</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-crm.html">CRM</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-finance.html">Finance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-blog.html">Blog</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarApps" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apps</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarApps">
+							<li>
+								<a class="dropdown-item" href="../calendar.html">Calendar</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../apps-file-manager.html">File Manager</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../chat-app.html">Chat</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Kanban</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../task-kanban-grid.html" class="dropdown-item">Board</a>
+									</li>
+									<li>
+										<a href="../task-kanban-list.html" class="dropdown-item">List</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Email</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../mail.html" class="dropdown-item">Inbox</a>
+									</li>
+									<li>
+										<a href="../mail-details.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../mail-draft.html" class="dropdown-item">Draft</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Ecommerce</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../ecommerce-products.html" class="dropdown-item">Products</a>
+									</li>
+									<li>
+										<a href="../ecommerce-products-details.html" class="dropdown-item">Prouduct Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-product-edit.html" class="dropdown-item">Add Product</a>
+									</li>
+
+									<li>
+										<a href="../ecommerce-order-list.html" class="dropdown-item">Orders</a>
+									</li>
+									<li>
+										<a href="../ecommerce-order-detail.html" class="dropdown-item">Order Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-cart.html" class="dropdown-item">Shopping Cart</a>
+									</li>
+									<li>
+										<a href="../ecommerce-checkout.html" class="dropdown-item">Checkout</a>
+									</li>
+									<li>
+										<a href="../ecommerce-customer.html" class="dropdown-item">Customers</a>
+									</li>
+									<li>
+										<a href="../ecommerce-seller.html" class="dropdown-item">Seller</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Project</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-grid.html">Grid</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-list.html">List</a>
+									</li>
+
+									<li class="dropdown-submenu dropend">
+										<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Single</a>
+										<ul class="dropdown-menu">
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-overview.html">Overview</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-task.html">Task</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-budget.html">Budget</a>
+											</li>
+
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-files.html">File</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-team.html">Team</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">CRM</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../crm-company.html" class="dropdown-item">Company</a>
+									</li>
+									<li>
+										<a href="../crm-contacts.html" class="dropdown-item">Contacts</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals.html">
+											Deals
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals-single.html">
+											Deals Single
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Invoice</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../invoice-list.html" class="dropdown-item">List</a>
+									</li>
+									<li>
+										<a href="../invoice-detail.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../invoice-generator.html" class="dropdown-item">Create Invoice</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Profile</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../profile-overview.html" class="dropdown-item">Overview</a>
+									</li>
+									<li>
+										<a href="../profile-project.html" class="dropdown-item">Project</a>
+									</li>
+									<li>
+										<a href="../profile-file.html" class="dropdown-item">Files</a>
+									</li>
+									<li>
+										<a href="../profile-team.html" class="dropdown-item">Team</a>
+									</li>
+									<li>
+										<a href="../profile-followers.html" class="dropdown-item">Followers</a>
+									</li>
+									<li>
+										<a href="../profile-activity.html" class="dropdown-item">Activity</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../profile-settings.html">Settings</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Blog</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="../blog-author.html">Author</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../blog-author-detail.html">Detail</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../create-blog-post.html">Create Post</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarAuthentication" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Authentication</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarAuthentication">
+							<li>
+								<a class="dropdown-item" href="../sign-in.html">Sign In</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../sign-up.html">Sign Up</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../forget-password.html">Forgot Password</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layouts</a>
+						<ul class="dropdown-menu dropdown-menu-start" aria-labelledby="layoutsDropdown">
+							<li><span class="dropdown-header">Layouts</span></li>
+							<li class="nav-item">
+								<a class="dropdown-item" href="../../index.html">Default</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="dropdown-item" href="../index.html">Horizontal</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarPages">
+							<li>
+								<a class="dropdown-item" href="../pricing.html">Pricing</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../starter.html">Starter</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">Maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarBaseUI" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+						<div class="dropdown-menu dropdown-menu-xl" aria-labelledby="navbarBaseUI">
+							<div class="row">
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="accordions.html" class="dropdown-item">Accordions</a>
+										</li>
+										<li class="nav-item">
+											<a class="dropdown-item" href="alerts.html">Alert</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="badge.html" class="dropdown-item">Badge</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+										</li>
+										<li class="nav-item">
+											<a href="buttons.html" class="dropdown-item">Buttons</a>
+										</li>
+										<li class="nav-item">
+											<a href="button-group.html" class="dropdown-item">Button group</a>
+										</li>
+										<li class="nav-item">
+											<a href="card.html" class="dropdown-item">Card</a>
+										</li>
+										<li class="nav-item">
+											<a href="carousel.html" class="dropdown-item">Carousel</a>
+										</li>
+										<li class="nav-item">
+											<a href="close-button.html" class="dropdown-item">Close Button</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="collapse.html" class="dropdown-item">Collapse</a>
+										</li>
+										<li class="nav-item">
+											<a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+										</li>
+										<li class="nav-item">
+											<a href="forms.html" class="dropdown-item">Forms</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="list-group.html" class="dropdown-item">List group</a>
+										</li>
+										<li class="nav-item">
+											<a href="modal.html" class="dropdown-item">Modal</a>
+										</li>
+										<li class="nav-item">
+											<a href="navs-tabs.html" class="dropdown-item">Navs and tabs</a>
+										</li>
+										<li class="nav-item">
+											<a href="navbar.html" class="dropdown-item">Navbar</a>
+										</li>
+										<li class="nav-item">
+											<a href="offcanvas.html" class="dropdown-item">Offcanvas</a>
+										</li>
+										<li class="nav-item">
+											<a href="pagination.html" class="dropdown-item">Pagination</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="placeholders.html" class="dropdown-item">Placeholders</a>
+										</li>
+										<li class="nav-item">
+											<a href="popovers.html" class="dropdown-item">Popovers</a>
+										</li>
+										<li class="nav-item">
+											<a href="progress.html" class="dropdown-item">Progress</a>
+										</li>
+										<li class="nav-item">
+											<a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+										</li>
+										<li class="nav-item">
+											<a href="spinners.html" class="dropdown-item">Spinners</a>
+										</li>
+										<li class="nav-item">
+											<a href="tables.html" class="dropdown-item">Tables</a>
+										</li>
+										<li class="nav-item">
+											<a href="toasts.html" class="dropdown-item">Toasts</a>
+										</li>
+										<li class="nav-item">
+											<a href="tooltips.html" class="dropdown-item">Tooltips</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i data-feather="more-horizontal" class="icon-xxs"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
+							<div class="list-group">
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/index.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="file-text" class="icon-sm text-primary"></i>
+
+										<div class="ms-3">
+											<h5 class="mb-0">Documentations</h5>
+											<p class="mb-0 fs-6">Browse the all documentation</p>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/changelog.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="layers" class="icon-sm text-primary"></i>
+										<div class="ms-3">
+											<h5 class="mb-0">
+												Changelog
+												<span class="text-primary ms-1">v1.0.0</span>
+											</h5>
+											<p class="mb-0 fs-6">See what's new</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+    <!-- Page Content -->
+
+
+    </div>
+    <div id="app-content">
+      <div class="app-content-area">
+      <!-- Container fluid -->
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-9 col-md-12 col-sm-12 col-12 ">
+
+              <!-- Content -->
+              <div class="">
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mb-8" id="intro">
+                      <h1 class="mb-0 h2">Buttons</h1>
+                      <p class="mb-0 text-muted">Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- simple-button -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="button" class="mb-4">
+                      <h2 class="h3 mb-1">Buttons</h2>
+                      <p>Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-simple-button-design-tab" data-bs-toggle="pill"
+                            href="#pills-simple-button-design" role="tab" aria-controls="pills-simple-button-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-simple-button-html-tab" data-bs-toggle="pill"
+                            href="#pills-simple-button-html" role="tab" aria-controls="pills-simple-button-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-simple-button-design"
+                          role="tabpanel" aria-labelledby="pills-simple-button-design-tab">
+                          <!-- Primary Button -->
+                          <button type="button" class="btn btn-primary mb-2">Primary</button>
+
+                          <!-- Secondary Button -->
+                          <button type="button" class="btn btn-secondary mb-2">Secondary</button>
+
+                          <!-- Success Button -->
+                          <button type="button" class="btn btn-success mb-2">Success</button>
+
+                          <!-- Danger Button -->
+                          <button type="button" class="btn btn-danger mb-2">Danger</button>
+
+                          <!-- Warning Button -->
+                          <button type="button" class="btn btn-warning mb-2">Warning</button>
+
+                          <!-- Info Button -->
+                          <button type="button" class="btn btn-info mb-2">Info</button>
+
+                          <!-- Light Button -->
+                          <button type="button" class="btn btn-light mb-2">Light</button>
+
+                          <!-- Dark Button -->
+                          <button type="button" class="btn btn-dark mb-2">Dark</button>
+
+                          <!-- Link Button -->
+                          <button type="button" class="btn btn-link mb-2">Link</button>
+
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-simple-button-html" role="tabpanel"
+                          aria-labelledby="pills-simple-button-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Primary Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Secondary Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-secondary mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Success Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-success mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Danger Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-danger mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Warning Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-warning mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Info Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-info mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Light Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-light mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Dark Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-dark mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Link Button --&gt;</span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-link mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+                       <!-- Outline buttons -->
+                       <div class="row">
+                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                           <div id="outline-button" class="mb-4">
+                             <h2 class="h3 mb-1">Outline buttons</h2>
+                             <p>In need of a button, but not the hefty background colors they bring? Replace
+                               the default modifier classes with the <code class="highlighter-rouge">.btn-outline-*</code> ones
+                               to remove all
+                               background images and colors
+                               on any button.</p>
+                           </div>
+                           <!-- Card -->
+                           <div class="card mb-10">
+                             <ul class="nav nav-line-bottom " id="pills-tab-outline-button" role="tablist">
+                               <li class="nav-item">
+                                 <a class="nav-link active" id="pills-outline-button-design-tab" data-bs-toggle="pill"
+                                   href="#pills-outline-button-design" role="tab" aria-controls="pills-outline-button-design"
+                                   aria-selected="true">Design</a>
+                               </li>
+                               <li class="nav-item">
+                                 <a class="nav-link" id="pills-outline-button-html-tab" data-bs-toggle="pill"
+                                   href="#pills-outline-button-html" role="tab" aria-controls="pills-outline-button-html"
+                                   aria-selected="false">HTML</a>
+                               </li>
+                             </ul>
+                             <!-- Tab content -->
+                             <div class="tab-content p-4" id="pills-tabContent-outline-button">
+                               <div class="tab-pane tab-example-design fade show active" id="pills-outline-button-design"
+                                 role="tabpanel" aria-labelledby="pills-outline-button-design-tab">
+                                 <!-- Primary Outline Button -->
+                                 <button type="button" class="btn btn-outline-primary mb-2">Primary</button>
+
+                                 <!-- Secondary Outline Button -->
+                                 <button type="button" class="btn btn-outline-secondary mb-2">Secondary</button>
+
+                                 <!-- Success Outline Button -->
+                                 <button type="button" class="btn btn-outline-success mb-2">Success</button>
+
+                                 <!-- Danger Outline Button -->
+                                 <button type="button" class="btn btn-outline-danger mb-2">Danger</button>
+
+                                 <!-- Warning Outline Button -->
+                                 <button type="button" class="btn btn-outline-warning mb-2">Warning</button>
+
+                                 <!-- Info Outline Button -->
+                                 <button type="button" class="btn btn-outline-info mb-2">Info</button>
+
+                                 <!-- Light Outline Button -->
+                                 <button type="button" class="btn btn-outline-light mb-2">Light</button>
+
+                                 <!-- Dark Outline Button -->
+                                 <button type="button" class="btn btn-outline-dark mb-2">Dark</button>
+
+
+                               </div>
+                               <div class="tab-pane tab-example-html fade " id="pills-outline-button-html" role="tabpanel"
+                                 aria-labelledby="pills-outline-button-html-tab">
+                                 <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Primary Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-primary mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Secondary Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-secondary mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Success Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-success mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Danger Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-danger mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Warning Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-warning mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Info Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-info mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Light Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-light mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+          <span class="token comment">&lt;!-- Dark Outline Button --&gt;</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-outline-dark mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                               </div>
+                             </div>
+                           </div>
+                         </div>
+                       </div>
+                            <!-- Soft buttons -->
+                            <div class="row">
+                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div id="soft-button" class="mb-4">
+                                  <h2 class="h3 mb-1">Soft buttons</h2>
+                                  <p>In need of a button, but not the hefty background colors they bring? Replace
+                                    the default modifier classes with the <code class="highlighter-rouge">.btn-soft-*</code> ones
+                                    to remove all
+                                    background images and colors
+                                    on any button.</p>
+                                </div>
+                                <!-- Card -->
+                                <div class="card mb-10">
+                                  <ul class="nav nav-line-bottom " id="pills-tab-soft-button" role="tablist">
+                                    <li class="nav-item">
+                                      <a class="nav-link active" id="pills-soft-button-design-tab" data-bs-toggle="pill"
+                                        href="#pills-soft-button-design" role="tab" aria-controls="pills-soft-button-design"
+                                        aria-selected="true">Design</a>
+                                    </li>
+                                    <li class="nav-item">
+                                      <a class="nav-link" id="pills-soft-button-html-tab" data-bs-toggle="pill"
+                                        href="#pills-soft-button-html" role="tab" aria-controls="pills-soft-button-html"
+                                        aria-selected="false">HTML</a>
+                                    </li>
+                                  </ul>
+                                  <!-- Tab content -->
+                                  <div class="tab-content p-4" id="pills-tabContent-soft-button">
+                                    <div class="tab-pane tab-example-design fade show active" id="pills-soft-button-design"
+                                      role="tabpanel" aria-labelledby="pills-soft-button-design-tab">
+                                      <!-- Primary soft Button -->
+                                      <button type="button" class="btn btn-primary-soft mb-2">Primary</button>
+
+                                      <!-- Secondary soft Button -->
+                                      <button type="button" class="btn btn-secondary-soft mb-2">Secondary</button>
+
+                                      <!-- Success soft Button -->
+                                      <button type="button" class="btn btn-success-soft mb-2">Success</button>
+
+                                      <!-- Danger soft Button -->
+                                      <button type="button" class="btn btn-danger-soft mb-2">Danger</button>
+
+                                      <!-- Warning soft Button -->
+                                      <button type="button" class="btn btn-warning-soft mb-2">Warning</button>
+
+                                      <!-- Info soft Button -->
+                                      <button type="button" class="btn btn-info-soft mb-2">Info</button>
+
+                                      <!-- Light soft Button -->
+                                      <button type="button" class="btn btn-light-soft mb-2">Light</button>
+
+                                      <!-- Dark soft Button -->
+                                      <button type="button" class="btn btn-dark-soft mb-2">Dark</button>
+
+
+                                    </div>
+                                    <div class="tab-pane tab-example-html fade " id="pills-soft-button-html" role="tabpanel"
+                                      aria-labelledby="pills-soft-button-html-tab">
+                                      <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Primary Outline Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Secondary Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-secondary-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Success Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-success-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Danger Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-danger-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Warning Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-warning-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Info Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-info-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Light Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-light-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+               <span class="token comment">&lt;!-- Dark Button --&gt;</span>
+               <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-dark-soft mb-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                <!-- simple-button -->
+
+                <!-- buttons tag -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="button-tags" class="mb-4">
+                      <h2 class="h3 mb-1">Button tags</h2>
+                      <p>The <code>.btn</code> classes are designed to be used with the <code>&lt;button&gt;</code> element. However, you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-tags" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-tags-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-tags-design" role="tab" aria-controls="pills-button-tags-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-tags-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-tags-html" role="tab" aria-controls="pills-button-tags-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-tags">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-tags-design"
+                          role="tabpanel" aria-labelledby="pills-button-tags-design-tab">
+
+                          <a class="btn btn-primary" href="#" role="button">Link</a>
+                          <button class="btn btn-primary" type="submit">Button</button>
+                          <input class="btn btn-primary" type="button" value="Input">
+                          <input class="btn btn-primary" type="submit" value="Submit">
+                          <input class="btn btn-primary" type="reset" value="Reset">
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-tags-html" role="tabpanel"
+                          aria-labelledby="pills-button-tags-html-tab">
+
+                              <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Button Tag --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Input<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Submit<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>reset<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Reset<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Outline buttons -->
+
+                <!-- Sizes -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="sizes" class="mb-4">
+                      <h2 class="h3 mb-1">Sizes</h2>
+                      <p>Fancy larger or smaller buttons? Add <code class="highlighter-rouge">.btn-lg</code> or <code
+                          class="highlighter-rouge">.btn-sm</code> for additional sizes.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-size-large" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-size-large-design-tab" data-bs-toggle="pill"
+                            href="#pills-size-large-design" role="tab" aria-controls="pills-size-large-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-size-large-html-tab" data-bs-toggle="pill"
+                            href="#pills-size-large-html" role="tab" aria-controls="pills-size-large-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-size-large">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-size-large-design"
+                          role="tabpanel" aria-labelledby="pills-size-large-design-tab">
+                          <button type="button" class="btn btn-primary btn-lg">Large
+                            button</button>
+                          <button type="button" class="btn btn-primary">Default
+                            button</button>
+                          <button type="button" class="btn btn-primary btn-sm">Small
+                            button</button>
+                          <button type="button" class="btn btn-primary btn-xs">Xtra Small
+                            button</button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-size-large-html" role="tabpanel"
+                          aria-labelledby="pills-size-large-html-tab">
+
+                              <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Sizing Button --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-lg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Large
+      button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Default
+      button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-sm<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Small
+     button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-xs<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Xtra Small
+   button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Sizes -->
+
+                <!-- Button block -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="buttonBlock" class="mb-4">
+                      <h2 class="h3 mb-1">Block buttons</h2>
+                      <p>Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-block" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-block-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-design" role="tab" aria-controls="pills-button-block-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-block-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-html" role="tab" aria-controls="pills-button-block-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab Content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-block">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-block-design"
+                          role="tabpanel" aria-labelledby="pills-button-block-design-tab">
+                          <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">Button</button>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-block-html" role="tabpanel"
+                          aria-labelledby="pills-button-block-html-tab">
+
+                              <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Button Block --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-grid gap-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                    <p class="mb-3">Here we create a responsive variation, starting with vertically stacked buttons until the <code>md</code> breakpoint, where <code>.d-md-block</code> replaces the <code>.d-grid</code> class, thus nullifying the <code>gap-2</code> utility. Resize your browser to see them change.</p>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-block-center" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-block-center-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-center-design" role="tab" aria-controls="pills-button-block-center-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-block-center-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-center-html" role="tab" aria-controls="pills-button-block-center-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab Content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-block-center">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-block-center-design"
+                          role="tabpanel" aria-labelledby="pills-button-block-center-design-tab">
+                          <div class="d-grid gap-2 d-md-block">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">Button</button>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-block-center-html" role="tabpanel"
+                          aria-labelledby="pills-button-block-center-html-tab">
+
+                              <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Button Block --&gt;</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-grid gap-2 d-md-block<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+                                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+                              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                    <p class="mb-3">You can adjust the width of your block buttons with grid column width classes. For example, for a half-width “block button”, use <code>.col-6</code>. Center it horizontally with <code>.mx-auto</code>, too.</p>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-block-left" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-block-left-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-left-design" role="tab" aria-controls="pills-button-block-left-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-block-left-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-left-html" role="tab" aria-controls="pills-button-block-left-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab Content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-block-left">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-block-left-design"
+                          role="tabpanel" aria-labelledby="pills-button-block-left-design-tab">
+                          <div class="d-grid gap-2 col-6 mx-auto">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">Button</button>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-block-left-html" role="tabpanel"
+                          aria-labelledby="pills-button-block-left-html-tab">
+                              <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Button Block --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-grid gap-2 col-6 mx-auto<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <p class="mb-3">Additional utilities can be used to adjust the alignment of buttons when horizontal. Here we’ve taken our previous responsive example and added some flex utilities and a margin utility on the button to right align the buttons when they’re no longer stacked.</p>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-block-right" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-block-right-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-right-design" role="tab" aria-controls="pills-button-block-right-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-block-right-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-block-right-html" role="tab" aria-controls="pills-button-block-right-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab Content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-block-right">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-block-right-design"
+                          role="tabpanel" aria-labelledby="pills-button-block-right-design-tab">
+                          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">Button</button>
+                          </div>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-block-right-html" role="tabpanel"
+                          aria-labelledby="pills-button-block-right-html-tab">
+                              <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Button Block --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>d-grid gap-2 d-md-flex justify-content-md-end<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Button block -->
+
+                <!-- Button Icon -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="button-icon" class="mb-4">
+                      <h2 class="h3 mb-1">Button icons </h2>
+                      <p>A contained button with an icon.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-icon" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-icon-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-design" role="tab" aria-controls="pills-button-icon-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-icon-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-html" role="tab" aria-controls="pills-button-icon-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-icon">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-icon-design"
+                          role="tabpanel" aria-labelledby="pills-button-icon-design-tab">
+                          <button type="button" class="btn btn-primary">
+                            Your Text Goes Here <i class="fe fe-shopping-bag ms-1"></i>
+                          </button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-icon-html" role="tabpanel"
+                          aria-labelledby="pills-button-icon-html-tab">
+
+                              <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Button With Icon --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   Your Text Goes Here <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fe fe-shopping-bag ms-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      With fixed width and height.
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-icon-fixed" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-icon-fixed-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-fixed-design" role="tab"
+                            aria-controls="pills-button-icon-fixed-design" aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-icon-fixed-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-fixed-html" role="tab" aria-controls="pills-button-icon-fixed-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-icon-fixed">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-icon-fixed-design"
+                          role="tabpanel" aria-labelledby="pills-button-icon-fixed-design-tab">
+                          <!-- Button with Icon-->
+                          <button type="button" class="btn btn-primary btn-icon">
+                            +
+                          </button>
+                          <button type="button" class="btn btn-primary btn-icon">
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                          </button>
+
+                          <button type="button" class="btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2">
+                            +
+                          </button>
+
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-icon-fixed-html" role="tabpanel"
+                          aria-labelledby="pills-button-icon-fixed-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Button with Icon--&gt;</span>
+  <span class="token comment">&lt;!-- Button with Icon--&gt;</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        +
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-icon<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>spinner-border spinner-border-sm<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>status<span class="token punctuation">"</span></span> <span class="token attr-name">aria-hidden</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-icon btn-white border border-2 rounded-circle btn-dashed ms-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        +
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      Also available in all button sizes.
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-icon-fixed-size" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-icon-fixed-size-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-fixed-size-design" role="tab"
+                            aria-controls="pills-button-icon-fixed-size-design" aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-icon-fixed-size-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-icon-fixed-size-html" role="tab"
+                            aria-controls="pills-button-icon-fixed-size-html" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-icon-fixed-size">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-icon-fixed-size-design"
+                          role="tabpanel" aria-labelledby="pills-button-icon-fixed-size-design-tab">
+                          <!-- Button with icon Size -->
+                          <button type="button" class="btn btn-primary btn-lg">
+                            +
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            +
+                          </button>
+                          <button type="button" class="btn btn-primary btn-sm">
+                            +
+                          </button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-icon-fixed-size-html"
+                          role="tabpanel" aria-labelledby="pills-button-icon-fixed-size-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Button with icon Size --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-lg<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      +
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      +
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary btn-sm<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+      +
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Button Icon -->
+
+                <!-- Active state -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="active-state" class="mb-4">
+                      <h2 class="h3 mb-1">Active state</h2>
+                      <p>Buttons will appear pressed (with a darker background, darker border, and
+                        inset shadow) when active. <strong>There’s no need to add a class to <code
+                            class="highlighter-rouge">&lt;button&gt;</code>s as they use a
+                          pseudo-class</strong>. However, you can still force the same active
+                        appearance with <code class="highlighter-rouge">.active</code> (and include
+                        the
+                        <code>aria-pressed="true"</code> attribute) should you need to replicate the
+                        state programmatically.
+                      </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-active" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-active-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-active-design" role="tab" aria-controls="pills-button-active-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-active-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-active-html" role="tab" aria-controls="pills-button-active-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-active">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-active-design"
+                          role="tabpanel" aria-labelledby="pills-button-active-design-tab">
+                          <a href="#" class="btn btn-primary  active" role="button" aria-pressed="true">Primary link</a>
+                          <a href="#" class="btn btn-secondary  active" role="button" aria-pressed="true">Link</a>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-active-html" role="tabpanel"
+                          aria-labelledby="pills-button-active-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Button Active State --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-primary btn-lg active<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">aria-pressed</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary btn-lg active<span class="token punctuation">"</span></span> <span class="token attr-name">role</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">aria-pressed</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Link<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Active state -->
+
+                <!-- Disabled state -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="disabled-state" class="mb-4">
+                      <h2 class="h3 mb-1">Disabled state</h2>
+                      <p>Make buttons look inactive by adding the <code class="highlighter-rouge">disabled</code> boolean
+                        attribute to any <code class="highlighter-rouge">&lt;button&gt;</code> element.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-disabled" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-disabled-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-disabled-design" role="tab" aria-controls="pills-button-disabled-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-disabled-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-disabled-html" role="tab" aria-controls="pills-button-disabled-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-disabled">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-disabled-design"
+                          role="tabpanel" aria-labelledby="pills-button-disabled-design-tab">
+                          <button type="button" class="btn btn-primary" disabled>Primary
+                            button</button>
+                          <button type="button" class="btn btn-secondary" disabled>Button</button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-disabled-html" role="tabpanel"
+                          aria-labelledby="pills-button-disabled-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Button Disabled --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">&gt;</span></span>Primary button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>btn btn-secondary<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">&gt;</span></span>Button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Disabled state -->
+
+                <!-- Toggle states -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="toggle-state" class="mb-4">
+                      <h2 class="h3 mb-1">Toggle states</h2>
+                      <p>Add <code class="highlighter-rouge">data-bs-toggle="button"</code> to toggle a
+                        button’s <code class="highlighter-rouge">active</code> state. If you’re
+                        pre-toggling a button, you must manually add the <code class="highlighter-rouge">.active</code>
+                        class <strong>and</strong>
+                        <code class="highlighter-rouge">aria-pressed="true"</code> to the <code
+                          class="highlighter-rouge">&lt;button&gt;</code>.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10">
+                      <ul class="nav nav-line-bottom " id="pills-tab-button-toggle" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-button-toggle-design-tab" data-bs-toggle="pill"
+                            href="#pills-button-toggle-design" role="tab" aria-controls="pills-button-toggle-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-button-toggle-html-tab" data-bs-toggle="pill"
+                            href="#pills-button-toggle-html" role="tab" aria-controls="pills-button-toggle-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-button-toggle">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-button-toggle-design"
+                          role="tabpanel" aria-labelledby="pills-button-toggle-design-tab">
+                          <button type="button" class="btn btn-primary" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+                          <button type="button" class="btn btn-primary active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+                          <button type="button" class="btn btn-primary" disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-button-toggle-html" role="tabpanel"
+                          aria-labelledby="pills-button-toggle-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Toggle State --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Toggle button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary active<span class="token punctuation">"</span></span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> <span class="token attr-name">aria-pressed</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Active toggle button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span> <span class="token attr-name">data-bs-toggle</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Disabled toggle button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
+              <!-- Sidebar nav fixed -->
+              <div class="sidebar-nav-fixed">
+                <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
+                <ul class="list-unstyled">
+                  <li><a href="#intro" class="active">Introduction</a></li>
+                  <li><a href="#button">Button </a></li>
+                  <li><a href="#outline-button">Outline </a></li>
+                  <li><a href="#button-tags">Button tags </a></li>
+                  <li><a href="#sizes">Sizes</a></li>
+                  <li><a href="#buttonBlock">Button block</a></li>
+                  <li><a href="#button-icon">Button Icon</a></li>
+                  <li><a href="#active-state">Active State</a></li>
+                  <li><a href="#disabled-state">Disabled State</a></li>
+                  <li><a href="#toggle-state">Toggle State</a></li>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <!-- Scripts -->
+  <script src="../../assets/libs/prismjs/prism.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <!-- Libs JS -->
+
+<script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../../assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../../assets/js/theme.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/buttons.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+</html>

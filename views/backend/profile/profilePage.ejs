@@ -1,0 +1,450 @@
+<%- include('../layout/header.ejs') %>
+  <main id="main-wrapper" class="main-wrapper">
+    <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+
+        <div id="app-content">
+          <!-- Container fluid -->
+          <div class="app-content-area">
+            <div class="container-fluid">
+              <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                  <!-- Bg -->
+                  <div class="pt-20 rounded-top" style="
+                background: url(../assets/images/background/profile-cover.jpg)
+                  no-repeat;
+                background-size: cover;
+              "></div>
+                  <div class="card rounded-bottom rounded-0 smooth-shadow-sm mb-5">
+                    <div class="d-flex align-items-center justify-content-between pt-4 pb-6 px-4">
+                      <div class="d-flex align-items-center">
+                        <!-- avatar -->
+                        <div
+                          class="avatar-xxl avatar-indicators avatar-online me-2 position-relative d-flex justify-content-end align-items-end mt-n10">
+                          <img src="" class="avatar-xxl rounded-circle border border-2" id="myImage" alt="Image" />
+                          <a href="#!" class="position-absolute top-0 right-0 me-2">
+                            <img id="ProfilePictureUploader"
+                              src="https://img.icons8.com/?size=100&id=102544&format=png&color=000000" style="
+                          margin-top: 85px;
+                          margin-left: -36px;
+                          height: 35px;
+                          width: 35px;
+                        " alt="Image" class="icon-sm" />
+                            <input type="file" id="fileInput" style="display: none" />
+                            <div style="
+                          background-color: rgb(39, 110, 172);
+                          border-radius: 50%;
+                          margin-top: 5px;
+                        "></div>
+                          </a>
+                        </div>
+                        <!-- text -->
+                        <div class="lh-1">
+                          <h2 class="mb-0" id="setName">
+                            <a href="#!" class="text-decoration-none"> </a>
+                          </h2>
+                          <p class="mb-0 d-block">@imjituchauhan</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- nav -->
+                    <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="">Overview</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- content -->
+              <div>
+                <!-- row -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100">
+                      <!-- card body -->
+                      <div class="card-header">
+                        <h4 class="mb-0">About Me</h4>
+                      </div>
+                      <div class="card-body">
+                        <!-- card title -->
+
+                        <h5 class="text-uppercase">Bio</h5>
+                        <!-- text -->
+                        <p class="mt-2 mb-6">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                          Suspen disse var ius enim in eros elementum tristique. Duis
+                          cursus, mi quis viverra ornare, eros dolor interdum nulla,
+                          ut commodo diam libero vitae erat.
+                        </p>
+                        <!-- row -->
+                        <div class="row">
+                          <div class="col-6 mb-5">
+                            <h5 class="text-uppercase">FirstName</h5>
+                            <p class="mb-0" id="setFirstName"></p>
+                          </div>
+                          <div class="col-6 mb-5">
+                            <h5 class="text-uppercase">LastName</h5>
+                            <p class="mb-0" id="setLastName"></p>
+                          </div>
+                          <div class="col-6">
+                            <h5 class="text-uppercase">Email</h5>
+                            <p class="mb-0" id="setEmail"></p>
+                          </div>
+                          <div class="col-6">
+                            <h5 class="text-uppercase">Location</h5>
+                            <p class="mb-0">Ahmedabad, India</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100">
+                      <!-- card body -->
+                      <div class="card-header">
+                        <h4 class="mb-0">Edit</h4>
+                      </div>
+                      <div class="card-body">
+                        <!-- card title -->
+                        <form id="EditUserForm">
+                          <div class="row">
+                            <div class="col">
+                              <label> First Name </label>
+                              <input type="text" id="fname" name="fname" class="form-control"
+                                placeholder="First name" />
+                            </div>
+                            <div class="col">
+                              <label> Last Name </label>
+                              <input type="text" id="lname" name="lname" class="form-control" placeholder="Last name" />
+                            </div>
+                          </div>
+                          <br />
+                          <div class="row">
+                            <div class="col">
+                              <label>Email</label>
+                              <input type="email" id="email" name="email" class="form-control" placeholder="Email" />
+                            </div>
+                          </div>
+                          <div class="row mt-2">
+                            <div class="col-2">
+                              <button type="submit" class="btn btn-primary">
+                                Edit
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-5">
+                    <!-- card -->
+                    <div class="card h-100">
+                      <!-- card body -->
+                      <div class="card-header">
+                        <h4 class="mb-0">Reset Password</h4>
+                      </div>
+                      <div class="card-body">
+                        <!-- card title -->
+                        <form id="ResetPasswordForm">
+                          <div class="row">
+                            <div class="col">
+                              <label>Old Password </label>
+                              <input type="password" id="oldpassword" name="oldPassword" class="form-control"
+                                placeholder="Old Password" />
+                            </div>
+                          </div>
+
+                          <div class="row mt-2">
+                            <div class="col">
+                              <label>New Password </label>
+                              <input type="password" id="newpassword" name="newPassword" class="form-control"
+                                placeholder="New Password" />
+                            </div>
+                          </div>
+                          <div class="row mt-2">
+                            <div class="col-2">
+                              <button type="submit" class="btn btn-primary">
+                                Reset
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- The Modal -->
+        <div id="loadingModal">
+          <div class="modal-content">
+            <div class="loadingicon"></div>
+            <spna class="loader"></spna>
+          </div>
+        </div>
+  </main>
+  <%- include('../layout/footer.ejs') %>
+    <script>
+      $(document).ready(function () {
+        //fetching User
+        function fetchUser() {
+          const Token = localStorage.getItem("token");
+          const AuthToken = Token.slice(1, -1);
+          //set values
+          $.ajax({
+            url: "/api/v1/auth/get-current",
+            type: "GET",
+            headers: {
+              Authorization: `Bearer ${AuthToken}`,
+            },
+            success: function (response) {
+              $("#setFirstName").html(response.data.firstname);
+              $("#setLastName").html(response.data.lastname);
+              $("#setEmail").html(response.data.email);
+              $("#fname").val(response.data.firstname);
+              $("#lname").val(response.data.lastname);
+              $("#email").val(response.data.email);
+              $("#setName").html(
+                response.data.firstname + " " + response.data.lastname
+              );
+              $("#myImage").attr("src", response.data.profilePic[0].url);
+            },
+            error: function (xhr, status, error) {
+              if (xhr.responseJSON && xhr.responseJSON.message) {
+                iziToast.error({
+                  title: "Error",
+                  message: xhr.responseJSON.message,
+                  position: "topRight", // Position of the toast
+                  timeout: 3000, // Duration in milliseconds
+                });
+              } else {
+                iziToast.error({
+                  title: "Error",
+                  message: "Internal Server Error",
+                  position: "topRight", // Position of the toast
+                  timeout: 3000, // Duration in milliseconds
+                });
+              }
+            },
+          });
+        }
+        fetchUser();
+
+        //Update Profile
+        $(document).on("click", "#ProfilePictureUploader", function () {
+          $("#fileInput").click();
+        });
+        $(document).on("change", "#fileInput", function () {
+          $("#loadingModal").fadeIn();
+          const fileInput = document.getElementById("fileInput");
+          const file = fileInput.files[0];
+
+          if (file) {
+            const formData = new FormData();
+            formData.append("file", file);
+            const Token = localStorage.getItem("token");
+            const AuthToken = Token.slice(1, -1);
+            $.ajax({
+              url: "/api/v1/auth/profile-upload",
+              type: "POST",
+              data: formData,
+              headers: {
+                Authorization: `Bearer ${AuthToken}`,
+              },
+              processData: false, // Prevent jQuery from automatically processing the data
+              contentType: false,
+              success: function (response) {
+                $("#loadingModal").fadeOut();
+                if (response.success) {
+                  iziToast.success({
+                    title: "Success",
+                    message: response.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                  fetchUser();
+
+                  //localstorage update User
+                  const UpData = response.data;
+                  const User = localStorage.getItem("user");
+                  const JUser = JSON.parse(User);
+                  // Remove the profilePic property
+                  delete JUser.profilePic;
+                  JUser["profilePic"] = [
+                    {
+                      public_id: UpData.public_id,
+                      url: UpData.url,
+                      _id: UpData._id,
+                    },
+                  ];
+                  console.log(JUser);
+                  const StringUser = JSON.stringify(JUser);
+                  localStorage.removeItem("user");
+                  localStorage.setItem("user", StringUser);
+                }
+              },
+              error: function (xhr, status, error) {
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                  iziToast.error({
+                    title: "Error",
+                    message: xhr.responseJSON.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                } else {
+                  iziToast.error({
+                    title: "Error",
+                    message: "Internal Server Error",
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
+              },
+            });
+          }
+        });
+
+        //Update User Details
+        //Validation
+        $("#EditUserForm").validate({
+          rules: {
+            fname: {
+              required: true,
+            },
+            lname: {
+              required: true,
+            },
+            email: {
+              required: true,
+              email: true,
+            },
+          },
+        });
+
+        $("#EditUserForm").on("submit", function (event) {
+          event.preventDefault();
+          const formData = $(this).serialize();
+          const Token = localStorage.getItem("token");
+          const AuthToken = Token.slice(1, -1);
+          if ($(this).valid()) {
+            $.ajax({
+              url: "/api/v1/auth/update-user",
+              type: "POST",
+              headers: {
+                Authorization: `Bearer ${AuthToken}`,
+              },
+              data: formData,
+              success: function (response) {
+                if (response.success) {
+                  iziToast.success({
+                    title: "Success",
+                    message: response.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                  fetchUser();
+                }
+              },
+              error: function (xhr, status, error) {
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                  iziToast.error({
+                    title: "Error",
+                    message: xhr.responseJSON.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                } else {
+                  iziToast.error({
+                    title: "Error",
+                    message: "Internal Server Error",
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
+              },
+            });
+          }
+        });
+
+        //Reset Password
+
+        // Define custom password validation method
+        $.validator.addMethod(
+          "complexPassword",
+          function (value, element) {
+            return (
+              this.optional(element) ||
+              (/[A-Z]/.test(value) &&
+                /\d/.test(value) &&
+                /[!@#$%^&*(),.?":{}|<>]/.test(value))
+            );
+          },
+          "Password must contain at least one uppercase letter, one digit, and one special character."
+        );
+        $("#ResetPasswordForm").validate({
+          rules: {
+            oldPassword: {
+              required: true,
+            },
+            newPassword: {
+              required: true,
+              complexPassword: true
+            },
+          },
+        });
+        //Reset Password Form Submiting 
+        $("#ResetPasswordForm").on("submit", function (event) {
+          event.preventDefault();
+          const formData = $(this).serialize();
+          const Token = localStorage.getItem("token");
+          const AuthToken = Token.slice(1, -1);
+          if ($(this).valid()) {
+            $.ajax({
+              url: "/api/v1/auth/resetPassword",
+              type: "POST",
+              headers: {
+                Authorization: `Bearer ${AuthToken}`,
+              },
+              data: formData,
+              success: function (response) {
+                if (response.success) {
+                  iziToast.success({
+                    title: "Success",
+                    message: response.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+
+                }
+              },
+              error: function (xhr, status, error) {
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                  iziToast.error({
+                    title: "Error",
+                    message: xhr.responseJSON.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                } else {
+                  iziToast.error({
+                    title: "Error",
+                    message: "Internal Server Error",
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
+              }
+            })
+          }
+
+        })
+
+      });
+    </script>
+    <%- include('../layout/end.ejs') %>

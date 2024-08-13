@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en" data-layout="horizontal">
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/badge.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="author" content="Codescandy" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8S4MT3EYG"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
+
+	gtag('config', 'G-M8S4MT3EYG');
+</script>
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../../assets/images/favicon/favicon.ico" />
+
+<!-- Color modes -->
+<script src="../../assets/js/vendors/color-modes.js"></script>
+
+<!-- Libs CSS -->
+<link href="../../assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/%40mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../../assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../../assets/css/theme.min.css">
+
+  <link href="../../assets/libs/prismjs/themes/prism-okaidia.min.css" rel="stylesheet">
+  <title>Badge | Dash UI - Bootstrap 5 Admin Dashboard Template</title>
+
+</head>
+
+<body>
+  <!-- Wrapper -->
+  <main id="main-wrapper" class="main-wrapper">
+    <div class="header">
+	<!-- navbar -->
+	<div class="navbar-custom navbar navbar-expand-lg">
+		<div class="container-fluid px-0">
+			<a class="navbar-brand d-block d-md-none" href="../../index.html">
+				<img src="../../assets/images/brand/logo/logo-2.svg" alt="Image" />
+			</a>
+
+			<a id="nav-toggle" href="#!" class="ms-auto ms-md-0 me-0 me-lg-3">
+				<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-text-indent-left text-muted" viewBox="0 0 16 16">
+					<path
+						d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm.646 2.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L4.293 8 2.646 6.354a.5.5 0 0 1 0-.708zM7 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm-5 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"
+					/>
+				</svg>
+			</a>
+
+			<div class="d-none d-md-none d-lg-block">
+				<!-- Form -->
+				<form action="#">
+					<div class="input-group">
+						<input class="form-control rounded-3 bg-transparent ps-9" type="search" value="" id="searchInput" placeholder="Search" />
+						<span class="">
+							<button class="btn position-absolute start-0" type="button">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="15"
+									height="15"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									class="feather feather-search text-dark"
+								>
+									<circle cx="11" cy="11" r="8"></circle>
+									<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+								</svg>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+			<!--Navbar nav -->
+			<ul class="navbar-nav navbar-right-wrap ms-lg-auto d-flex nav-top-wrap align-items-center ms-4 ms-lg-0">
+				<li>
+					<div class="dropdown">
+						<button class="btn btn-ghost btn-icon rounded-circle" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (auto)">
+							<i class="bi theme-icon-active"></i>
+							<span class="visually-hidden bs-theme-text">Toggle theme</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bs-theme-text">
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+									<i class="bi theme-icon bi-sun-fill"></i>
+									<span class="ms-2">Light</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+									<i class="bi theme-icon bi-moon-stars-fill"></i>
+									<span class="ms-2">Dark</span>
+								</button>
+							</li>
+							<li>
+								<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+									<i class="bi theme-icon bi-circle-half"></i>
+									<span class="ms-2">Auto</span>
+								</button>
+							</li>
+						</ul>
+					</div>
+				</li>
+
+				<li class="dropdown stopevent ms-2">
+					<a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<i class="icon-xs" data-feather="bell"></i>
+					</a>
+					<div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="dropdownNotification">
+						<div>
+							<div class="border-bottom px-3 pt-2 pb-3 d-flex justify-content-between align-items-center">
+								<p class="mb-0 text-dark fw-medium fs-4">Notifications</p>
+								<a href="#!" class="text-muted">
+									<span>
+										<i class="me-1 icon-xs" data-feather="settings"></i>
+									</span>
+								</a>
+							</div>
+							<div data-simplebar style="height: 250px">
+								<!-- List group -->
+								<ul class="list-group list-group-flush notification-list-scroll">
+									<!-- List group item -->
+									<li class="list-group-item bg-light">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Rishi Chopra</h5>
+											<p class="mb-0">Mauris blandit erat id nunc blandit, ac eleifend dolor pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Neha Kannned</h5>
+											<p class="mb-0">Proin at elit vel est condimentum elementum id in ante. Maecenas et sapien metus.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Nirmala Chauhan</h5>
+											<p class="mb-0">Morbi maximus urna lobortis elit sollicitudin sollicitudieget elit vel pretium.</p>
+										</a>
+									</li>
+									<!-- List group item -->
+									<li class="list-group-item">
+										<a href="#!" class="text-muted">
+											<h5 class="mb-1">Sina Ray</h5>
+											<p class="mb-0">Sed aliquam augue sit amet mauris volutpat hendrerit sed nunc eu diam.</p>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="border-top px-3 py-2 text-center">
+								<a href="#!" class="text-inherit">View all Notifications</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<!-- List -->
+				<li class="dropdown ms-2">
+					<a class="rounded-circle" href="#!" role="button" id="dropdownUser" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<div class="avatar avatar-md avatar-indicators avatar-online">
+							<img alt="avatar" src="../../assets/images/avatar/avatar-11.jpg" class="rounded-circle" />
+						</div>
+					</a>
+					<div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownUser">
+						<div class="px-4 pb-0 pt-2">
+							<div class="lh-1">
+								<h5 class="mb-1">John E. Grainger</h5>
+								<a href="#!" class="text-inherit fs-6">View my profile</a>
+							</div>
+							<div class="dropdown-divider mt-3 mb-2"></div>
+						</div>
+
+						<ul class="list-unstyled">
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>
+									Edit Profile
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="activity"></i>
+									Activity Log
+								</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item d-flex align-items-center" href="#!">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>
+									Settings
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../../index.html">
+									<i class="me-2 icon-xxs dropdown-item-icon" data-feather="power"></i>
+									Sign Out
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+    <!-- navbar horizontal -->
+    <!-- navbar -->
+<div class="navbar-horizontal nav-dashboard">
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-default navbar-dropdown p-0 py-lg-2">
+			<div class="d-flex d-lg-block justify-content-between align-items-center w-100 w-lg-0 py-2 px-4 px-md-2 px-lg-0">
+				<span class="d-lg-none">Menu</span>
+				<!-- Button -->
+				<button
+					class="navbar-toggler collapsed ms-2"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbar-default"
+					aria-controls="navbar-default"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="icon-bar top-bar mt-0"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+			</div>
+			<!-- Collapse -->
+			<div class="collapse navbar-collapse px-6 px-lg-0" id="navbar-default">
+				<ul class="navbar-nav">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDashboard" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-bs-display="static">Dashboard</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarDashboard">
+							<li>
+								<a class="dropdown-item" href="../index.html">Project</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-analytics.html">Analytics</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-ecommerce.html">Ecommerce</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-crm.html">CRM</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-finance.html">Finance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../dashboard-blog.html">Blog</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarApps" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Apps</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarApps">
+							<li>
+								<a class="dropdown-item" href="../calendar.html">Calendar</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../apps-file-manager.html">File Manager</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../chat-app.html">Chat</a>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Kanban</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../task-kanban-grid.html" class="dropdown-item">Board</a>
+									</li>
+									<li>
+										<a href="../task-kanban-list.html" class="dropdown-item">List</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Email</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../mail.html" class="dropdown-item">Inbox</a>
+									</li>
+									<li>
+										<a href="../mail-details.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../mail-draft.html" class="dropdown-item">Draft</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Ecommerce</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../ecommerce-products.html" class="dropdown-item">Products</a>
+									</li>
+									<li>
+										<a href="../ecommerce-products-details.html" class="dropdown-item">Prouduct Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-product-edit.html" class="dropdown-item">Add Product</a>
+									</li>
+
+									<li>
+										<a href="../ecommerce-order-list.html" class="dropdown-item">Orders</a>
+									</li>
+									<li>
+										<a href="../ecommerce-order-detail.html" class="dropdown-item">Order Details</a>
+									</li>
+									<li>
+										<a href="../ecommerce-cart.html" class="dropdown-item">Shopping Cart</a>
+									</li>
+									<li>
+										<a href="../ecommerce-checkout.html" class="dropdown-item">Checkout</a>
+									</li>
+									<li>
+										<a href="../ecommerce-customer.html" class="dropdown-item">Customers</a>
+									</li>
+									<li>
+										<a href="../ecommerce-seller.html" class="dropdown-item">Seller</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Project</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-grid.html">Grid</a>
+									</li>
+									<li class="nav-item">
+										<a class="dropdown-item" href="../project-list.html">List</a>
+									</li>
+
+									<li class="dropdown-submenu dropend">
+										<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Single</a>
+										<ul class="dropdown-menu">
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-overview.html">Overview</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-task.html">Task</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-budget.html">Budget</a>
+											</li>
+
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-files.html">File</a>
+											</li>
+											<li class="nav-item">
+												<a class="dropdown-item" href="../project-team.html">Team</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">CRM</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../crm-company.html" class="dropdown-item">Company</a>
+									</li>
+									<li>
+										<a href="../crm-contacts.html" class="dropdown-item">Contacts</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals.html">
+											Deals
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../deals-single.html">
+											Deals Single
+											<span class="badge text-bg-primary ms-2">New</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Invoice</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../invoice-list.html" class="dropdown-item">List</a>
+									</li>
+									<li>
+										<a href="../invoice-detail.html" class="dropdown-item">Details</a>
+									</li>
+									<li>
+										<a href="../invoice-generator.html" class="dropdown-item">Create Invoice</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Profile</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="../profile-overview.html" class="dropdown-item">Overview</a>
+									</li>
+									<li>
+										<a href="../profile-project.html" class="dropdown-item">Project</a>
+									</li>
+									<li>
+										<a href="../profile-file.html" class="dropdown-item">Files</a>
+									</li>
+									<li>
+										<a href="../profile-team.html" class="dropdown-item">Team</a>
+									</li>
+									<li>
+										<a href="../profile-followers.html" class="dropdown-item">Followers</a>
+									</li>
+									<li>
+										<a href="../profile-activity.html" class="dropdown-item">Activity</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../profile-settings.html">Settings</a>
+									</li>
+								</ul>
+							</li>
+							<li class="dropdown-submenu dropend">
+								<a class="dropdown-item dropdown-list-group-item dropdown-toggle" href="#">Blog</a>
+								<ul class="dropdown-menu">
+									<li>
+										<a class="dropdown-item" href="../blog-author.html">Author</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../blog-author-detail.html">Detail</a>
+									</li>
+									<li>
+										<a class="dropdown-item" href="../create-blog-post.html">Create Post</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarAuthentication" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Authentication</a>
+						<ul class="dropdown-menu dropdown-menu-arrow" aria-labelledby="navbarAuthentication">
+							<li>
+								<a class="dropdown-item" href="../sign-in.html">Sign In</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../sign-up.html">Sign Up</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../forget-password.html">Forgot Password</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layouts</a>
+						<ul class="dropdown-menu dropdown-menu-start" aria-labelledby="layoutsDropdown">
+							<li><span class="dropdown-header">Layouts</span></li>
+							<li class="nav-item">
+								<a class="dropdown-item" href="../../index.html">Default</a>
+							</li>
+
+							<li class="nav-item">
+								<a class="dropdown-item" href="../index.html">Horizontal</a>
+							</li>
+						</ul>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarPages" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarPages">
+							<li>
+								<a class="dropdown-item" href="../pricing.html">Pricing</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../starter.html">Starter</a>
+							</li>
+
+							<li>
+								<a class="dropdown-item" href="../maintenance.html">Maintenance</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="../404-error.html">404 Error</a>
+							</li>
+						</ul>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarBaseUI" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+						<div class="dropdown-menu dropdown-menu-xl" aria-labelledby="navbarBaseUI">
+							<div class="row">
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="accordions.html" class="dropdown-item">Accordions</a>
+										</li>
+										<li class="nav-item">
+											<a class="dropdown-item" href="alerts.html">Alert</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="badge.html" class="dropdown-item">Badge</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="breadcrumb.html" class="dropdown-item">Breadcrumb</a>
+										</li>
+										<li class="nav-item">
+											<a href="buttons.html" class="dropdown-item">Buttons</a>
+										</li>
+										<li class="nav-item">
+											<a href="button-group.html" class="dropdown-item">Button group</a>
+										</li>
+										<li class="nav-item">
+											<a href="card.html" class="dropdown-item">Card</a>
+										</li>
+										<li class="nav-item">
+											<a href="carousel.html" class="dropdown-item">Carousel</a>
+										</li>
+										<li class="nav-item">
+											<a href="close-button.html" class="dropdown-item">Close Button</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="collapse.html" class="dropdown-item">Collapse</a>
+										</li>
+										<li class="nav-item">
+											<a href="dropdowns.html" class="dropdown-item">Dropdowns</a>
+										</li>
+										<li class="nav-item">
+											<a href="forms.html" class="dropdown-item">Forms</a>
+										</li>
+
+										<li class="nav-item">
+											<a href="list-group.html" class="dropdown-item">List group</a>
+										</li>
+										<li class="nav-item">
+											<a href="modal.html" class="dropdown-item">Modal</a>
+										</li>
+										<li class="nav-item">
+											<a href="navs-tabs.html" class="dropdown-item">Navs and tabs</a>
+										</li>
+										<li class="nav-item">
+											<a href="navbar.html" class="dropdown-item">Navbar</a>
+										</li>
+										<li class="nav-item">
+											<a href="offcanvas.html" class="dropdown-item">Offcanvas</a>
+										</li>
+										<li class="nav-item">
+											<a href="pagination.html" class="dropdown-item">Pagination</a>
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4">
+									<ul class="list-unstyled">
+										<li class="nav-item">
+											<a href="placeholders.html" class="dropdown-item">Placeholders</a>
+										</li>
+										<li class="nav-item">
+											<a href="popovers.html" class="dropdown-item">Popovers</a>
+										</li>
+										<li class="nav-item">
+											<a href="progress.html" class="dropdown-item">Progress</a>
+										</li>
+										<li class="nav-item">
+											<a href="scrollspy.html" class="dropdown-item">Scrollspy</a>
+										</li>
+										<li class="nav-item">
+											<a href="spinners.html" class="dropdown-item">Spinners</a>
+										</li>
+										<li class="nav-item">
+											<a href="tables.html" class="dropdown-item">Tables</a>
+										</li>
+										<li class="nav-item">
+											<a href="toasts.html" class="dropdown-item">Toasts</a>
+										</li>
+										<li class="nav-item">
+											<a href="tooltips.html" class="dropdown-item">Tooltips</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							<i data-feather="more-horizontal" class="icon-xxs"></i>
+						</a>
+						<div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
+							<div class="list-group">
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/index.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="file-text" class="icon-sm text-primary"></i>
+
+										<div class="ms-3">
+											<h5 class="mb-0">Documentations</h5>
+											<p class="mb-0 fs-6">Browse the all documentation</p>
+										</div>
+									</div>
+								</a>
+								<a class="list-group-item list-group-item-action border-0" href="../../docs/changelog.html">
+									<div class="d-flex align-items-center">
+										<i data-feather="layers" class="icon-sm text-primary"></i>
+										<div class="ms-3">
+											<h5 class="mb-0">
+												Changelog
+												<span class="text-primary ms-1">v1.0.0</span>
+											</h5>
+											<p class="mb-0 fs-6">See what's new</p>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</div>
+
+
+    <!-- Page Content -->
+    <div id="app-content">
+      <div class="app-content-area">
+        <!-- Container fluid -->
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xl-9 col-md-12 col-sm-12 col-12 ">
+              <div class=" ">
+
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mb-8" id="intro">
+                      <h1 class="mb-0 h2 ">Badges</h1>
+                      <p class="mb-0 text-muted">Documentation and examples for badges, our small count and
+                        labeling
+                        component.</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Background colors -->
+                <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="bg-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Background colors</h2>
+                      <p>Use our background utility classes to quickly change the appearance of a badge. Please note
+                        that
+                        when using Bootstrap’s default <code>.bg-light</code>, you’ll likely need a text color utility
+                        like <code>.text-dark</code> for proper styling. This is because background utilities do not set
+                        anything but <code>background-color</code>.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-bg-badge" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-bg-badge-design-tab" data-bs-toggle="pill"
+                            href="#pills-bg-badge-design" role="tab" aria-controls="pills-bg-badge-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-bg-badge-html-tab" data-bs-toggle="pill"
+                            href="#pills-bg-badge-html" role="tab" aria-controls="pills-bg-badge-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-bg-badge">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-bg-badge-design"
+                          role="tabpanel" aria-labelledby="pills-bg-badge-design-tab">
+                          <!-- Primary badge -->
+                          <span class="badge bg-primary">Primary</span>
+
+                          <!-- Secondary badge -->
+                          <span class="badge bg-secondary">Secondary</span>
+
+                          <!-- Success badge -->
+                          <span class="badge bg-success">Success</span>
+
+                          <!-- Danger badge -->
+                          <span class="badge bg-danger">Danger</span>
+
+                          <!-- Warning badge -->
+                          <span class="badge bg-warning">Warning</span>
+
+                          <!-- Info badge -->
+                          <span class="badge bg-info">Info</span>
+
+                          <!-- Light badge -->
+                          <span class="badge bg-light">Light</span>
+
+                          <!-- Dark badge -->
+                          <span class="badge bg-dark">Dark</span>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-bg-badge-html" role="tabpanel"
+                          aria-labelledby="pills-bg-badge-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Primary badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Secondary badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Success badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Danger badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Warning badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-warning text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Info badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-info text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Light badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-light text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Dark badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Background colors -->
+                <!-- Background colors -->
+                <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="soft-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Soft colors</h2>
+
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-soft-badge" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-soft-badge-design-tab" data-bs-toggle="pill"
+                            href="#pills-soft-badge-design" role="tab" aria-controls="pills-soft-badge-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-soft-badge-html-tab" data-bs-toggle="pill"
+                            href="#pills-soft-badge-html" role="tab" aria-controls="pills-soft-badge-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-soft-badge">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-soft-badge-design"
+                          role="tabpanel" aria-labelledby="pills-soft-badge-design-tab">
+                          <!-- Primary badge -->
+                          <span class="badge badge-primary-soft">Primary</span>
+
+                          <!-- Secondary badge -->
+                          <span class="badge badge-secondary-soft">Secondary</span>
+
+                          <!-- Success badge -->
+                          <span class="badge badge-success-soft">Success</span>
+
+                          <!-- Danger badge -->
+                          <span class="badge badge-danger-soft">Danger</span>
+
+                          <!-- Warning badge -->
+                          <span class="badge badge-warning-soft">Warning</span>
+
+                          <!-- Info badge -->
+                          <span class="badge badge-info-soft">Info</span>
+
+
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-soft-badge-html" role="tabpanel"
+                          aria-labelledby="pills-soft-badge-html-tab">
+                          <pre><code class="language-markup"><span class="token comment">&lt;!-- Primary badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-primary-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+                          <span class="token comment">&lt;!-- Secondary badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-secondary-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+                          <span class="token comment">&lt;!-- Success badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-success-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+                          <span class="token comment">&lt;!-- Danger badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-danger-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+                          <span class="token comment">&lt;!-- Warning badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-warning-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+                          <span class="token comment">&lt;!-- Info badge --&gt;</span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-info-soft<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Background colors -->
+
+
+                <!-- Pill badges -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="pill-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Pill badges</h2>
+                      <p>Use the <code>.rounded-pill</code> utility class to make badges more rounded with a larger
+                        <code>border-radius</code>.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-pill-badges" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-pill-badges-design-tab" data-bs-toggle="pill"
+                            href="#pills-pill-badges-design" role="tab" aria-controls="pills-pill-badges-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-pill-badges-html-tab" data-bs-toggle="pill"
+                            href="#pills-pill-badges-html" role="tab" aria-controls="pills-pill-badges-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-pill-badges">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-pill-badges-design"
+                          role="tabpanel" aria-labelledby="pills-pill-badges-design-tab">
+                          <!-- Primary badge -->
+                          <span class="badge rounded-pill bg-primary">Primary</span>
+
+                          <!-- Secondary badge -->
+                          <span class="badge rounded-pill bg-secondary">Secondary</span>
+
+                          <!-- Success badge -->
+                          <span class="badge rounded-pill bg-success">Success</span>
+
+                          <!-- Danger badge -->
+                          <span class="badge rounded-pill bg-danger">Danger</span>
+
+                          <!-- Warning badge -->
+                          <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+
+                          <!-- Info badge -->
+                          <span class="badge rounded-pill bg-info text-dark">Info</span>
+
+                          <!-- Light badge -->
+                          <span class="badge rounded-pill bg-light text-dark">Light</span>
+
+                          <!-- Dark badge -->
+                          <span class="badge rounded-pill bg-dark">Dark</span>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-pill-badges-html" role="tabpanel"
+                          aria-labelledby="pills-pill-badges-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy">  <span class="token comment">&lt;!-- Primary badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Secondary badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Success badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Danger badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Warning badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-warning text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Info badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-info text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Light badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-light text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token comment">&lt;!-- Dark badge --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge rounded-pill bg-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Pill badges -->
+
+                <!-- Simple Badge -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mb-4">
+                      <h2 class="h3 mb-1">Buttons</h2>
+                      <p>Badges can be used as part of links or buttons to provide a counter.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-badge-second" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-badge-second-design-tab" data-bs-toggle="pill"
+                            href="#pills-badge-second-design" role="tab" aria-controls="pills-badge-second-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-badge-second-html-tab" data-bs-toggle="pill"
+                            href="#pills-badge-second-html" role="tab" aria-controls="pills-badge-second-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-badge-second">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-badge-second-design"
+                          role="tabpanel" aria-labelledby="pills-badge-second-design-tab">
+                          <!-- Button -->
+                          <button type="button" class="btn btn-primary">
+                            Notifications <span class="badge bg-secondary">4</span>
+                          </button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-badge-second-html" role="tabpanel"
+                          aria-labelledby="pills-badge-second-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"> <span class="token comment">&lt;!-- Button --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   Notifications <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Simple Badge -->
+
+
+                <!-- Pill badges -->
+
+                <!-- Positioned Badges -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="positioned-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Positioned</h2>
+                      <p>Use utilities to modify a <code>.badge</code> and position it in the corner of a link or
+                        button.
+                      </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-positioned-badge" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-positioned-badge-design-tab" data-bs-toggle="pill"
+                            href="#pills-positioned-badge-design" role="tab"
+                            aria-controls="pills-positioned-badge-design" aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-positioned-badge-html-tab" data-bs-toggle="pill"
+                            href="#pills-positioned-badge-html" role="tab" aria-controls="pills-positioned-badge-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-positioned-badge">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-positioned-badge-design"
+                          role="tabpanel" aria-labelledby="pills-positioned-badge-design-tab">
+                          <button type="button" class="btn btn-primary position-relative">
+                            Inbox
+                            <span
+                              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                              99+
+                              <span class="visually-hidden">unread messages</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-positioned-badge-html" role="tabpanel"
+                          aria-labelledby="pills-positioned-badge-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comments">&lt;!-- Positioned --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary position-relative<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Inbox
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    99+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>visually-hidden<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>unread messages<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="mb-4">
+
+                      <p>You can also replace the <code>.badge</code> class with a few more utilities without a count
+                        for
+                        a more generic indicator.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-positioned-badge-without-number" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-positioned-badge-without-number-design-tab"
+                            data-bs-toggle="pill" href="#pills-positioned-badge-without-number-design" role="tab"
+                            aria-controls="pills-positioned-badge-without-number-design" aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-positioned-badge-without-number-html-tab" data-bs-toggle="pill"
+                            href="#pills-positioned-badge-without-number-html" role="tab"
+                            aria-controls="pills-positioned-badge-without-number-html" aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-positioned-badge-without-number">
+                        <div class="tab-pane tab-example-design fade show active"
+                          id="pills-positioned-badge-without-number-design" role="tabpanel"
+                          aria-labelledby="pills-positioned-badge-without-number-design-tab">
+                          <button type="button" class="btn btn-primary position-relative">
+                            Profile
+                            <span
+                              class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                              <span class="visually-hidden">New alerts</span>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-positioned-badge-without-number-html"
+                          role="tabpanel" aria-labelledby="pills-positioned-badge-without-number-html-tab">
+
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comments">&lt;!-- Positioned --&gt;</span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn btn-primary position-relative<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+ Profile
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>visually-hidden<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New alerts<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Positioned Badges -->
+
+                <!-- Dot Badges -->
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="dot-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Dot</h2>
+                      <p>Use <code>.badge-dot</code> classes on an <code class="highlighter-rouge">&lt;a&gt;</code>
+                        element quickly provide
+                        <em>actionable</em> badges with hover and focus states.</p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-badge-dot" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-badge-dot-design-tab" data-bs-toggle="pill"
+                            href="#pills-badge-dot-design" role="tab" aria-controls="pills-badge-dot-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-badge-dot-html-tab" data-bs-toggle="pill"
+                            href="#pills-badge-dot-html" role="tab" aria-controls="pills-badge-dot-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-badge-dot">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-badge-dot-design"
+                          role="tabpanel" aria-labelledby="pills-badge-dot-design-tab">
+                          <!-- Primary badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-primary me-1"></span>
+                            <span>Primary</span></span>
+
+                          <!-- Secondary badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-secondary me-1"></span><span
+                              class="text-secondary">Secondary</span></span>
+
+                          <!-- Success badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-success me-1"></span><span
+                              class="text-success">Success</span></span>
+
+                          <!-- Danger badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-danger me-1"></span><span
+                              class="text-danger">Danger</span></span>
+
+                          <!-- Warning badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-warning me-1"></span><span
+                              class="text-warning">Warning</span></span>
+
+                          <!-- Info badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-info me-1"></span><span
+                              class="text-info">Info</span></span>
+
+                          <!-- Light badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-light me-1"></span><span
+                              class="text-light">Light</span></span>
+
+                          <!-- Dark badge -->
+                          <span class="me-2"><span class="badge badge-dot bg-dark me-1"></span><span
+                              class="text-dark">Dark</span></span>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-badge-dot-html" role="tabpanel"
+                          aria-labelledby="pills-badge-dot-html-tab">
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Primary badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-primary me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>Primary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+   <span class="token comment">&lt;!-- Secondary badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-secondary me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Secondary<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+   <span class="token comment">&lt;!-- Success badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-success me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-success<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Success<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Danger badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-danger me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-danger<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Danger<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token comment">&lt;!-- Warning badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-warning me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-warning<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Warning<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+   <span class="token comment">&lt;!-- Info badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-info me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-info<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Info<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+   <span class="token comment">&lt;!-- Light badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-light me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+       <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-light<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Light<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+
+   <span class="token comment">&lt;!-- Dark badge --&gt;</span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>me-2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>badge badge-dot bg-dark me-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span>
+    <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text-dark<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Dark<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Dot Badges -->
+
+                <!-- Simple Badge -->
+                <div class="row ">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div id="simple-badge" class="mb-4">
+                      <h2 class="h3 mb-1">Simple Badge </h2>
+                      <p>Badges scale to match the size of the immediate parent element by using relative font sizing
+                        and
+                        <code class="highlighter-rouge">em</code> units.
+                      </p>
+                    </div>
+                    <!-- Card -->
+                    <div class="card mb-10 ">
+                      <ul class="nav nav-line-bottom " id="pills-tab-simple-badge" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" id="pills-simple-badge-design-tab" data-bs-toggle="pill"
+                            href="#pills-simple-badge-design" role="tab" aria-controls="pills-simple-badge-design"
+                            aria-selected="true">Design</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" id="pills-simple-badge-html-tab" data-bs-toggle="pill"
+                            href="#pills-simple-badge-html" role="tab" aria-controls="pills-simple-badge-html"
+                            aria-selected="false">HTML</a>
+                        </li>
+                      </ul>
+                      <!-- Tab content -->
+                      <div class="tab-content p-4" id="pills-tabContent-simple-badge">
+                        <div class="tab-pane tab-example-design fade show active" id="pills-simple-badge-design"
+                          role="tabpanel" aria-labelledby="pills-simple-badge-design-tab">
+                          <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+                          <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+                          <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+                          <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+                          <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+                          <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+                        </div>
+                        <div class="tab-pane tab-example-html fade " id="pills-simple-badge-html" role="tabpanel"
+                          aria-labelledby="pills-simple-badge-html-tab">
+
+                          <pre><code class="language-markup" data-copy-state="copy"><span class="token comment">&lt;!-- Headings --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h4</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h4</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h6</span><span class="token punctuation">&gt;</span></span>Example heading <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge bg-secondary<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>New<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h6</span><span class="token punctuation">&gt;</span></span></code></pre>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Simple Badge -->
+
+
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
+              <!-- sidebar nav fixed -->
+              <div class="sidebar-nav-fixed">
+                <span class="px-4 mb-2 d-block text-uppercase ls-md fw-semi-bold fs-6">Contents</span>
+                <ul class="list-unstyled">
+                  <li><a href="#intro" class="active">Introduction</a></li>
+                  <li><a href="#bg-badge">Background Color</a></li>
+                  <li><a href="#pill-badge">Pill</a></li>
+                  <li><a href="#buttons">Button</a></li>
+                  <li><a href="#positioned-badge">Positioned</a></li>
+                  <li><a href="#dot-badge">Dot</a></li>
+                  <li><a href="#simple-badge">Simple</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+  <!-- Scripts -->
+  <script src="../../assets/libs/prismjs/prism.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="../../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+  <!-- Libs JS -->
+
+<script src="../../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../../assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../../assets/js/theme.min.js"></script>
+
+
+</body>
+
+
+<!-- Mirrored from dashui.codescandy.com/dashuipro/horizontal/components/badge.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 02 Aug 2024 16:35:10 GMT -->
+</html>

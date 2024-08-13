@@ -1,0 +1,709 @@
+<%- include('./layout/header.ejs') %>
+  <main id="main-wrapper" class="main-wrapper">
+    <%- include('./layout/navbar.ejs') %> <%- include('./layout/sidebar.ejs') %>
+
+        <div id="app-content">
+          <div class="app-content-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <!-- Page header -->
+                  <div class="d-flex justify-content-between mb-5 align-items-center">
+                    <h3 class="mb-0">Ecommerce</h3>
+                    <a href="#!" class="btn btn-primary">Add Product</a>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-cols-1 row-cols-xl-4 row-cols-md-2">
+                <div class="col mb-5">
+                  <div class="card h-100 card-lift">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted fw-semi-bold">Orders</span>
+                        <span><i data-feather="shopping-cart" class="text-info"></i></span>
+                      </div>
+                      <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                        <h3 class="fw-bold mb-0">5,312</h3>
+                        <span class="mt-1 ms-2 text-danger"><i data-feather="arrow-down"
+                            class="icon-xs"></i>2.29%</span>
+                      </div>
+                      <a href="#!" class="btn-link fw-semi-bold">View Orders</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-5">
+                  <div class="card h-100 card-lift">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted fw-semi-bold">Revenue</span>
+                        <span><i data-feather="dollar-sign" class="text-info"></i></span>
+                      </div>
+                      <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                        <h3 class="fw-bold mb-0">$8,312</h3>
+                        <span class="mt-1 ms-2 text-success"><i data-feather="arrow-up" class="icon-xs"></i>2.29%</span>
+                      </div>
+                      <a href="#!" class="btn-link fw-semi-bold">View Earnings</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-5">
+                  <div class="card h-100 card-lift">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted fw-semi-bold">Customer</span>
+                        <span><i data-feather="user" class="text-info"></i></span>
+                      </div>
+                      <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                        <h3 class="fw-bold mb-0">$15,312</h3>
+                        <span class="mt-1 ms-2 text-success"><i data-feather="arrow-up" class="icon-xs"></i>5.16%</span>
+                      </div>
+                      <a href="#!" class="btn-link fw-semi-bold">All Customer</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-5">
+                  <div class="card h-100 card-lift">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <span class="text-muted fw-semi-bold">Balance</span>
+                        <span><i data-feather="credit-card" class="text-info"></i></span>
+                      </div>
+                      <div class="mt-4 mb-3 d-flex align-items-center lh-1">
+                        <h3 class="fw-bold mb-0">$35.64k</h3>
+                      </div>
+                      <a href="#!" class="btn-link fw-semi-bold">Withdraw Money</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-8 col-12 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h4 class="mb-0">Revenue</h4>
+                      <div role="group" aria-label="Basic radio toggle button group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" checked />
+                        <label class="btn btn-outline-white btn-sm" for="btnradio1">All</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" />
+                        <label class="btn btn-outline-white btn-sm" for="btnradio2">1M</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" />
+                        <label class="btn btn-outline-white btn-sm" for="btnradio3">6M</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" />
+                        <label class="btn btn-outline-white btn-sm" for="btnradio4">1Y</label>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div id="revenueChart"></div>
+                      <div class="mt-4 px-lg-6">
+                        <div class="row bg-light rounded-3">
+                          <div class="col-lg-4 col-md-6">
+                            <div class="p-4">
+                              <span><i class="mdi mdi-circle small me-1 text-primary"></i>Current Week</span>
+                              <h3 class="mb-0 mt-2">$235,965</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="p-4">
+                              <span><i class="mdi mdi-circle small me-1 text-info"></i>Past Week</span>
+                              <h3 class="mb-0 mt-2">$198,214</h3>
+                            </div>
+                          </div>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="p-4">
+                              <span>Today's Earning: </span>
+                              <h3 class="mb-0 mt-2">$2,562.30</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 col-12 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header">
+                      <h4 class="mb-0">Total Sales</h4>
+                    </div>
+                    <div class="card-body">
+                      <div id="totalSale" class="d-flex justify-content-center"></div>
+                      <table class="table table-sm table-borderless mb-0 mt-5">
+                        <tbody>
+                          <tr>
+                            <td>
+                              <i class="mdi mdi-square-rounded text-primary fs-5 me-2"></i>Direct
+                            </td>
+                            <td class="text-end">$1200.42</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <i class="mdi mdi-square-rounded text-warning fs-5 me-2"></i>Affiliate
+                            </td>
+                            <td class="text-end">$353.42</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <i class="mdi mdi-square-rounded text-danger fs-5 me-2"></i>Sponsored
+                            </td>
+                            <td class="text-end">$413.31</td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <i class="mdi mdi-square-rounded text-info fs-5 me-2"></i>E-mail
+                            </td>
+                            <td class="text-end">$235.72</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xl-4 col-lg-6 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header">
+                      <h4 class="mb-0">Revenue by Location</h4>
+                    </div>
+                    <div class="card-body">
+                      <div id="locationmap" style="width: 100%; height: 250px"></div>
+                      <div class="mt-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span>United States</span>
+                          <span class="text-dark">$22,120</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px">
+                          <div class="progress-bar" role="progressbar" aria-label="Example 1px high" style="width: 45%"
+                            aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span>India</span>
+                          <span class="text-dark">$12,756</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px">
+                          <div class="progress-bar bg-success" role="progressbar" aria-label="Example 1px high"
+                            style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span>United Kingdom</span>
+                          <span class="text-dark">$8,864</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px">
+                          <div class="progress-bar bg-info" role="progressbar" aria-label="Example 1px high"
+                            style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                      <div class="mt-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <span>Sweden</span>
+                          <span class="text-dark">$6,124</span>
+                        </div>
+                        <div class="progress mt-1" style="height: 6px">
+                          <div class="progress-bar bg-warning" role="progressbar" aria-label="Example 1px high"
+                            style="width: 18%" aria-valuenow="18" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-8 col-lg-6 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h4 class="mb-0">Best Selling Products</h4>
+                      <div class="d-flex align-items-center">
+                        <div class="col">
+                          <span>Sort By:</span>
+                        </div>
+                        <div class="col-auto ms-2">
+                          <select class="form-select form-select-sm">
+                            <option selected>Today</option>
+                            <option value="Yesterday">Yesterday</option>
+                            <option value="Last 7 Days">Last 7 Days</option>
+                            <option value="Last 30 Days">Last 30 Days</option>
+                            <option value="This Month">This Month</option>
+                            <option value="Last Month">Last Month</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive table-card">
+                        <table class="table text-nowrap mb-0 table-centered">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Image</th>
+                              <th>Product Name</th>
+                              <th>Invoice</th>
+                              <th>QTY</th>
+
+                              <th>Price</th>
+                              <th>Order Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-1.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">Apple Watch</a>
+                              </td>
+                              <td><a href="#!">#21345</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$968.09</td>
+                              <td>27-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-2.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">Apple Watch Dark</a>
+                              </td>
+                              <td><a href="#!">#21344</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$868.09</td>
+                              <td>26-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-3.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">Apple Headphone</a>
+                              </td>
+                              <td><a href="#!">#21343</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$1268.09</td>
+                              <td>25-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-4.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">Apple Watch Dark</a>
+                              </td>
+                              <td><a href="#!">#21342</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$768.09</td>
+                              <td>25-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-5.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">T-shirt Blue</a>
+                              </td>
+                              <td><a href="#!">#21341</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$68.09</td>
+                              <td>24-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-6.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td>
+                                <a href="#!" class="text-inherit">Apple Watch Dark</a>
+                              </td>
+                              <td><a href="#!">#21340</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$678.09</td>
+                              <td>24-08-2023</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <a href="#!"><img src="../assets/images/ecommerce/product-7.jpg" alt="Image"
+                                    class="img-4by3-xs rounded" /></a>
+                              </td>
+                              <td><a href="#!" class="text-inherit">Headphone</a></td>
+                              <td><a href="#!">#21339</a></td>
+                              <td>1</td>
+                              <td class="text-dark">$568.09</td>
+                              <td>22-08-2023</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header">
+                      <h4 class="mb-0">Recent Orders</h4>
+                    </div>
+
+                    <div class="card-body">
+                      <div class="table-responsive table-card">
+                        <table class="table text-nowrap mb-0 table-centered">
+                          <thead class="table-light">
+                            <tr>
+                              <th>Order ID</th>
+                              <th>Customer</th>
+                              <th>Product</th>
+                              <th>Amount</th>
+                              <th>Vendor</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><a href="#!">#DU0007</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <img src="../assets/images/avatar/avatar-8.jpg" alt="Image"
+                                    class="avatar-xs avatar rounded-circle me-1" />
+                                  <span>Michell Forge</span>
+                                </a>
+                              </td>
+                              <td>Headphone</td>
+                              <td class="text-success">$99.00</td>
+                              <td>DollarSmart</td>
+                              <td>
+                                <span class="badge badge-success-soft text-success">Paid</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0006</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <img src="../assets/images/avatar/avatar-11.jpg" alt="Image"
+                                    class="avatar-xs avatar rounded-circle me-1" />
+                                  <span>Judy Huston</span>
+                                </a>
+                              </td>
+                              <td>Beauty Lips</td>
+                              <td class="text-success">$399.00</td>
+                              <td>Snail Bouque</td>
+                              <td>
+                                <span class="badge badge-success-soft text-success">Paid</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0005</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <span class="avatar avatar-xs me-1">
+                                    <span class="avatar-initials rounded-circle fs-6 bg-primary-soft">OT</span>
+                                  </span>
+                                  <span>Olivier Tassi</span>
+                                </a>
+                              </td>
+                              <td>Lady Bag</td>
+                              <td class="text-success">$729.00</td>
+                              <td>Cartmax</td>
+                              <td>
+                                <span class="badge badge-danger-soft text-danger">Cancel</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0004</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <img src="../assets/images/avatar/avatar-2.jpg" alt="Image"
+                                    class="avatar-xs avatar rounded-circle me-1" />
+                                  <span>Cynth Spur</span>
+                                </a>
+                              </td>
+                              <td>Headphone</td>
+                              <td class="text-success">$225.00</td>
+                              <td>DollarSmart</td>
+                              <td>
+                                <span class="badge badge-warning-soft text-warning">Pending</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0003</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <span class="avatar avatar-xs me-1">
+                                    <span
+                                      class="avatar-initials rounded-circle fs-6 bg-danger-soft text-danger">RJ</span>
+                                  </span>
+                                  <span>Ruby Jackson</span>
+                                </a>
+                              </td>
+                              <td>Furniture</td>
+                              <td class="text-success">$639.00</td>
+                              <td>Megaplex</td>
+                              <td>
+                                <span class="badge badge-success-soft text-success">Paid</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0002</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <img src="../assets/images/avatar/avatar-3.jpg" alt="Image"
+                                    class="avatar-xs avatar rounded-circle me-1" />
+                                  <span>Joshua Galher</span>
+                                </a>
+                              </td>
+                              <td>Accessories</td>
+                              <td class="text-success">$89.00</td>
+                              <td>Shopperia</td>
+                              <td>
+                                <span class="badge badge-success-soft text-success">Paid</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><a href="#!">#DU0001</a></td>
+                              <td>
+                                <a href="#!" class="text-inherit">
+                                  <img src="../assets/images/avatar/avatar-4.jpg" alt="Image"
+                                    class="avatar-xs avatar rounded-circle me-1" />
+                                  <span>Michael Bro</span>
+                                </a>
+                              </td>
+                              <td>Kitchen</td>
+                              <td class="text-success">$29.00</td>
+                              <td>Frcommerce</td>
+                              <td>
+                                <span class="badge badge-success-soft text-success">Paid</span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-5">
+                  <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h4 class="mb-0">Top Seller</h4>
+                      <div>
+                        <select class="form-select form-select-sm">
+                          <option selected>Report</option>
+                          <option value="1">Report Download</option>
+                          <option value="2">Export</option>
+                          <option value="3">Import</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="table-responsive table-card">
+                        <table class="table text-nowrap mb-0 table-centered">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-1.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">Brilliant Boutique</a>
+                                    </h5>
+                                    <small>Bryan M. Flores</small>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>Beauty Lips</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">3214</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$529511</td>
+                              <td>
+                                42%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-2.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">Cartmax</a>
+                                    </h5>
+                                    <small>Mamie Lacasse</small>
+                                  </div>
+                                </div>
+                              </td>
+
+                              <td>Lady Bag</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">4213</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$308719</td>
+                              <td>
+                                89%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-3.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">DollarSmart</a>
+                                    </h5>
+                                    <small>Diane Hilbert</small>
+                                  </div>
+                                </div>
+                              </td>
+
+                              <td>Headphone</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">756</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$24859</td>
+                              <td>
+                                89%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-4.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">Megaplex</a>
+                                    </h5>
+                                    <small>Charity Parris</small>
+                                  </div>
+                                </div>
+                              </td>
+
+                              <td>Furniture</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">252</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$3204</td>
+                              <td>
+                                63%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-5.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">Shopperia</a>
+                                    </h5>
+                                    <small>Maurice Phillips</small>
+                                  </div>
+                                </div>
+                              </td>
+
+                              <td>Accessories</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">636</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$92079</td>
+                              <td>
+                                55%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="d-flex">
+                                  <a href="#!">
+                                    <img src="../assets/images/svg/brand-logo-6.svg" alt="Image" /></a>
+                                  <div class="ms-3 lh-1">
+                                    <h5 class="mb-0">
+                                      <a href="#!" class="text-inherit">Freshcommerce</a>
+                                    </h5>
+                                    <small>Timothy Doss</small>
+                                  </div>
+                                </div>
+                              </td>
+
+                              <td>Kitchen</td>
+                              <td>
+                                <div class="lh-1">
+                                  <h5 class="mb-0">522</h5>
+                                  <small>Stock</small>
+                                </div>
+                              </td>
+                              <td class="text-dark">$3204</td>
+                              <td>
+                                67%
+                                <span class="ms-2"><i class="text-success icon-xs"
+                                    data-feather="trending-up"></i></span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-between align-items-center">
+                      <span>Showing <span class="text-dark">5</span> of
+                        <span class="text-dark">25</span> Results</span>
+                      <nav>
+                        <ul class="pagination mb-0 pagination-sm">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#!"><i class="mdi mdi-chevron-left"></i></a>
+                          </li>
+                          <li class="page-item active">
+                            <a class="page-link" href="#!">1</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!">3</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#!"><i class="mdi mdi-chevron-right"></i></a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </main>
+  <%- include('./layout/footer.ejs') %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <%- include('./layout/end.ejs') %>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Ecommerce</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=ixEVm6F0REs_&format=png&color=7950F2"
+    type="image/x-icon" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.css"
+    integrity="sha512-wJgJNTBBkLit7ymC6vvzM1EcSWeM9mmOu+1USHaRBbHkm6W9EgM0HY27+UtUaprntaYQJF75rc8gjxllKs5OIQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url("https://img.freepik.com/premium-photo/purple-shopping-cart-with-purple-background-purple-background_999671-63272.jpg?size=626&ext=jpg&ga=GA1.1.47107935.1721477749&semt=ais_hybrid"),
+        #000;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .wrapper {
+      width: 400px;
+      border-radius: 8px;
+      padding: 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .input-field {
+      position: relative;
+      border-bottom: 2px solid #ccc;
+      margin: 15px 0;
+    }
+
+    .input-field label {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.15s ease;
+    }
+
+    .input-field input {
+      width: 100%;
+      height: 40px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .input-field input:focus~label,
+    .input-field input:valid~label {
+      font-size: 0.8rem;
+      top: 10px;
+      transform: translateY(-120%);
+    }
+
+    .forget {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 25px 0 35px 0;
+      color: #fff;
+    }
+
+    #remember {
+      accent-color: #fff;
+    }
+
+    .forget label {
+      display: flex;
+      align-items: center;
+    }
+
+    .forget label p {
+      margin-left: 8px;
+    }
+
+    .wrapper a {
+      color: #efefef;
+      text-decoration: none;
+    }
+
+    .wrapper a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      background: #fff;
+      color: #000;
+      font-weight: 600;
+      border: none;
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 3px;
+      font-size: 16px;
+      border: 2px solid transparent;
+      transition: 0.3s ease;
+      margin-top: -14px;
+    }
+
+    button:hover {
+      color: #fff;
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .register {
+      text-align: center;
+      margin-top: 30px;
+      color: #fff;
+    }
+
+    .error {
+      color: rgb(255, 2, 2);
+      float: left;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <form id="LoginForm">
+      <h2>Login</h2>
+      <div class="input-field">
+        <input type="text" id="email" name="email" required />
+        <label>Email</label>
+      </div>
+      <span class="error" id="email-error"></span>
+
+      <div class="input-field">
+        <input type="password" id="password" name="password" required />
+        <label>Password</label>
+      </div>
+      <span class="error" id="password-error"></span>
+
+      <div class="forget">
+        <label for="remember">
+          <input type="checkbox" id="remember" style="margin-top: -14px" />
+          <p>Remember me</p>
+        </label>
+        <a href="/api/v1/auth//forgotpasswordpage1" style="margin-top: -14px">Forgot password?</a>
+      </div>
+      <button type="submit">Log In</button>
+      <div class="register"></div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.21.0/jquery.validate.min.js"
+    integrity="sha512-KFHXdr2oObHKI9w4Hv1XPKc898mE4kgYx58oqsc/JqqdLMDI4YjOLzom+EMlW8HFUd0QfjfAvxSL6sEq/a42fQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js"
+    integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready(function () {
+      //check if user store in local
+      // const user = localStorage.getItem("user");
+      // const token = localStorage.getItem("token");
+
+      // if (user || token) {
+      //   windoe.location.href = "/";
+      // }
+
+      $("#LoginForm").validate({
+        errorPlacement: function (error, element) {
+          var id = element.attr("id") + "-error";
+          $("#" + id).append(error);
+        },
+        rules: {
+          email: {
+            required: true,
+            email: true,
+          },
+          password: {
+            required: true,
+          },
+        },
+      });
+
+      $("#LoginForm").on("submit", function (event) {
+        event.preventDefault();
+        var formData = $(this).serialize();
+        if ($(this).valid()) {
+          $.ajax({
+            url: "/api/v1/auth/signin",
+            type: "POST",
+            data: formData,
+            success: function (response) {
+              if (response.success) {
+                $.toast({
+                  heading: "Success",
+                  text: response.message,
+                  showHideTransition: "slide",
+                  icon: "success",
+                  position: "top-right",
+                });
+                localStorage.setItem("user", JSON.stringify(response.User));
+                localStorage.setItem("token", JSON.stringify(response.Token));
+
+                window.location.href = "/";
+              }
+            },
+            error: function (xhr, status, error) {
+              if (xhr.responseJSON && xhr.responseJSON.message) {
+                $.toast({
+                  heading: "Error",
+                  text: xhr.responseJSON.message,
+                  showHideTransition: "slide",
+                  icon: "error",
+                  position: "top-right",
+                });
+              } else {
+                $.toast({
+                  heading: "Error",
+                  text: "Internal Server Error",
+                  showHideTransition: "slide",
+                  icon: "error",
+                  position: "top-left",
+                });
+              }
+            },
+          });
+        } else {
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
