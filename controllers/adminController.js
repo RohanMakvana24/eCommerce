@@ -72,15 +72,18 @@ export const deleteProfile = async (req, res) => {
     // delete preview image
     await cloudinary.v2.uploader.destroy(public_id, (error, result) => {
       if (error) {
-        console.error("Error deleting image:", error);
+        res.status(400).send({
+          success: true,
+          message: error,
+        });
       } else {
-        console.log("Image deleted successfully:", result);
+        res.status(200).send({
+          success: true,
+          message: "Deleted Succefully",
+        });
       }
     });
-    res.status(200).send({
-      success: true,
-      message: "Deleted Succefully",
-    });
+   
   } catch (error) {
     console.log(error);
     res.status(504).send({
