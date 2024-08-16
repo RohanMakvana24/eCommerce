@@ -9,7 +9,7 @@ import { getDataUri } from "../utils/features.js";
 //@ POST
 export const Signup = async (req, res) => {
   try {
-    const { firstname, lastname, email, password  ,  public_id , url } = req.body;
+    const { firstname, lastname, email, password, public_id, url } = req.body;
 
     //Validaion
     if (!firstname || !lastname || !email || !password || !public_id || !url) {
@@ -36,10 +36,10 @@ export const Signup = async (req, res) => {
       lastname,
       email,
       password: hashPassword,
-      profilePic : {
-        public_id : public_id,
-        url : url
-      }
+      profilePic: {
+        public_id: public_id,
+        url: url,
+      },
     });
 
     res.status(201).send({

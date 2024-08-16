@@ -1,1209 +1,188 @@
 <%- include('../layout/header.ejs') %>
-<main id="main-wrapper" class="main-wrapper">
-  <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
-  <div id="app-content">
-    <!-- Container fluid -->
-    <div class="app-content-area">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 col-md-12 col-12">
-            <!-- Page header -->
-            <div class="mb-5">
-              <h3 class="mb-0">Products</h3>
-            </div>
-          </div>
-        </div>
-        <div>
-          <!-- row -->
-          <div class="row">
-            <div class="col-12">
-              <div class="card">
-                <div class="card-header d-md-flex border-bottom-0">
-                  <div class="flex-grow-1">
-                    <a
-                      href="/adminhandle/add-admin-page"
-                      class="btn btn-primary"
-                      >+ Add Product</a
-                    >
-                  </div>
-                  <div class="mt-3 mt-md-0">
-                    <a
-                      href=""
-                      class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                      data-template="settingOne"
-                    >
-                      <i data-feather="settings" class="icon-xs"></i>
-                      <div id="settingOne" class="d-none">
-                        <span>Setting</span>
-                      </div>
-                    </a>
-
-                    <a href="#!" class="btn btn-outline-white ms-2">Import</a>
-                    <a href="#!" class="btn btn-outline-white ms-2">Export</a>
+  <main id="main-wrapper" class="main-wrapper">
+    <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+        <div id="app-content">
+          <!-- Container fluid -->
+          <div class="app-content-area">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-12 col-md-12 col-12">
+                  <!-- Page header -->
+                  <div class="mb-5">
+                    <h3 class="mb-0">Products</h3>
                   </div>
                 </div>
-                <div class="card-body">
-                  <div class="table-responsive table-card">
-                    <table
-                      id="admintable"
-                      class="table text-nowrap table-centered mt-0"
-                      style="width: 100%"
-                    >
-                      <thead class="table-light">
-                        <tr>
-                          <th class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="checkAll"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="checkAll"
-                              ></label>
+              </div>
+              <div>
+                <!-- row -->
+                <div class="row">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header d-md-flex border-bottom-0">
+                        <div class="flex-grow-1">
+                          <a href="/adminhandle/add-admin-page" class="btn btn-primary">+ Add Product</a>
+                        </div>
+                        <div class="mt-3 mt-md-0">
+                          <a href="" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
+                            data-template="settingOne">
+                            <i data-feather="settings" class="icon-xs"></i>
+                            <div id="settingOne" class="d-none">
+                              <span>Setting</span>
                             </div>
-                          </th>
-                          <th class="ps-1">Product</th>
-                          <th>Category</th>
-                          <th>Added Date</th>
-                          <th>Price</th>
-                          <th>Quantity</th>
-                          <th>Status</th>
-                          <th>Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox2"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox2"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-1.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Women Shoes</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Accessories</td>
-                          <td>19 July, 2023</td>
-                          <td>$65.29</td>
-                          <td>235</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeOne"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeOne" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editOne"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editOne" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashOne"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashOne" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox3"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox3"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-2.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Black Round Sunglasses</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Bags</td>
-                          <td>19 July, 2023</td>
-                          <td>$15.99</td>
-                          <td>56</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeTwo"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeTwo" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="edit"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="edit" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashTwo"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashTwo" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox4"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox4"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-8.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Black Round Sunglasses</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Men's Fashion</td>
-                          <td>19 July, 2023</td>
-                          <td>$12.39</td>
-                          <td>67</td>
-                          <td>
-                            <span class="badge badge-danger-soft"
-                              >Deactive</span
-                            >
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeThree"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeThree" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editTwo"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editTwo" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashThree"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashThree" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox5"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox5"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-9.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Dimond Earning</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Women's Fashion</td>
-                          <td>18 July, 2023</td>
-                          <td>$35.99</td>
-                          <td>24</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeFour"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeFour" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editThree"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editThree" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashFour"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashFour" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox6"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox6"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-3.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Shoulder Bag</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Accessories</td>
-                          <td>17 July, 2023</td>
-                          <td>$65.29</td>
-                          <td>32</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeFive"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeFive" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editFour"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editFour" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashFive"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashFive" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox16"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox16"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-4.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Vinage Perfume</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Bags</td>
-                          <td>20 July, 2023</td>
-                          <td>$45.29</td>
-                          <td>45</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeSix"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeSix" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editFive"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editFive" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashSix"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashSix" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox7"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox7"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-5.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Apple airpods</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Men's Fashion</td>
-                          <td>20 July, 2023</td>
-                          <td>$65.29</td>
-                          <td>45</td>
-                          <td>
-                            <span class="badge badge-danger-soft"
-                              >Deactive</span
-                            >
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeSeven"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeSeven" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editSix"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editSix" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashSeven"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashSeven" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox8"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox8"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-6.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Sandy Perfume</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Women's Fashion</td>
-                          <td>18 July, 2023</td>
-                          <td>$35.29</td>
-                          <td>34</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeNine"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeNine" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editSeven"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editSeven" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashEight"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashEight" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox9"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox9"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-7.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Man Wallet</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Bags</td>
-                          <td>19 July, 2023</td>
-                          <td>$15.99</td>
-                          <td>56</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeEleven"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeEleven" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editEight"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editEight" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashNine"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashNine" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox10"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox10"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-8.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Black Rectangle Sunglasses</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Men's Fashion</td>
-                          <td>19 July, 2023</td>
-                          <td>$12.39</td>
-                          <td>67</td>
-                          <td>
-                            <span class="badge badge-danger-soft"
-                              >Deactive</span
-                            >
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeTweleve"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeTweleve" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editNine"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editNine" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashTen"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashTen" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox11"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox11"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-9.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Dimond Earning</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Women's Fashion</td>
-                          <td>18 July, 2023</td>
-                          <td>$35.99</td>
-                          <td>24</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeThirteen"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeThirteen" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editTen"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editTen" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashEleven"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashEleven" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox12"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox12"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-2.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Black Round Sunglasses</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Accessories</td>
-                          <td>17 July, 2023</td>
-                          <td>$65.29</td>
-                          <td>32</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeFourteen"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeFourteen" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editEleven"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editEleven" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashTwelve"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashTwelve" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox13"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox13"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-3.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Shoulder Bag</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Bags</td>
-                          <td>20 July, 2023</td>
-                          <td>$45.29</td>
-                          <td>45</td>
-                          <td>
-                            <span class="badge badge-success-soft">Active</span>
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeFifteen"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeFifteen" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editThirteen"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editThirteen" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashThirteen"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashThirteen" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td class="pe-0">
-                            <div class="form-check">
-                              <input
-                                class="form-check-input"
-                                type="checkbox"
-                                value=""
-                                id="contactCheckbox14"
-                              />
-                              <label
-                                class="form-check-label"
-                                for="contactCheckbox14"
-                              ></label>
-                            </div>
-                          </td>
-                          <td class="ps-0">
-                            <div class="d-flex align-items-center">
-                              <img
-                                src="../assets/images/ecommerce/product-4.jpg"
-                                alt=""
-                                class="img-4by3-sm rounded-3"
-                              />
-                              <div class="ms-3">
-                                <h5 class="mb-0">
-                                  <a href="#!" class="text-inherit"
-                                    >Vintage Perfume</a
-                                  >
-                                </h5>
-                                <span class="text-warning">
-                                  <i class="mdi mdi-star"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                  <i class="mdi mdi-star ms-n1"></i>
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>Men's Fashion</td>
-                          <td>20 July, 2023</td>
-                          <td>$65.29</td>
-                          <td>45</td>
-                          <td>
-                            <span class="badge badge-danger-soft"
-                              >Deactive</span
-                            >
-                          </td>
-                          <td>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="eyeSixteen"
-                            >
-                              <i data-feather="eye" class="icon-xs"></i>
-                              <div id="eyeSixteen" class="d-none">
-                                <span>View</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="editFourteen"
-                            >
-                              <i data-feather="edit" class="icon-xs"></i>
-                              <div id="editFourteen" class="d-none">
-                                <span>Edit</span>
-                              </div>
-                            </a>
-                            <a
-                              href="#!"
-                              class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                              data-template="trashFourteen"
-                            >
-                              <i data-feather="trash-2" class="icon-xs"></i>
-                              <div id="trashFourteen" class="d-none">
-                                <span>Delete</span>
-                              </div>
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                          </a>
+
+                          <a href="#!" class="btn btn-outline-white ms-2">Import</a>
+                          <a href="#!" class="btn btn-outline-white ms-2">Export</a>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div class="table-responsive table-card">
+                          <table id="admintable" class="table text-nowrap table-centered mt-0" style="width: 100%">
+                            <thead>
+                              <tr>
+                                <th> Profile</th>
+                                <th>Name</th>
+                                <th> Email </th>
+                                <th> Action </th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-  <%- include('../layout/footer.ejs') %>
-  <script>
-    $(document).ready(function () {
-      $("#admintable").DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: {
-          url: "http://localhost:3000/data",
-          type: "GET",
-        },
-        columns: [
-          { data: "id" },
-          { data: "name" },
-          { data: "age" },
-          { data: "city" },
-        ],
-      });
-    });
-  </script>
-  <%- include('../layout/end.ejs') %>
-</main>
+        <%- include('../layout/footer.ejs') %>
+          <script>
+            $(document).ready(function () {
+              const Token = localStorage.getItem("token");
+              const AuthToken = Token.slice(1, -1);
+              console.log(AuthToken)
+              const adminTable = $("#admintable").DataTable({
+                "processing": true,
+                "serverSide": true,
+                "ajax": {
+                  "url": "/adminhandle/getadmins",
+                  "type": "GET",
+                  headers: { 'Authorization': `Bearer ${AuthToken}` },
+                },
+                "columns": [
+
+                  {
+                    "data": null,
+                    "render": function (data, type, row) {
+                      // Ensure profilePic exists and is an array
+                      const profilePic = row.profilePic && row.profilePic.length > 0 ? row.profilePic[0] : {};
+                      const imgUrl = profilePic.url ? profilePic.url : ''; // Use a default value or empty string if no URL is available
+
+                      return `
+                      <img src="${imgUrl}"
+                      alt="" class="img-4by3-sm rounded-3" />
+                       `;
+                    }
+                  },
+                  {
+                    "data": null,
+                    render: function (data, type, row) {
+                      return row.firstname + " " + row.lastname
+                    }
+                  },
+                  {
+                    "data": "email"
+                  },
+                  {
+                    "data": null,
+                    render: function (data, type, row) {
+                      return `	<a href="#!"
+																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
+																data-template="eyeOne">
+											   				<i class="fa fa-eye" aria-hidden="true"></i>
+																<div id="eyeOne" class="d-none">
+																	<span>View</span>
+																</div>
+															</a>
+															<a href=""
+																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
+																data-template="editOne">
+												    		<i class="fas fa-edit"></i>
+																<div id="editOne" class="d-none">
+																	<span>Edit</span>
+																</div>
+															</a>
+															<a href=""
+                              id="delteBtn"
+                              data-id="${row._id}"
+																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
+																data-template="trashOne">
+														   	<i class="fa fa-trash" aria-hidden="true"></i>
+																<div id="trashOne" class="d-none">
+																	<span>Delete</span>
+																</div>
+															</a>`
+                    }
+                  }
+                ]
+              });
+              //delete admin 
+              $(document).on("click", "#delteBtn", function (event) {
+                event.preventDefault();
+                const id = $(this).data("id");
+                //validation
+                if (!id) {
+                  iziToast.success({
+                    title: "Error",
+                    message: "id is required",
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
+                //Ajax Call 🛫 
+                $.ajax({
+                  url: `/adminhandle/delete-admin/${id}`,
+                  type: "DELETE",
+                  headers: {
+                    "Authorization": `Bearer ${AuthToken}`
+                  },
+                  success: function (resposne) {
+                    if (resposne.success) {
+                      iziToast.success({
+                        title: "Succsss",
+                        message: resposne.message,
+                        position: "topRight", // Position of the toast
+                        timeout: 3000, // Duration in milliseconds
+                      });
+                      adminTable.ajax.reload();
+                    }
+                  },
+                  error: function (xhr, status, error) {
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                      iziToast.error({
+                        title: "Error",
+                        message: xhr.responseJSON.message,
+                        position: "topRight", // Position of the toast
+                        timeout: 3000, // Duration in milliseconds
+                      });
+                    } else {
+                      iziToast.error({
+                        title: "Error",
+                        message: "Internal Server Error",
+                        position: "topRight", // Position of the toast
+                        timeout: 3000, // Duration in milliseconds
+                      });
+                    }
+                  }
+                })
+              })
+
+              //Edit Admin 
+              $(document).on("click", function (event) {
+                event.preventDefault();
+              })
+            });
+          </script>
+          <%- include('../layout/end.ejs') %>
+  </main>
