@@ -1,7 +1,7 @@
 import UserModel from "../models/UserModel.js";
 import { getDataUri } from "../utils/features.js";
 import cloudinary from "cloudinary";
-
+import bcerytp from "bcryptjs";
 //ADD ADMIN PAGE
 //GET
 export const add_admin_page = (req, res) => {
@@ -160,5 +160,22 @@ export const deleteAdmin = async (req, res) => {
       success: false,
       message: error.message,
     });
+  }
+};
+
+//Edit Admin
+export const EditAdmin = async (req, res) => {
+  try {
+    const id = req.params.id;
+    if (!id) {
+      res.render("backend/admin/manage-admin");
+    }
+
+    const User = await UserModel.findById(id);
+    console.log(User);
+
+    res.render("backend/admin/edit-admin", { data: User });
+  } catch (error) {
+    console.log(error);
   }
 };

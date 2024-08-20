@@ -9,7 +9,7 @@
                 <div class="col-lg-12 col-md-12 col-12">
                   <!-- Page header -->
                   <div class="mb-5">
-                    <h3 class="mb-0">Products</h3>
+                    <h3 class="mb-0">Admin</h3>
                   </div>
                 </div>
               </div>
@@ -56,133 +56,97 @@
             </div>
           </div>
         </div>
-        <%- include('../layout/footer.ejs') %>
-          <script>
-            $(document).ready(function () {
-              const Token = localStorage.getItem("token");
-              const AuthToken = Token.slice(1, -1);
-              console.log(AuthToken)
-              const adminTable = $("#admintable").DataTable({
-                "processing": true,
-                "serverSide": true,
-                "ajax": {
-                  "url": "/adminhandle/getadmins",
-                  "type": "GET",
-                  headers: { 'Authorization': `Bearer ${AuthToken}` },
-                },
-                "columns": [
 
-                  {
-                    "data": null,
-                    "render": function (data, type, row) {
-                      // Ensure profilePic exists and is an array
-                      const profilePic = row.profilePic && row.profilePic.length > 0 ? row.profilePic[0] : {};
-                      const imgUrl = profilePic.url ? profilePic.url : ''; // Use a default value or empty string if no URL is available
-
-                      return `
-                      <img src="${imgUrl}"
-                      alt="" class="img-4by3-sm rounded-3" />
-                       `;
-                    }
-                  },
-                  {
-                    "data": null,
-                    render: function (data, type, row) {
-                      return row.firstname + " " + row.lastname
-                    }
-                  },
-                  {
-                    "data": "email"
-                  },
-                  {
-                    "data": null,
-                    render: function (data, type, row) {
-                      return `	<a href="#!"
-																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-																data-template="eyeOne">
-											   				<i class="fa fa-eye" aria-hidden="true"></i>
-																<div id="eyeOne" class="d-none">
-																	<span>View</span>
-																</div>
-															</a>
-															<a href=""
-																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-																data-template="editOne">
-												    		<i class="fas fa-edit"></i>
-																<div id="editOne" class="d-none">
-																	<span>Edit</span>
-																</div>
-															</a>
-															<a href=""
-                              id="delteBtn"
-                              data-id="${row._id}"
-																class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-																data-template="trashOne">
-														   	<i class="fa fa-trash" aria-hidden="true"></i>
-																<div id="trashOne" class="d-none">
-																	<span>Delete</span>
-																</div>
-															</a>`
-                    }
-                  }
-                ]
-              });
-              //delete admin 
-              $(document).on("click", "#delteBtn", function (event) {
-                event.preventDefault();
-                const id = $(this).data("id");
-                //validation
-                if (!id) {
-                  iziToast.success({
-                    title: "Error",
-                    message: "id is required",
-                    position: "topRight", // Position of the toast
-                    timeout: 3000, // Duration in milliseconds
-                  });
-                }
-                //Ajax Call 🛫 
-                $.ajax({
-                  url: `/adminhandle/delete-admin/${id}`,
-                  type: "DELETE",
-                  headers: {
-                    "Authorization": `Bearer ${AuthToken}`
-                  },
-                  success: function (resposne) {
-                    if (resposne.success) {
-                      iziToast.success({
-                        title: "Succsss",
-                        message: resposne.message,
-                        position: "topRight", // Position of the toast
-                        timeout: 3000, // Duration in milliseconds
-                      });
-                      adminTable.ajax.reload();
-                    }
-                  },
-                  error: function (xhr, status, error) {
-                    if (xhr.responseJSON && xhr.responseJSON.message) {
-                      iziToast.error({
-                        title: "Error",
-                        message: xhr.responseJSON.message,
-                        position: "topRight", // Position of the toast
-                        timeout: 3000, // Duration in milliseconds
-                      });
-                    } else {
-                      iziToast.error({
-                        title: "Error",
-                        message: "Internal Server Error",
-                        position: "topRight", // Position of the toast
-                        timeout: 3000, // Duration in milliseconds
-                      });
-                    }
-                  }
-                })
-              })
-
-              //Edit Admin 
-              $(document).on("click", function (event) {
-                event.preventDefault();
-              })
-            });
-          </script>
-          <%- include('../layout/end.ejs') %>
   </main>
+
+  <%- include('../layout/footer.ejs') %>
+    <script>
+      $(document).ready(function () {
+        const Token = localStorage.getItem("token");
+        const AuthToken = Token ? Token.slice(1, -1) : '';
+
+        const adminTable = $("#admintable").DataTable({
+          "processing": true,
+          "serverSide": true,
+          "ajax": {
+            "url": "/adminhandle/getadmins",
+            "type": "GET",
+            headers: { 'Authorization': `Bearer ${AuthToken}` },
+          },
+          "columns": [
+            {
+              "data": null,
+              "render": function (data, type, row) {
+                const profilePic = row.profilePic && row.profilePic.length > 0 ? row.profilePic[0] : {};
+                const imgUrl = profilePic.url ? profilePic.url : '';
+                return `<img src="${imgUrl}" alt="" class="img-4by3-sm rounded-3" />`;
+              }
+            },
+            {
+              "data": null,
+              "render": function (data, type, row) {
+                return `${row.firstname} ${row.lastname}`;
+              }
+            },
+            {
+              "data": "email"
+            },
+            {
+              "data": null,
+              "render": function (data, type, row) {
+                return `
+                            <a href="#!" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeOne">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                <div id="eyeOne" class="d-none"><span>View</span></div>
+                            </a>
+                            <a href="" id="deleteBtn" data-id="${row._id}" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="trashOne">
+                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                <div id="trashOne" class="d-none"><span>Delete</span></div>
+                            </a>`;
+              }
+            }
+          ]
+        });
+
+        $(document).on("click", "#deleteBtn", function (event) {
+          event.preventDefault();
+          const id = $(this).data("id");
+          if (!id) {
+            iziToast.error({
+              title: "Error",
+              message: "ID is required",
+              position: "topRight",
+              timeout: 3000
+            });
+            return;
+          }
+          $.ajax({
+            url: `/adminhandle/delete-admin/${id}`,
+            type: "DELETE",
+            headers: { "Authorization": `Bearer ${AuthToken}` },
+            success: function (response) {
+              if (response.success) {
+                iziToast.success({
+                  title: "Success",
+                  message: response.message,
+                  position: "topRight",
+                  timeout: 3000
+                });
+                adminTable.ajax.reload();
+              }
+            },
+            error: function (xhr) {
+              const message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : "Internal Server Error";
+              iziToast.error({
+                title: "Error",
+                message: message,
+                position: "topRight",
+                timeout: 3000
+              });
+            }
+          });
+        });
+      });
+    </script>
+
+    <%- include('../layout/end.ejs') %>

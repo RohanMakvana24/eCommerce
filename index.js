@@ -12,6 +12,7 @@ import { Auth } from "./middleware/Auth.js";
 import DashboardRoute from "./routes/dashoboardRoute.js";
 import cloudinary from "cloudinary";
 import AdminRoute from "./routes/adminRoute.js";
+import CategoriesRoute from "./routes/categoriesRoute.js";
 //DOTENV CONFIGURATION
 dotenv.config({ path: "./config/.env" });
 
@@ -44,6 +45,8 @@ server.set("view engine", "ejs");
 server.use("/api/v1/auth", AuthRoutes);
 server.use("/", DashboardRoute);
 server.use("/adminhandle", AdminRoute);
+server.use("/categoryhandle", CategoriesRoute);
+
 server.use((req, res) => {
   res.status(504).send({
     error: "Page not found",
