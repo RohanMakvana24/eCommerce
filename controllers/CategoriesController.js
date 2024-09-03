@@ -1,5 +1,5 @@
 import CategoryModel from "../models/categoryModel.js";
-
+import cloudinary from "cloudinary";
 //@ Accesss : Private
 //@ Desc : display add categories page
 //@ Route : api/v1/categorieshandle/add-categories-page
@@ -170,6 +170,73 @@ export const edit_Category = async (req, res) => {
 
     const Category = await CategoryModel.findById(id);
     res.render("backend/categories/update_categories", { data: Category });
+  } catch (error) {
+    console.log(error);
+    return res.status(504).send({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+// <---------------  End Get Single Category Section 💥  ------------------>
+
+//@ Accesss : Private
+//@ Desc : Update Categories
+//@ Route : api/v1/categorieshandle/update-category
+export const updayte_category = async (req, res) => {
+  try {
+    const { name, status, public_id, url, description, catId } = req.body;
+    //validations
+    if (!name || !status || !description || !catId) {
+      return res.status(400).send({
+        success: false,
+        message: "All Fields are required",
+      });
+    }
+
+    if (!public_id || !url) {
+      const Category = await CategoryModel.findByIdAndUpdate(catId, {
+        name: name,
+        isActive: status,
+        description: description,
+      });
+      return res.status(201).send({
+        success: true,
+        message: "The Category Updated",
+      });
+    } else {
+      const Category = await CategoryModel.findById(catId);
+      const old_public_id = Category.image[0].public_id;
+
+      // delete preview image
+      await cloudinary.v2.uploader.destroy(old_public_id, (error, result) => {
+        if (error) {
+          res.status(400).send({
+            success: true,
+            message: error,
+          });
+        } else {
+          console.log(result);
+        }
+      });
+      await CategoryModel.findByIdAndUpdate(catId, {
+        name: name,
+        image: {
+          public_id: public_id,
+          url: url,
+        },
+        meta: {
+          updatedBy: req.user._id,
+        },
+        isActive: status,
+        description: description,
+      });
+      return res.status(201).send({
+        success: true,
+        message: "The Category Updated",
+      });
+    }
   } catch (error) {
     console.log(error);
     return res.status(504).send({

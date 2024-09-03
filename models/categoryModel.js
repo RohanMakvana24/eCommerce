@@ -14,7 +14,7 @@ const categorySchema = new Schema({
   },
   image: [
     {
-      pulic_id: {
+      public_id: {
         type: String,
       },
       url: {

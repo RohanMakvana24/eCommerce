@@ -24,17 +24,12 @@
                                             <form id="addcategoriesForm" enctype="multipart/form-data">
                                                 <div class="card-body">
                                                     <div class="row">
-                                                        <div class="col-md-6 mb-3">
+                                                        <div class="col-md-12 mb-3">
                                                             <label class="form-label">Name</label>
                                                             <input type="text" class="form-control" id="name"
                                                                 name="name" placeholder="Category Name" required />
                                                         </div>
-                                                        <div class="col-md-6 mb-3">
-                                                            <label class="form-label">Parent Categories </label>
-                                                            <select class="form-select" name="parentcategory"
-                                                                id="parentCategories">
-                                                            </select>
-                                                        </div>
+
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12 mb-3">
@@ -110,34 +105,34 @@
                 const token = localStorage.getItem('token');
                 const AuthToken = token.slice(1, -1);
 
-                //Get All Categories 💣
-                function getCategory() {
-                    $("#parentCategories").empty();
-                    $.ajax({
-                        url: "/categoryhandle/get-category",
-                        type: "GET",
-                        headers: {
-                            Authorization: `Bearer ${AuthToken}`
-                        },
-                        success: function (response) {
-                            if (response.data.length == 0) {
-                                $("#parentCategories").prop("disabled", true)
-                            } else {
-                                $("#parentCategories").html(`<option value=""> Select Parent Category </option> `)
-                                response.data.forEach(element => {
-                                    $("#parentCategories").append(`
-                                      <option value=${element._id}> ${element.name}
-                                       </option>`)
-                                });
+                // //Get All Categories 💣
+                // function getCategory() {
+                //     $("#parentCategories").empty();
+                //     $.ajax({
+                //         url: "/categoryhandle/get-category",
+                //         type: "GET",
+                //         headers: {
+                //             Authorization: `Bearer ${AuthToken}`
+                //         },
+                //         success: function (response) {
+                //             if (response.data.length == 0) {
+                //                 $("#parentCategories").prop("disabled", true)
+                //             } else {
+                //                 $("#parentCategories").html(`<option value=""> Select Parent Category </option> `)
+                //                 response.data.forEach(element => {
+                //                     $("#parentCategories").append(`
+                //                       <option value=${element._id}> ${element.name}
+                //                        </option>`)
+                //                 });
 
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.log(error)
-                        }
-                    })
-                }
-                getCategory();
+                //             }
+                //         },
+                //         error: function (xhr, status, error) {
+                //             console.log(error)
+                //         }
+                //     })
+                // }
+                // getCategory();
                 //Categories Form Validation 💣
                 $("#addcategoriesForm").validate({
                     rules: {

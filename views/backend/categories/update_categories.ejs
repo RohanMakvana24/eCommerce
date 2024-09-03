@@ -21,7 +21,7 @@
                                         <!-- card -->
                                         <div class="card mb-6">
                                             <!-- card body -->
-                                            <form id="addcategoriesForm" enctype="multipart/form-data">
+                                            <form id="updateCategoriesForm" enctype="multipart/form-data">
                                                 <div class="card-body">
                                                     <div class="row">
                                                         <div class="col-md-12 mb-3">
@@ -79,10 +79,13 @@
                                                     <div class="row">
                                                         <input type="hidden" id="public_id" name="public_id" />
                                                         <input type="hidden" id="url" name="url" />
+                                                        <input type="hidden" value="<%= data._id %>" id="catId"
+                                                            name="catId" />
+
 
                                                         <div class="col-12 mb-3">
                                                             <input type="submit" id="AddCatBtn" class="btn btn-primary"
-                                                                value=" Add New" />
+                                                                value="Update Now" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -120,35 +123,35 @@
                 const AuthToken = token.slice(1, -1);
 
                 //Get All Categories 💣
-                function getCategory() {
-                    $("#parentCategories").empty();
-                    $.ajax({
-                        url: "/categoryhandle/get-category",
-                        type: "GET",
-                        headers: {
-                            Authorization: `Bearer ${AuthToken}`
-                        },
-                        success: function (response) {
-                            if (response.data.length == 0) {
-                                $("#parentCategories").prop("disabled", true)
-                            } else {
-                                $("#parentCategories").html(`<option value=""> Select Parent Category </option> `)
-                                response.data.forEach(element => {
-                                    $("#parentCategories").append(`
-                                      <option value=${element._id}> ${element.name}
-                                       </option>`)
-                                });
+                // function getCategory() {
+                //     $("#parentCategories").empty();
+                //     $.ajax({
+                //         url: "/categoryhandle/get-category",
+                //         type: "GET",
+                //         headers: {
+                //             Authorization: `Bearer ${AuthToken}`
+                //         },
+                //         success: function (response) {
+                //             if (response.data.length == 0) {
+                //                 $("#parentCategories").prop("disabled", true)
+                //             } else {
+                //                 $("#parentCategories").html(`<option value=""> Select Parent Category </option> `)
+                //                 response.data.forEach(element => {
+                //                     $("#parentCategories").append(`
+                //                       <option value=${element._id}> ${element.name}
+                //                        </option>`)
+                //                 });
 
-                            }
-                        },
-                        error: function (xhr, status, error) {
-                            console.log(error)
-                        }
-                    })
-                }
-                getCategory();
+                //             }
+                //         },
+                //         error: function (xhr, status, error) {
+                //             console.log(error)
+                //         }
+                //     })
+                // }
+                // getCategory();
                 //Categories Form Validation 💣
-                $("#addcategoriesForm").validate({
+                $("#updateCategoriesForm").validate({
                     rules: {
                         name: {
                             required: true
@@ -160,14 +163,15 @@
 
                 })
                 //Categories Form Submitimg 💣
-                $("#addcategoriesForm").on("submit", function (event) {
+                $("#updateCategoriesForm").on("submit", function (event) {
                     event.preventDefault();
                     const formdata = $(this).serializeArray();
 
                     var description = quill.getText().trim();
                     //Description Validation
-                    if (description === "") {
+                    if (description == "") {
                         $("#descrptionError").text('Desciption is required').css("color", "red")
+                        return false;
                     } else {
                         var descObject = { name: "description", value: description };
                         formdata.push(descObject)
@@ -175,14 +179,15 @@
                     }
 
                     //Categories Image validation
-                    if (formdata[2].value === "" && formdata[3].value == "") {
-                        $("#imageError").text('Categories Image is required').css("color", "red")
-                    }
+                    // if (formdata[2].value === "" && formdata[3].value == "") {
+                    //     $("#imageError").text('Categories Image is required').css("color", "red")
+                    //     return false;
+                    // }
                     if ($(this).valid()) {
                         console.log(formdata)
                         $.ajax({
-                            url: "/categoryhandle/add-category",
-                            type: "POST",
+                            url: "/categoryhandle/update-category",
+                            type: "PUT",
                             data: formdata,
                             headers: {
                                 Authorization: `Bearer ${AuthToken}`
@@ -195,10 +200,7 @@
                                         position: "topRight", // Position of the toast
                                         timeout: 3000, // Duration in milliseconds
                                     });
-                                    setTimeout(() => {
-                                        window.location.reload();
-
-                                    }, 1000);
+                                    window.location.href = "/categoryhandle/manage-category"
                                 }
                             },
                             error: function (xhr, status, error) {
@@ -226,7 +228,7 @@
 
         <!--Categories Image Uploading Start-->
         <script>
-            $("#AddCatBtn").prop("disabled", true)
+            // $("#AddCatBtn").prop("disabled", true)
             var flag = 0
             const Token = localStorage.getItem("token");
             const AuthToken = Token.slice(1, -1);
@@ -246,7 +248,7 @@
                     document.getElementById("public_id").value = response.data.public_id;
                     document.getElementById("url").value = response.data.url;
                     $("#imageError").text("");
-                    $("#AddCatBtn").prop("disabled", false)
+                    // $("#AddCatBtn").prop("disabled", false)
 
                 },
                 error: function (file, response) {

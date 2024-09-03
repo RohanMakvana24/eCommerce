@@ -8,6 +8,7 @@ import {
   get_all_Categories,
   getCategories,
   manage_categories,
+  updayte_category,
 } from "../controllers/CategoriesController.js";
 import Authenticate from "../middleware/Authenticate.js";
 import isEmptyBody from "../middleware/isEmptyBody.js";
@@ -36,4 +37,7 @@ CategoriesRoute.delete("/delete-category/:id", Authenticate, deleteCategory);
 
 //Edit Category
 CategoriesRoute.get("/edit-category/:id", Auth, edit_Category);
+
+//UPDATE CATEGORY
+CategoriesRoute.put("/update-category", Authenticate, updayte_category);
 export default CategoriesRoute;
