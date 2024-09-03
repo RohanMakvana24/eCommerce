@@ -12,11 +12,17 @@ const categorySchema = new Schema({
     type: String,
     trim: true,
   },
-  parent: {
-    type: Schema.Types.ObjectId,
-    ref: "Category", // Reference to another Category for hierarchical structure
-    default: null,
-  },
+  image: [
+    {
+      pulic_id: {
+        type: String,
+      },
+      url: {
+        type: String,
+      },
+    },
+  ],
+
   // Optional: You can add more fields here as needed
   isActive: {
     type: Number,

@@ -10,7 +10,6 @@ import { getDataUri } from "../utils/features.js";
 export const Signup = async (req, res) => {
   try {
     const { firstname, lastname, email, password, public_id, url } = req.body;
-    console.log(req.body);
     //Validaion
     if (!firstname || !lastname || !email || !password || !public_id || !url) {
       return res.status(404).send({

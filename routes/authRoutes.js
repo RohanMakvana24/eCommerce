@@ -25,7 +25,7 @@ import upload from "../middleware/multer.js";
 const AuthRoutes = express.Router();
 
 //SignUp POST
-AuthRoutes.post("/signup", Signup);  
+AuthRoutes.post("/signup", Signup);
 
 //SignUp GET
 AuthRoutes.get("/login-page", (req, res) => {
