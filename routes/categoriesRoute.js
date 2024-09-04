@@ -40,4 +40,5 @@ CategoriesRoute.get("/edit-category/:id", Auth, edit_Category);
 
 //UPDATE CATEGORY
 CategoriesRoute.put("/update-category", Authenticate, updayte_category);
+
 export default CategoriesRoute;
