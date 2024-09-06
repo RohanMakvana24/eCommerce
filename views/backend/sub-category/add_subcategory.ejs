@@ -29,10 +29,12 @@
                                                             <input type="text" class="form-control" id="name"
                                                                 name="name" placeholder="Category Name" required />
                                                         </div>
+
                                                         <div class="col-md-6 mb-3">
-                                                            <lable>Categories</lable>
-                                                            <select id="categories" name="categories"> 
-                                                              <option> </option>
+                                                            <label class="form-label">Categories</label>
+                                                            <select class="form-select" id="categories"
+                                                                name="categoryId" aria-label="Default select example">
+
                                                             </select>
                                                         </div>
 
@@ -59,22 +61,8 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-12 mb-3">
-                                                            <label class="form-label">Image</label>
-                                                            <div id="myDropzone" class="dropzone">
-                                                                <div class="dz-message">
-                                                                    Drop files here or click to upload
-                                                                </div>
-                                                            </div>
-                                                            <span id="imageError"> </span>
 
-                                                        </div>
-                                                    </div>
                                                     <div class="row">
-                                                        <input type="hidden" id="public_id" name="public_id" />
-                                                        <input type="hidden" id="url" name="url" />
-
                                                         <div class="col-12 mb-3">
                                                             <input type="submit" id="AddCatBtn" class="btn btn-primary"
                                                                 value=" Add New" />
@@ -112,34 +100,35 @@
                 const AuthToken = token.slice(1, -1);
 
                 // //Get All Categories 💣
-                // function getCategory() {
-                //     $("#parentCategories").empty();
-                //     $.ajax({
-                //         url: "/categoryhandle/get-category",
-                //         type: "GET",
-                //         headers: {
-                //             Authorization: `Bearer ${AuthToken}`
-                //         },
-                //         success: function (response) {
-                //             if (response.data.length == 0) {
-                //                 $("#parentCategories").prop("disabled", true)
-                //             } else {
-                //                 $("#parentCategories").html(`<option value=""> Select Parent Category </option> `)
-                //                 response.data.forEach(element => {
-                //                     $("#parentCategories").append(`
-                //                       <option value=${element._id}> ${element.name}
-                //                        </option>`)
-                //                 });
+                function getCategory() {
+                    $("#categories").empty();
+                    $.ajax({
+                        url: "/categoryhandle/get-category",
+                        type: "GET",
+                        headers: {
+                            Authorization: `Bearer ${AuthToken}`
+                        },
+                        success: function (response) {
+                            console.log(response)
+                            if (response.data.length == 0) {
+                                $("#categories").prop("disabled", true)
+                            } else {
+                                $("#categories").html(`<option value=""> Select  Category </option> `)
+                                response.data.forEach(element => {
+                                    $("#categories").append(`
+                                      <option value=${element._id}> ${element.name}
+                                       </option>`)
+                                });
 
-                //             }
-                //         },
-                //         error: function (xhr, status, error) {
-                //             console.log(error)
-                //         }
-                //     })
-                // }
-                // getCategory();
-                //Categories Form Validation 💣
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(error)
+                        }
+                    })
+                }
+                getCategory();
+                //Sub Categories Form Validation 💣
                 $("#addcategoriesForm").validate({
                     rules: {
                         name: {
@@ -147,7 +136,7 @@
                         },
                         status: {
                             required: true
-                        },
+                        }
                     },
 
                 })
@@ -156,24 +145,20 @@
                     event.preventDefault();
                     const formdata = $(this).serializeArray();
 
+
                     var description = quill.getText().trim();
                     //Description Validation
                     if (description === "") {
                         $("#descrptionError").text('Desciption is required').css("color", "red")
+                        return false;
                     } else {
                         var descObject = { name: "description", value: description };
                         formdata.push(descObject)
                         $("#descrptionError").text("");
                     }
-
-                    //Categories Image validation
-                    if (formdata[2].value === "" && formdata[3].value == "") {
-                        $("#imageError").text('Categories Image is required').css("color", "red")
-                    }
                     if ($(this).valid()) {
-                        console.log(formdata)
                         $.ajax({
-                            url: "/categoryhandle/add-category",
+                            url: "/subcategoryhandle/add-subcategory",
                             type: "POST",
                             data: formdata,
                             headers: {
@@ -215,97 +200,4 @@
                 })
             })
         </script>
-
-        <!--Categories Image Uploading Start-->
-        <script>
-            $("#AddCatBtn").prop("disabled", true)
-            var flag = 0
-            const Token = localStorage.getItem("token");
-            const AuthToken = Token.slice(1, -1);
-            Dropzone.autoDiscover = false; // Prevent Dropzone from auto-initializing
-            const myDropzone = new Dropzone("#myDropzone", {
-                url: "/adminhandle/profile-upload",
-                maxFiles: 1, // URL where files will be uploaded
-                method: "post",
-                maxFilesize: 2, // Maximum file size in MB
-                acceptedFiles: "image/*", // Only allow image files
-                addRemoveLinks: true, // Add remove links to each file preview
-                paramName: "file", // Change the parameter name for the file
-                headers: {
-                    Authorization: `Bearer ${AuthToken}`, // Authorization header
-                },
-                success: function (file, response) {
-                    document.getElementById("public_id").value = response.data.public_id;
-                    document.getElementById("url").value = response.data.url;
-                    $("#imageError").text("");
-                    $("#AddCatBtn").prop("disabled", false)
-
-                },
-                error: function (file, response) {
-                    flag = 1;
-                    $("#imageError").text('Categories Image Size is big').css("color", "red")
-                    this.removeFile(this.files[0]);
-
-                },
-                init: function () {
-                    this.on("addedfile", function (file) {
-                        if (this.files.length > 1) {
-                            this.removeFile(this.files[0]);
-                        }
-                    });
-                    // Bind the removedfile event
-                    this.on("removedfile", function (file) {
-                        if (flag !== 1) {
-                            handleFileRemoval();
-                        }
-                    });
-                },
-
-            });
-
-            function handleFileRemoval() {
-                $("#imageError").text('Categories Image is required').css("color", "red")
-
-                const public_id = document.getElementById("public_id").value;
-                $.ajax({
-                    url: "/adminhandle/delete-temp-profile",
-                    type: "POST",
-                    headers: {
-                        Authorization: `Bearer ${AuthToken}`, // Authorization header
-                    },
-                    data: {
-                        public_id: public_id,
-                    },
-                    success: function (response) {
-                        if (response.success) {
-                            iziToast.success({
-                                title: "Success",
-                                message: response.message,
-                                position: "topRight", // Position of the toast
-                                timeout: 3000, // Duration in milliseconds
-                            });
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        if (xhr.responseJSON && xhr.responseJSON.message) {
-                            iziToast.error({
-                                title: "Error",
-                                message: xhr.responseJSON.message,
-                                position: "topRight", // Position of the toast
-                                timeout: 3000, // Duration in milliseconds
-                            });
-                        } else {
-                            iziToast.error({
-                                title: "Error",
-                                message: "Internal Server Error",
-                                position: "topRight", // Position of the toast
-                                timeout: 3000, // Duration in milliseconds
-                            });
-                        }
-                    },
-                });
-            }
-        </script>
-        <!--Profile Uploading End -->
-
         <%- include('../layout/end.ejs') %>

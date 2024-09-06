@@ -1,30 +1,23 @@
-import mongoose from "mongoose";
+import mongoose, { mongo } from "mongoose";
 const { Schema } = mongoose;
 
 // Define the Category Schema
-const categorySchema = new Schema({
+const subcategorySchema = new Schema({
   name: {
     type: String,
     required: true,
-    unique: true,
     trim: true,
   },
   description: {
     type: String,
     trim: true,
   },
-  image: [
-    {
-      public_id: {
-        type: String,
-      },
-      url: {
-        type: String,
-      },
-    },
-  ],
+  categoryId: {
+    type: mongoose.Schema.ObjectId,
+    ref: "Category",
+    required: false,
+  },
 
-  // Optional: You can add more fields here as needed
   isActive: {
     type: Number,
     enum: [1, 0],
@@ -51,7 +44,7 @@ const categorySchema = new Schema({
 });
 
 // Add pre-save middleware to update `updatedAt` field
-categorySchema.pre("save", function (next) {
+subcategorySchema.pre("save", function (next) {
   if (this.isModified("name") || this.isModified("description")) {
     this.meta.updatedAt = Date.now();
   }
@@ -59,6 +52,6 @@ categorySchema.pre("save", function (next) {
 });
 
 // Define and export the Category model
-const CategoryModel = new mongoose.model("Category", categorySchema);
+const SubCategoryModel = new mongoose.model("SubCategory", subcategorySchema);
 
-export default CategoryModel;
+export default SubCategoryModel;
