@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Electronics",
+      "description": "Devices and gadgets",
+      "categoryId": "66d9f3c4ea7b6ff90a7876f6",  
+      "isActive": 1,
+      "meta": {
+        "createdBy": "66be3b05bdf04293cde2c554",  
+        "updatedBy": "66be3b05bdf04293cde2c554",  
+        "createdAt": "2024-09-08T12:00:00Z",
+        "updatedAt": "2024-09-08T12:00:00Z"
+      }
+    },
+    {
+      "name": "Clothing",
+      "description": "Apparel and garments",
+      "categoryId": "66d9f3c4ea7b6ff90a7876f6",  
+      "isActive": 1,
+      "meta": {
+        "createdBy": "66be3b05bdf04293cde2c554",  
+        "updatedBy": "66be3b05bdf04293cde2c554",  
+        "createdAt": "2024-09-08T13:00:00Z",
+        "updatedAt": "2024-09-08T13:00:00Z"
+      }
+    },
+    {
+      "name": "Books",
+      "description": "Various genres of books",
+      "categoryId": "66d9f3c4ea7b6ff90a7876f6", 
+      "meta": {
+        "createdBy": "66be3b05bdf04293cde2c554", 
+        "updatedBy": "66be3b05bdf04293cde2c554",  
+        "createdAt": "2024-09-08T14:00:00Z",
+        "updatedAt": "2024-09-08T14:00:00Z"
+      }
+    }
+  ]
+  

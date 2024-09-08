@@ -1,0 +1,211 @@
+<%- include('../layout/header.ejs') %>
+    <main id="main-wrapper" class="main-wrapper">
+        <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+                <div id="app-content">
+                    <!-- Container fluid -->
+                    <div class="app-content-area">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-12">
+                                    <!-- Page header -->
+                                    <div class="mb-5">
+                                        <h3 class="mb-0">Update Sub Categories</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <!-- row -->
+
+                                <div class="row">
+                                    <div class="col-lg-12 col-12">
+                                        <!-- card -->
+                                        <div class="card mb-6">
+                                            <!-- card body -->
+                                            <form id="UpdatesubCategoriesForm" enctype="multipart/form-data">
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">Name</label>
+                                                            <input type="text" class="form-control" id="name"
+                                                                name="name" value="<%= data.name %>"
+                                                                placeholder="Category Name" required />
+                                                        </div>
+
+                                                        <div class="col-md-6 mb-3">
+                                                            <label class="form-label">Categories</label>
+                                                            <select class="form-select" id="categories"
+                                                                name="categoryId" aria-label="Default select example">
+                                                            </select>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 mb-3">
+                                                            <label class="form-label">Status</label>
+                                                            <select class="form-select" name="status"
+                                                                aria-label="Default select example">
+                                                                <option value="">Select Status</option>
+                                                                <option <%=data.isActive==1 ? "Selected" : "" %>
+                                                                    value="1">
+                                                                    Active</option>
+                                                                <option <%=data.isActive==0 ? "Selected" : "" %>
+                                                                    value="0">Inactive</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <label class="form-label">Description</label>
+                                                            <div id="toolbar-container">
+                                                            </div>
+                                                            <div style="height : 100px" id="editor-container">
+                                                            </div>
+                                                            <span id="descrptionError"> </span>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-12 mb-3">
+                                                            <input type="hidden" name="subCatId"
+                                                                value="<%= data._id %>">
+                                                            <input type="submit" id="AddCatBtn" class="btn btn-primary"
+                                                                value=" Add New" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <%- include('../layout/footer.ejs') %>
+        <script>
+            var quill = new Quill('#editor-container', {
+                modules: {
+                    toolbar: [
+                        [{ header: [1, 2, false] }],
+                        ['bold', 'italic', 'underline'],
+                        [{ list: 'ordered' }, { list: 'bullet' }],
+                        ['link'],
+                        ['clean']
+                    ]
+                },
+                theme: 'snow'
+            });
+            var descriptionold = `<%= data.description %>`;
+            // Set the content of the editor
+            quill.root.innerHTML = descriptionold;
+
+        </script>
+        <script>
+            $(document).ready(function () {
+                const token = localStorage.getItem('token');
+                const AuthToken = token.slice(1, -1);
+
+                // //Get All Categories 💣
+                function getCategory() {
+                    $("#categories").empty();
+                    $.ajax({
+                        url: "/categoryhandle/get-category",
+                        type: "GET",
+                        headers: {
+                            Authorization: `Bearer ${AuthToken}`
+                        },
+                        success: function (response) {
+                            console.log(response)
+                            if (response.data.length == 0) {
+                                $("#categories").prop("disabled", true)
+                            } else {
+                                $("#categories").html(`<option value="<%= data.categoryId._id %>">  <%= data.categoryId.name %> </option> `)
+                                response.data.forEach(element => {
+                                    $("#categories").append(`
+                                      <option value=${element._id}> ${element.name}
+                                       </option>`)
+                                });
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(error)
+                        }
+                    })
+                }
+                getCategory();
+                //Sub Categories Form Validation 💣
+                $("#UpdatesubCategoriesForm").validate({
+                    rules: {
+                        name: {
+                            required: true
+                        },
+                        status: {
+                            required: true
+                        }
+                    },
+
+                })
+                //Categories Form Submitimg 💣
+                $("#UpdatesubCategoriesForm").on("submit", function (event) {
+                    event.preventDefault();
+                    const formdata = $(this).serializeArray();
+
+
+                    var description = quill.getText().trim();
+                    //Description Validation
+                    if (description === "") {
+                        $("#descrptionError").text('Desciption is required').css("color", "red")
+                        return false;
+                    } else {
+                        var descObject = { name: "description", value: description };
+                        formdata.push(descObject)
+                        $("#descrptionError").text("");
+                    }
+
+                    if ($(this).valid()) {
+                        $.ajax({
+                            url: "/subcategoryhandle/update-subcategory",
+                            type: "PUT",
+                            data: formdata,
+                            headers: {
+                                Authorization: `Bearer ${AuthToken}`
+                            },
+                            success: function (response) {
+                                if (response.success) {
+                                    iziToast.success({
+                                        title: "Success",
+                                        message: response.message,
+                                        position: "topRight", // Position of the toast
+                                        timeout: 3000, // Duration in milliseconds
+                                    });
+                                    setTimeout(() => {
+                                        window.location.href = "/subcategoryhandle/manage-subcategory";
+
+                                    }, 1000);
+                                }
+                            },
+                            error: function (xhr, status, error) {
+                                if (xhr.responseJSON && xhr.responseJSON.message) {
+                                    iziToast.error({
+                                        title: "Error",
+                                        message: xhr.responseJSON.message,
+                                        position: "topRight", // Position of the toast
+                                        timeout: 3000, // Duration in milliseconds
+                                    });
+                                } else {
+                                    iziToast.error({
+                                        title: "Error",
+                                        message: "Internal Server Error",
+                                        position: "topRight", // Position of the toast
+                                        timeout: 3000, // Duration in milliseconds
+                                    });
+                                }
+                            },
+                        })
+                    }
+                })
+            })
+        </script>
+        <%- include('../layout/end.ejs') %>

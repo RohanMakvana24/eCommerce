@@ -1,108 +1,120 @@
 <%- include('../layout/header.ejs') %>
-    <main id="main-wrapper" class="main-wrapper">
-        <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
-                <div id="app-content">
-                    <!-- Container fluid -->
-                    <div class="app-content-area">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-12">
-                                    <!-- Page header -->
-                                    <div class="mb-5">
-                                        <h3 class="mb-0">Categories Manage</h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <!-- row -->
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="card">
-                                            <div class="card-header d-md-flex border-bottom-0">
-                                                <div class="flex-grow-1">
-                                                    <a href="/adminhandle/add-admin-page" class="btn btn-primary">+ Add
-                                                        New</a>
-                                                </div>
-                                                <div class="mt-3 mt-md-0">
-                                                    <a href=""
-                                                        class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                                                        data-template="settingOne">
-                                                        <i data-feather="settings" class="icon-xs"></i>
-                                                        <div id="settingOne" class="d-none">
-                                                            <span>Setting</span>
-                                                        </div>
-                                                    </a>
+<main id="main-wrapper" class="main-wrapper">
+  <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+  <div id="app-content">
+    <!-- Container fluid -->
+    <div class="app-content-area">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-12">
+            <!-- Page header -->
+            <div class="mb-5">
+              <h3 class="mb-0">Sub Categories Manage</h3>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card">
+                <div class="card-header d-md-flex border-bottom-0">
+                  <div class="flex-grow-1">
+                    <a
+                      href="/adminhandle/add-admin-page"
+                      class="btn btn-primary"
+                      >+ Add New</a
+                    >
+                  </div>
+                  <div class="mt-3 mt-md-0">
+                    <a
+                      href=""
+                      class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
+                      data-template="settingOne"
+                    >
+                      <i data-feather="settings" class="icon-xs"></i>
+                      <div id="settingOne" class="d-none">
+                        <span>Setting</span>
+                      </div>
+                    </a>
 
-                                                    <a href="#!" class="btn btn-outline-white ms-2">Import</a>
-                                                    <a href="#!" class="btn btn-outline-white ms-2">Export</a>
-                                                </div>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="table-responsive table-card">
-                                                    <table id="catTable" class="table text-nowrap table-centered mt-0"
-                                                        style="width: 100%">
-                                                        <thead>
-                                                            <tr>
-                                                                <th> Image </th>
-                                                                <th>Name</th>
-                                                                <th> Status </th>
-                                                                <th>Action</th>
-                                                            </tr>
-                                                        </thead>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a
+                      href="#"
+                      id="getDataExcelBTN"
+                      class="btn btn-outline-white ms-2"
+                      >Excel</a
+                    >
+                    <a
+                      href="#"
+                      id="generatePdfBTN"
+                      class="btn btn-outline-white ms-2"
+                      >PDF</a
+                    >
+                    <a href="#!" id="importData" class="btn btn-warning ms-2"
+                      >Import</a
+                    >
+                    <input type="file" id="file" style="display: none" />
+                  </div>
                 </div>
+                <div class="card-body">
+                  <div class="table-responsive table-card">
+                    <table
+                      id="subCatTable"
+                      class="table text-nowrap table-centered mt-0"
+                      style="width: 100%"
+                    >
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 
-    </main>
+<%- include('../layout/footer.ejs') %>
+<script>
+  $(document).ready(function () {
+    const Token = localStorage.getItem("token");
+    const AuthToken = Token ? Token.slice(1, -1) : "";
 
-    <%- include('../layout/footer.ejs') %>
-        <script>
-            $(document).ready(function () {
-                const Token = localStorage.getItem("token");
-                const AuthToken = Token ? Token.slice(1, -1) : '';
-
-                const CategoryTable = $("#catTable").DataTable({
-                    "processing": true,
-                    "serverSide": true,
-                    "ajax": {
-                        "url": "/categoryhandle/get-all-categories",
-                        "type": "GET",
-                        headers: { 'Authorization': `Bearer ${AuthToken}` },
-                    },
-                    "columns": [
-                        {
-                            "data": null,
-                            "render": function (data, type, row) {
-                                const catimage = row.image && row.image.length > 0 ? row.image[0] : {};
-                                const imgUrl = catimage.url ? catimage.url : '';
-                                return `<img src="${imgUrl}" alt="No Image" class="img-4by3-sm rounded-3" />`;
-                            }
-                        },
-                        {
-                            "data": "name"
-                        },
-                        {
-                            "data": "isActive",
-                            "render": function (data, type, row) {
-                                if (data === 1) {
-                                    return `<span style="background-color: green; color: white; border-radius: 8px; padding: 3px 3px; display: inline-block; width: 70px; text-align: center;">Active</span>`;
-                                } else {
-                                    return `<span style="background-color: red; color: white; border-radius: 8px; padding: 3px 3px; display: inline-block; width: 70px; text-align: center;">Inactive</span>`;
-                                }
-                            }
-                        },
-                        {
-                            "data": null,
-                            "render": function (data, type, row) {
-                                return `
-                            <a href="/categoryhandle/edit-category/${row._id}" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeOne">
+    const SubCategoryTable = $("#subCatTable").DataTable({
+      processing: true,
+      serverSide: true,
+      ajax: {
+        url: "/subcategoryhandle/get-all-subcategories",
+        type: "GET",
+        headers: { Authorization: `Bearer ${AuthToken}` },
+      },
+      columns: [
+        {
+          data: "name",
+        },
+        {
+          data: "isActive",
+          render: function (data, type, row) {
+            if (data === 1) {
+              return `<span style="background-color: green; color: white; border-radius: 8px; padding: 3px 3px; display: inline-block; width: 70px; text-align: center;">Active</span>`;
+            } else {
+              return `<span style="background-color: red; color: white; border-radius: 8px; padding: 3px 3px; display: inline-block; width: 70px; text-align: center;">Inactive</span>`;
+            }
+          },
+        },
+        {
+          data: null,
+          render: function (data, type, row) {
+            return `
+                            <a href="/subcategoryhandle/edit-subcategory/${row._id}" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip" data-template="eyeOne">
                                 <i class="fa fa-edit" aria-hidden="true"></i>
                                 <div id="eyeOne" class="d-none"><span>View</span></div>
                             </a>
@@ -110,52 +122,240 @@
                                 <i class="fa fa-trash" aria-hidden="true"></i>
                                 <div id="trashOne" class="d-none"><span>Delete</span></div>
                             </a>`;
-                            }
-                        },
+          },
+        },
+      ],
+    });
 
+    $(document).on("click", "#deleteBtn", function (event) {
+      event.preventDefault();
+      const id = $(this).data("id");
 
-                    ]
-                });
-
-                $(document).on("click", "#deleteBtn", function (event) {
-                    event.preventDefault();
-                    const id = $(this).data("id");
-                    if (!id) {
-                        iziToast.error({
-                            title: "Error",
-                            message: "ID is required",
-                            position: "topRight",
-                            timeout: 3000
-                        });
-                        return;
-                    }
-                    $.ajax({
-                        url: `/categoryhandle/delete-category/${id}`,
-                        type: "DELETE",
-                        headers: { "Authorization": `Bearer ${AuthToken}` },
-                        success: function (response) {
-                            if (response.success) {
-                                iziToast.success({
-                                    title: "Success",
-                                    message: response.message,
-                                    position: "topRight",
-                                    timeout: 3000
-                                });
-                                CategoryTable.ajax.reload();
-                            }
-                        },
-                        error: function (xhr) {
-                            const message = xhr.responseJSON && xhr.responseJSON.message ? xhr.responseJSON.message : "Internal Server Error";
-                            iziToast.error({
-                                title: "Error",
-                                message: message,
-                                position: "topRight",
-                                timeout: 3000
-                            });
-                        }
-                    });
-                });
+      if (!id) {
+        iziToast.error({
+          title: "Error",
+          message: "ID is required",
+          position: "topRight",
+          timeout: 3000,
+        });
+        return;
+      }
+      $.ajax({
+        url: `/subcategoryhandle/delete-subcategory/${id}`,
+        type: "DELETE",
+        headers: { Authorization: `Bearer ${AuthToken}` },
+        success: function (response) {
+          if (response.success) {
+            iziToast.success({
+              title: "Success",
+              message: response.message,
+              position: "topRight",
+              timeout: 3000,
             });
-        </script>
+            SubCategoryTable.ajax.reload();
+          }
+        },
+        error: function (xhr) {
+          const message =
+            xhr.responseJSON && xhr.responseJSON.message
+              ? xhr.responseJSON.message
+              : "Internal Server Error";
+          iziToast.error({
+            title: "Error",
+            message: message,
+            position: "topRight",
+            timeout: 3000,
+          });
+        },
+      });
+    });
 
-        <%- include('../layout/end.ejs') %>
+    //Get Data in Excel
+    $("#getDataExcelBTN").on("click", function () {
+      //get all data
+      var data = SubCategoryTable.rows()
+        .data()
+        .toArray()
+        .map((row) => {
+          //Updaated By
+          const updatedBy = row["meta"] && row["meta"]["updatedBy"];
+          const Upfirstname = updatedBy ? updatedBy["firstname"] || "" : "";
+          const Uplastname = updatedBy ? updatedBy["lastname"] || "" : "";
+
+          //Created By
+          const createdBy = row["meta"] && row["meta"]["createdBy"];
+          const Crfirstname = createdBy ? createdBy["firstname"] || "" : "";
+          const Crlastname = createdBy ? createdBy["lastname"] || "" : "";
+
+          return {
+            name: row["name"],
+            status: row["isActive"],
+            description: row["description"],
+            category: row["categoryId"]["name"],
+            createdAt: row["meta"]["createdAt"],
+            createdBy:
+              Crfirstname && Crlastname ? `${Crfirstname} ${Crlastname}` : " ",
+            updatedAt: row["meta"]["updatedAt"],
+            updatedBy:
+              Upfirstname && Uplastname ? `${Upfirstname} ${Uplastname}` : " ",
+          };
+        });
+      //Ajax Call
+      if (data.length !== 0) {
+        $.ajax({
+          url: "/subcategoryhandle/generate-excel",
+          method: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(data),
+          headers: {
+            Authorization: `Bearer ${AuthToken}`,
+          },
+          xhrFields: {
+            responseType: "blob",
+          },
+          success: function (response) {
+            // Create a link element, use it to download the file, and then remove it
+            var url = window.URL.createObjectURL(response);
+            var a = document.createElement("a");
+            a.href = url;
+            a.download = "export.xlsx";
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+          },
+          error: function (xhr, status, error) {
+            if (xhr.responseJSON && xhr.responseJSON.message) {
+              alert(xhr.responseJSON.message);
+            } else {
+              alert("somenthing went wrong");
+            }
+          },
+        });
+      } else {
+        iziToast.error({
+          title: "Error",
+          message: "Data Not Found",
+          position: "topRight", // Position of the toast
+          timeout: 3000, // Duration in milliseconds
+        });
+      }
+    });
+
+    //Import data from json file
+    $("#importData").on("click", function () {
+      $("#file").click();
+    });
+
+    //Get File
+    $("#file").on("change", function (event) {
+      const fileinput = event.target;
+      const file = fileinput.files[0];
+
+      if (file.type !== "application/json") {
+        iziToast.error({
+          title: "Error",
+          message: "Please upload only JSON file",
+          position: "topRight",
+          timeout: 3000,
+        });
+      }
+      var formdata = new FormData();
+      formdata.append("file", file);
+
+      //send ajax request
+      $.ajax({
+        url: "/subcategoryhandle/import-data",
+        type: "POST",
+        data: formdata,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          if (response.success) {
+            iziToast.success({
+              title: "Success",
+              message: response.message,
+              position: "topRight",
+              timeout: 3000,
+            });
+            SubCategoryTable.ajax.reload();
+          }
+        },
+        error: function (xhr, status, error) {
+          if (xhr.responseJSON && xhr.responseJSON.message) {
+            iziToast.success({
+              title: "Success",
+              message: xhr.responseJSON.message,
+              position: "topRight",
+              timeout: 3000,
+            });
+          } else {
+            iziToast.error({
+              title: "Error",
+              message: "Somenthing Went Wrong",
+              position: "topRight",
+              timeout: 3000,
+            });
+          }
+        },
+      });
+    });
+
+    //🎯 generate PDF File
+    $("#generatePdfBTN").on("click", function () {
+      var data = SubCategoryTable.rows()
+        .data()
+        .toArray()
+        .map((row) => {
+          //Updaated By
+          const updatedBy = row["meta"] && row["meta"]["updatedBy"];
+          const Upfirstname = updatedBy ? updatedBy["firstname"] || "" : "";
+          const Uplastname = updatedBy ? updatedBy["lastname"] || "" : "";
+
+          //Created By
+          const createdBy = row["meta"] && row["meta"]["createdBy"];
+          const Crfirstname = createdBy ? createdBy["firstname"] || "" : "";
+          const Crlastname = createdBy ? createdBy["lastname"] || "" : "";
+
+          return {
+            name: row["name"],
+            status: row["isActive"],
+            description: row["description"],
+            category: row["categoryId"]["name"],
+            createdAt: row["meta"]["createdAt"],
+            createdBy:
+              Crfirstname && Crlastname ? `${Crfirstname} ${Crlastname}` : " ",
+            updatedAt: row["meta"]["updatedAt"],
+            updatedBy:
+              Upfirstname && Uplastname ? `${Upfirstname} ${Uplastname}` : " ",
+          };
+        });
+      console.log(data);
+
+      //AJAX CALL
+      $.ajax({
+        url: "/subcategoryhandle/generate-pdf",
+        type: "POST",
+        contentType: "application/json",
+        data: JSON.stringify(data),
+        xhrFields: {
+          responseType: "blob", // Important for handling the file download
+        },
+        success: function (blob) {
+          var url = window.URL.createObjectURL(blob);
+          var a = document.createElement("a");
+          a.href = url;
+          a.download = "subcategory.pdf"; // Default filename for the downloaded file
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.URL.revokeObjectURL(url); // Clean up the URL object
+        },
+        error: function (xhr, status, error) {
+          console.log(error);
+        },
+      });
+    });
+  });
+</script>
+
+<%- include('../layout/end.ejs') %>
