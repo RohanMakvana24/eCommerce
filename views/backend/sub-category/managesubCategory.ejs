@@ -302,6 +302,7 @@
 
     //🎯 generate PDF File
     $("#generatePdfBTN").on("click", function () {
+      const tableData = SubCategoryTable.rows().data().toArray();
       var data = SubCategoryTable.rows()
         .data()
         .toArray()
@@ -336,19 +337,20 @@
         url: "/subcategoryhandle/generate-pdf",
         type: "POST",
         contentType: "application/json",
-        data: JSON.stringify(data),
         xhrFields: {
-          responseType: "blob", // Important for handling the file download
+          responseType: "blob", // Important for handling binary data
         },
+        data: JSON.stringify(tableData),
         success: function (blob) {
-          var url = window.URL.createObjectURL(blob);
-          var a = document.createElement("a");
+          // Create a URL for the Blob object
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement("a");
           a.href = url;
-          a.download = "subcategory.pdf"; // Default filename for the downloaded file
+          a.download = "example.pdf";
           document.body.appendChild(a);
           a.click();
-          document.body.removeChild(a);
-          window.URL.revokeObjectURL(url); // Clean up the URL object
+          a.remove();
+          window.URL.revokeObjectURL(url); // Download the generated PDF
         },
         error: function (xhr, status, error) {
           console.log(error);

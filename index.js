@@ -47,7 +47,7 @@ server.use("/api/v1/auth", AuthRoutes);
 server.use("/", DashboardRoute);
 server.use("/adminhandle", AdminRoute);
 server.use("/categoryhandle", CategoriesRoute);
-server.use("/subcategoryhandle" , SubCategoryRoute);
+server.use("/subcategoryhandle", SubCategoryRoute);
 
 server.use((req, res) => {
   res.status(504).send({

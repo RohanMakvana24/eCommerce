@@ -1,7 +1,7 @@
 import SubCategoryModel from "../models/subcategoriesModel.js";
 import ExcelJS from "exceljs";
-import fs from "fs";
 import PDFDocument from "pdfkit";
+import fs from "fs";
 import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 
@@ -326,77 +326,98 @@ export const importDataJSON = async (req, res) => {
 
 export const generatePDf = async (req, res) => {
   try {
-    const data = req.body;
-
+    // Get the directory name of the current module
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = dirname(__filename);
+    const tableData = req.body;
+
     // Create a new PDF document
     const doc = new PDFDocument();
-    const fileName = "subcategory.pdf";
-    const filePath = join(__dirname, fileName);
 
-    // Pipe PDF to a writable stream
-    doc.pipe(fs.createWriteStream(filePath));
+    // Set the response header to indicate a PDF file
+    res.setHeader("Content-Disposition", 'attachment; filename="example.pdf"');
+    res.setHeader("Content-Type", "application/pdf");
 
-    // Add a title
-    doc.fontSize(16).text("Subcategory Report", { align: "center" });
-    doc.moveDown();
+    // Pipe the PDF isssnto the response
+    doc.pipe(res);
 
-    // Define column widths
-    const columns = {
-      name: 100,
-      status: 60,
-      description: 150,
-      category: 100,
-      createdAt: 100,
-      createdBy: 120,
-      updatedAt: 100,
-      updatedBy: 120,
-    };
+    // Sample data
+    const data = tableData;
+    // Table heading
+    const heading = "Sub Category";
+    const headingX = 50;
+    const headingY = 50;
+    const headingWidth = 500;
+
+    // Draw table heading
+    doc.fontSize(18).font("Helvetica-Bold");
+    doc.text(heading, headingX, headingY, {
+      width: headingWidth,
+      align: "center",
+    });
+    doc.moveDown(); // Add space below the heading
+    // Table headers
+    const headers = ["Name", "Description", "Category Name", "Active"];
+    const rows = data.map((item) => [
+      item.name,
+      item.description,
+      item.categoryId.name,
+      item.isActive ? "Yes" : "No",
+    ]);
+
+    const tableWidth = 500;
+    const columnWidth = tableWidth / headers.length;
+    const startX = 50;
+    const startY = 100;
+    const rowHeight = 20;
 
     // Draw table header
-    doc.fontSize(12).text("Name", 50, 80);
-    doc.text("Status", 150, 80);
-    doc.text("Description", 210, 80);
-    doc.text("Category", 370, 80);
-    doc.text("Created At", 470, 80);
-    doc.text("Created By", 570, 80);
-    doc.text("Updated At", 690, 80);
-    doc.text("Updated By", 790, 80);
-
-    doc.moveDown();
+    doc.fontSize(14).font("Helvetica-Bold");
+    headers.forEach((header, i) => {
+      doc.text(header, startX + i * columnWidth, startY, {
+        width: columnWidth,
+        align: "center",
+      });
+    });
 
     // Draw table rows
-    let yPosition = 100;
-    data.forEach((row) => {
+    doc.fontSize(12).font("Helvetica");
+    rows.forEach((row, rowIndex) => {
+      row.forEach((cell, cellIndex) => {
+        doc.text(
+          cell,
+          startX + cellIndex * columnWidth,
+          startY + (rowIndex + 1) * rowHeight,
+          { width: columnWidth, align: "center" }
+        );
+      });
+    });
+
+    // Draw table borders
+    doc.strokeColor("black").lineWidth(1);
+    // Draw header borders
+    doc.rect(startX, startY - 14, tableWidth, 28).stroke();
+    headers.forEach((_, i) => {
       doc
-        .fontSize(10)
-        .text(row.name, 50, yPosition, { width: columns.name })
-        .text(row.status, 150, yPosition, { width: columns.status })
-        .text(row.description, 210, yPosition, { width: columns.description })
-        .text(row.category, 370, yPosition, { width: columns.category })
-        .text(row.createdAt, 470, yPosition, { width: columns.createdAt })
-        .text(row.createdBy, 570, yPosition, { width: columns.createdBy })
-        .text(row.updatedAt, 690, yPosition, { width: columns.updatedAt })
-        .text(row.updatedBy, 790, yPosition, { width: columns.updatedBy });
+        .moveTo(startX + i * columnWidth, startY - 14)
+        .lineTo(startX + i * columnWidth, startY + rows.length * rowHeight + 10)
+        .stroke();
+    });
+    doc
+      .moveTo(startX, startY + rows.length * rowHeight + 10)
+      .lineTo(startX + tableWidth, startY + rows.length * rowHeight + 10)
+      .stroke();
 
-      yPosition += 20; // Move to next line for the next row
+    // Draw row borders
+    rows.forEach((_, i) => {
+      doc
+        .moveTo(startX, startY + (i + 1) * rowHeight - 1)
+        .lineTo(startX + tableWidth, startY + (i + 1) * rowHeight - 1)
+        .stroke();
     });
 
+    // Finalize the PDF and end the stream
     doc.end();
-
-    console.log(`PDF generated at ${filePath}`);
-    // Serve file
-    res.sendFile(filePath, { root: __dirname }, (err) => {
-      if (err) {
-        console.error("Error sending file:", err);
-        res.status(500).send("Error generating PDF");
-      } else {
-        fs.unlink(filePath, (unlinkErr) => {
-          if (unlinkErr) console.error("Error deleting temp file:", unlinkErr);
-        });
-      }
-    });
   } catch (error) {
     console.log(error);
     res.status(504).send({
