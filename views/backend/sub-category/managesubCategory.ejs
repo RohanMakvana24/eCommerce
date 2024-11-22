@@ -65,6 +65,7 @@
                     >
                       <thead>
                         <tr>
+                          <th>Delete</th>
                           <th>Name</th>
                           <th>Status</th>
                           <th>Action</th>
@@ -98,6 +99,12 @@
       },
       columns: [
         {
+          data: null,
+          render: function (data, type, row) {
+            return `<input type="checkbox" value="${row._id}"  id="multipleDelete" />`;
+          },
+        },
+        {
           data: "name",
         },
         {
@@ -127,6 +134,11 @@
       ],
     });
 
+    $("#subCatTable").append(
+      '<tfoot id="tableFoter"><tr><td colspan="1"><button id="deleteRows" class="btn btn-danger">Delete</button></td></tr></tfoot>'
+    );
+
+    $("#deleteRows").prop("disabled", true);
     $(document).on("click", "#deleteBtn", function (event) {
       event.preventDefault();
       const id = $(this).data("id");
@@ -356,6 +368,11 @@
           console.log(error);
         },
       });
+    });
+
+    //Delete Multiple Record
+    $(document).on("change", "#multipleDelete", function () {
+      $("#deleteRows").prop("disabled", false);
     });
   });
 </script>
