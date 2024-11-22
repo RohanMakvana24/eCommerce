@@ -188,14 +188,7 @@ export const ForgotPassword = async (req, res) => {
     User.OTP = OTP;
     await User.save();
     //Send Email
-    SendEmail(email, subject, htmlContent);
-
-    //response
-    res.status(200).send({
-      success: true,
-      message: "The OTP and Secret Send To Your Email Check it...",
-      data: email,
-    });
+    SendEmail(email, subject, htmlContent, res);
   } catch (error) {
     console.log(error);
     res.status(504).send({
