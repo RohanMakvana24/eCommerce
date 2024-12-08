@@ -1,7 +1,16 @@
 import UserModel from "../models/UserModel.js";
 import { getDataUri } from "../utils/features.js";
 import cloudinary from "cloudinary";
-import bcerytp from "bcryptjs";
+import { stringify } from 'csv-stringify/sync'
+import path, { resolve } from 'path';
+import fs from 'fs'
+import pdf from 'html-pdf'
+import { response } from "express";
+import AppRootPath from 'app-root-path'
+import ejs from 'ejs'
+// Get the current directory using import.meta.url
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
 //ADD ADMIN PAGE
 //GET
 export const add_admin_page = (req, res) => {
@@ -177,5 +186,152 @@ export const EditAdmin = async (req, res) => {
     res.render("backend/admin/edit-admin", { data: User });
   } catch (error) {
     console.log(error);
+  }
+};
+
+// ^ Preview Admin Page ^ //
+// Method : GET //
+export const getPreviewPageAdmin = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const FindAdmin = await UserModel.findById(id);
+
+    res.render("backend/admin/preview-admin", { admin: FindAdmin });
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+// ^ Edit Admin Page ^ //
+// Method : GET //
+export const getEditAdminPage = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const FindAdmin = await UserModel.findById(id);
+    res.render("backend/admin/edit-admin", { admin: FindAdmin })
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
+// ^ Update Admin Page ^ //
+// Method : POST //
+export const UpdateAdmin = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { firstname, lastname, email, public_id, url } = req.body;
+
+    const adminDetails = {
+      firstname,
+      lastname,
+      email,
+      profilePic: {
+        public_id,
+        url
+      }
+    }
+    //validation
+    if (!firstname || !lastname || !email || !public_id || !url) {
+      return res.status(404).send({
+        success: true,
+        message: "All Field are required"
+      })
+    }
+
+    const User = await UserModel.findOne({ email: email });
+    if (User) {
+      delete adminDetails.email
+    }
+
+    const UpdateAdmin = await UserModel.findByIdAndUpdate(id, adminDetails, { new: true })
+    if (UpdateAdmin) {
+      return res.status(200).send({
+        success: true,
+        message: "The Admin Updated Succefullly"
+      })
+    }
+  } catch (error) {
+
+    console.log(error)
+    return res.status(504).send({
+      success: false,
+      message: error.message
+    })
+  }
+}
+
+export const exportCSV = (req, res) => {
+  try {
+    let column = {
+      _id: "_id",
+      firstname: "firstname",
+      lastname: "lastname",
+      email: "email",
+      role: "role",
+      profilePic: "profilePic"
+    }
+    // Logic to get user records excluding password
+    const UserData = Object.values(req.body).map(({ password, profilePic, ...rest }) => ({
+      ...rest,
+      profilePic: profilePic[0]?.url
+    }));
+
+
+    const output = stringify(UserData, { header: true, columns: column })
+    res.setHeader('Content-Type', 'text/csv');
+    res.setHeader('Content-Disposition', 'attachment; filename=my.csv');
+    res.send(output);
+
+  } catch (error) {
+    return res.status(504).send({
+      success: false,
+      message: "CSV File Generates Error"
+    })
+  }
+}
+
+
+// Export Pdf File
+export const exportPdf = async (req, res) => {
+  try {
+    // Prepare the data by excluding unwanted fields
+    const UserData = Object.values(req.body).map(({ password, Token, profilePic, ...rest }) => ({
+      ...rest,
+      profilePic: profilePic[0]?.url // Assuming profilePic is an array
+    }));
+
+    console.log(UserData); // Check the data format
+
+    // Resolve the file path properly using AppRootPath
+    const filePathName = path.join(AppRootPath.path, 'views', 'backend', 'admin', 'pdf.ejs');
+    console.log(filePathName);
+
+    // Read the EJS file content
+    const htmlTemplate = fs.readFileSync(filePathName, 'utf-8');
+
+    // Render the EJS template to an HTML string with the UserData
+    const htmlString = ejs.render(htmlTemplate, { UserData });
+
+    // PDF generation options
+    const options = {
+      format: 'Letter',
+    };
+
+    // Generate the PDF and send it directly to the response
+    pdf.create(htmlString, options).toBuffer((err, buffer) => {
+      if (err) {
+        console.error('Error generating PDF:', err);
+        return res.status(500).send('Error generating PDF');
+      }
+
+      // Set response headers for PDF download
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', 'attachment; filename=users.pdf');
+      res.send(buffer); // Send the PDF buffer directly
+    });
+  } catch (error) {
+    console.log('Error in exportPdf:', error);
+    res.status(500).send('Server Error');
   }
 };

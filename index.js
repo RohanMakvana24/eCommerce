@@ -14,6 +14,8 @@ import cloudinary from "cloudinary";
 import AdminRoute from "./routes/adminRoute.js";
 import CategoriesRoute from "./routes/categoriesRoute.js";
 import SubCategoryRoute from "./routes/subCategoryRoute.js";
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
 //DOTENV CONFIGURATION
 dotenv.config({ path: "./config/.env" });
 
@@ -40,7 +42,7 @@ server.use(express.static("public"));
 server.use(morgan("dev"));
 
 //VIEW SETUP
-server.set("view engine", "ejs");
+server.set("view engine", "ejs")
 
 //ROUTES
 server.use("/api/v1/auth", AuthRoutes);

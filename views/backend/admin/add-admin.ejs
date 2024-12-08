@@ -94,7 +94,6 @@
           Authorization: `Bearer ${AuthToken}`, // Authorization header
         },
         success: function (file, response) {
-          console.log(response)
           document.getElementById("public_id").value = response.data.public_id;
           document.getElementById("url").value = response.data.url;
         },
@@ -109,6 +108,7 @@
           });
           // Bind the removedfile event
           this.on("removedfile", function (file) {
+
             handleFileRemoval();
           });
 
@@ -158,6 +158,7 @@
           },
         });
       }
+
     </script>
     <!--Profile Uploading End -->
     <script>
@@ -191,45 +192,60 @@
               required: true,
               complexPassword: true,
             },
+
           },
         });
+
         $("#AddAdminForm").on("submit", function (event) {
           event.preventDefault();
           const formData = $(this).serializeArray();
+          if (formData[4].value == "" || formData[5].value == "") {
+            return iziToast.error({
+              title: "Error",
+              message: "Image is uploading please wait",
+              position: "topRight", // Position of the toast
+              timeout: 3000, // Duration in milliseconds
+            });
+          }
+          if ($(this).valid()) {
+            $.ajax({
+              url: "/api/v1/auth/signup",
+              type: "POST",
+              data: formData,
+              success: function (response) {
+                if (response.success) {
+                  iziToast.success({
+                    title: "Success",
+                    message: response.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
 
-          $.ajax({
-            url: "/api/v1/auth/signup",
-            type: "POST",
-            data: formData,
-            success: function (response) {
-              if (response.success) {
-                iziToast.success({
-                  title: "Success",
-                  message: response.message,
-                  position: "topRight", // Position of the toast
-                  timeout: 3000, // Duration in milliseconds
-                });
-              }
+                setTimeout(() => {
+                  location.reload();
+                }, 2000);
+              },
+              error: function (xhr, status, error) {
+                if (xhr.responseJSON && xhr.responseJSON.message) {
+                  iziToast.error({
+                    title: "Error",
+                    message: xhr.responseJSON.message,
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                } else {
+                  iziToast.error({
+                    title: "Error",
+                    message: "Internal Server Error",
+                    position: "topRight", // Position of the toast
+                    timeout: 3000, // Duration in milliseconds
+                  });
+                }
+              },
+            });
+          }
 
-            },
-            error: function (xhr, status, error) {
-              if (xhr.responseJSON && xhr.responseJSON.message) {
-                iziToast.error({
-                  title: "Error",
-                  message: xhr.responseJSON.message,
-                  position: "topRight", // Position of the toast
-                  timeout: 3000, // Duration in milliseconds
-                });
-              } else {
-                iziToast.error({
-                  title: "Error",
-                  message: "Internal Server Error",
-                  position: "topRight", // Position of the toast
-                  timeout: 3000, // Duration in milliseconds
-                });
-              }
-            },
-          });
         });
       });
     </script>

@@ -101,17 +101,17 @@
                             <a href="../index.html"><img src="/assets/images/brand/logo/logo-2.svg"
                                     class="mb-2 text-inverse" alt="Image" /></a>
                             <p class="mb-6">
-                                Please enter your OTP That is send in your email.
+                                Please enter your OTP That is send in your
+                                email.
                             </p>
-
-
                         </div>
                         <div class="row justify-content-center">
                             <div class="card bg-white mb-5 mt-5 border-0"
                                 style="box-shadow: 0 12px 15px rgba(0, 0, 0, 0.02);">
                                 <div class="card-body p-5 text-center">
                                     <h4>Verify</h4>
-                                    <p>Your code was sent to you via email</p>
+                                    <p>Your code was sent to you via
+                                        email</p>
                                     <p id="email" class="mb-6"> </p>
 
                                     <div class="otp-field mb-4">
@@ -128,7 +128,8 @@
                                     </button>
 
                                     <p class="resend text-muted mb-0">
-                                        Didn't receive code? <a href="">Request again</a>
+                                        Didn't receive code? <span id="countDown"> </span> <a href id="resendOTP">Resend
+                                            OTP</a>
                                     </p>
                                 </div>
                             </div>
@@ -155,6 +156,72 @@
     <!-- Theme JS -->
     <script src="/assets/js/theme.min.js"></script>
     <script>
+        $(document).ready(function () {
+            let second = 60;
+            $("#resendOTP").hide();
+            const countdown = setInterval(function () {
+                if (second <= 0) {
+                    $("#countDown").hide();
+                    $("#resendOTP").show();
+                }
+                else {
+                    $("#countDown").css("color", "red")
+                    $("#countDown").text(second);
+                    second--;
+                }
+            }, 1000)
+
+        })
+
+        //Resend OTP Logic
+        const pa = new URLSearchParams(window.location.search);
+        const da = pa.get('data');
+
+        console.log(da)
+        $("#resendOTP").on("click", function (event) {
+            event.preventDefault();
+            alert("Ok")
+            $.ajax({
+                url: "/api/v1/auth/forgot-password",
+                type: "POST",
+                data: {
+                    email: da
+                },
+                success: function (response) {
+                    if (response.success) {
+                        $.toast({
+                            heading: "Success",
+                            text: response.message,
+                            showHideTransition: "slide",
+                            icon: "success",
+                            position: "top-right",
+                        });
+                    }
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                        $.toast({
+                            heading: "Error",
+                            text: xhr.responseJSON.message,
+                            showHideTransition: "slide",
+                            icon: "error",
+                            position: "top-right",
+                        });
+                    } else {
+                        $.toast({
+                            heading: "Error",
+                            text: "Somenthing Went Wrong",
+                            showHideTransition: "slide",
+                            icon: "error",
+                            position: "top-right",
+                        });
+                    }
+                }
+
+            })
+        })
+    </script>
+    <script>
 
         function obscureEmail(email, visibleLength = 2) {
             // Split the email into username and domain parts
@@ -176,7 +243,6 @@
             // Return the obscured email
             return `${obscureUsername}@${obscureDomain}`;
         }
-
 
         // Get URL parameters
         const params = new URLSearchParams(window.location.search);

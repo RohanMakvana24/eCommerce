@@ -5,8 +5,13 @@ import {
   deleteAdmin,
   deleteProfile,
   EditAdmin,
+  exportCSV,
+  exportPdf,
+  getEditAdminPage,
+  getPreviewPageAdmin,
   manage_admin,
   NewUploadProfile,
+  UpdateAdmin,
 } from "../controllers/adminController.js";
 import Authenticate from "../middleware/Authenticate.js";
 import upload from "../middleware/multer.js";
@@ -40,7 +45,19 @@ AdminRoute.get("/getadmins", Authenticate, allAdmin);
 AdminRoute.delete("/delete-admin/:id", Authenticate, deleteAdmin);
 
 //Edit Admin
-AdminRoute.get("/editadmin/:id", EditAdmin);
+// AdminRoute.get("/editadmin/:id", EditAdmin);
 
-//Update Admin
+//Admin-Preview  : GET
+AdminRoute.get("/preview-admin-page/:id", getPreviewPageAdmin);
+
+//Admin-Edit  : GET
+AdminRoute.get("/edit-admin-page/:id", getEditAdminPage);
+
+//Update-Admin : POST 
+AdminRoute.post("/update-admin/:id", UpdateAdmin)
+
+//Export CSV File
+AdminRoute.post("/export-csv", exportCSV)
+AdminRoute.post("/export-pdf", exportPdf)
+
 export default AdminRoute;

@@ -1,0 +1,108 @@
+<%- include('../layout/header.ejs') %>
+    <main id="main-wrapper" class="main-wrapper">
+        <%- include('../layout/navbar.ejs') %> <%- include('../layout/sidebar.ejs') %>
+                <div id="app-content">
+
+                    <!-- Container fluid -->
+                    <div class="app-content-area">
+                        <div class="container-fluid">
+
+
+                            <div class="row align-items-center">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+                                    <!-- Bg -->
+                                    <div class="pt-20 rounded-top" style="
+                        background: url(../assets/images/background/profile-cover.jpg)
+                          no-repeat;
+                        background-size: cover;
+                      "></div>
+                                    <div class="card rounded-bottom rounded-0 smooth-shadow-sm mb-5">
+                                        <div class="d-flex align-items-center justify-content-between pt-4 pb-6 px-4">
+                                            <div class="d-flex align-items-center">
+                                                <!-- avatar -->
+                                                <div
+                                                    class="avatar-xxl avatar-indicators avatar-online me-2 position-relative d-flex justify-content-end align-items-end mt-n10">
+                                                    <img src="<%=admin.profilePic[0].url %>" class="avatar-xxl
+                                                    rounded-circle border border-2 ">
+
+                                                </div>
+                                                <!-- text -->
+                                                <div class="lh-1">
+                                                    <h2 class="mb-0">
+                                                        <%= admin.firstname %>
+                                                            <%= admin.lastname %>
+                                                                <a href="#!" class="text-decoration-none">
+                                                                </a>
+                                                    </h2>
+                                                    <p class="mb-0 d-block">@<%= admin.firstname %>
+                                                            <%= admin.lastname %>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <a href="/adminhandle/edit-admin-page/<%= admin._id %>"
+                                                    class="btn btn-outline-primary d-none d-md-block">Edit
+                                                    Profile</a>
+                                            </div>
+                                        </div>
+                                        <!-- nav -->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- content -->
+                            <div>
+                                <!-- row -->
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-5">
+                                        <!-- card -->
+                                        <div class="card h-100">
+                                            <!-- card body -->
+                                            <div class="card-header">
+                                                <h4 class="mb-0">About Me</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <!-- card title -->
+
+                                                <!-- row -->
+                                                <div class="row">
+                                                    <div class="col-6 mb-5">
+                                                        <h5 class="text-uppercase">First Name</h5>
+                                                        <p class="mb-0">
+                                                            <%= admin.firstname %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 mb-5">
+                                                        <h5 class="text-uppercase">Last Name</h5>
+                                                        <p class="mb-0">
+                                                            <%= admin.lastname %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6 mb-5">
+                                                        <h5 class="text-uppercase">
+                                                            Email
+                                                        </h5>
+                                                        <p class="mb-0">
+                                                            <%= admin.email %>
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <h5 class="text-uppercase">Location</h5>
+                                                        <p class="mb-0">Ahmedabad, India</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </main>
+    <%- include('../layout/footer.ejs') %>
+        <script>
+            $(document).ready(function () {
+            })
+        </script>
+        <%- include('../layout/end.ejs') %>
