@@ -43,6 +43,15 @@
                                                         </div>
                                                     </div>
                                                     <div class="row">
+                                                        <div class="col-md-12 mb-3">
+                                                            <label class="form-label">Parent Category</label>
+                                                            <select class="form-select" name="pcategory"
+                                                                aria-label="Default select example" id="pCategory">
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
                                                         <div class="col-12 mb-3">
                                                             <label class="form-label">Description</label>
                                                             <div id="toolbar-container">
@@ -86,6 +95,7 @@
     </main>
     <%- include('../layout/footer.ejs') %>
         <script>
+
             var quill = new Quill('#editor-container', {
                 modules: {
                     toolbar: [
@@ -99,9 +109,38 @@
                 theme: 'snow'
             });
 
+            // Parent Category Get 
+            $(document).ready(function () {
+                const token = localStorage.getItem('token');
+                const AuthToken = token.slice(1, -1);
+                function getParentCategory() {
+                    $.ajax({
+                        url: "/categoryhandle/get-category",
+                        type: "GET",
+                        headers: {
+                            Authorization: `Bearer ${AuthToken}`
+                        },
+                        success: function (response) {
+                            if (response.data.length == 0) {
+                                $("#pCategory").prop("disabled", true)
+                            } else {
+                                $("#pCategory").html('<option value=""> Select Parent Category </option>')
+                                response.data.forEach(element => {
+                                    $("#pCategory").append(`<option value="${element._id}"> ${element.name} </option>`)
+                                });
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(error)
+                        }
+                    })
+                }
+                getParentCategory()
+            }) 
         </script>
         <script>
             $(document).ready(function () {
+                $('.js-example-basic-multiple').select2();
                 const token = localStorage.getItem('token');
                 const AuthToken = token.slice(1, -1);
 

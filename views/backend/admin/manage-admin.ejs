@@ -23,15 +23,6 @@
                           <a href="/adminhandle/addadminpage" class="btn btn-primary">+ Add Admin</a>
                         </div>
                         <div class="mt-3 mt-md-0">
-                          <a href="" class="btn btn-ghost btn-icon btn-sm rounded-circle texttooltip"
-                            data-template="settingOne">
-                            <i data-feather="settings" class="icon-xs"></i>
-                            <div id="settingOne" class="d-none">
-                              <span>Setting</span>
-                            </div>
-                          </a>
-
-
                           <!-- Export Dropdown (Optional) -->
                           <div class="dropdown d-inline">
                             <a href="#!" class="btn btn-outline-white ms-2" type="button" id="dropdownMenuButton2"
@@ -39,7 +30,7 @@
                               Import
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                              <li><a class="dropdown-item" href="#">CSV File</a></li>
+                              <li><a class="dropdown-item" href="#" id="importJSON">JSON File</a></li>
                               <!-- You can add more export options here -->
                             </ul>
                           </div>
@@ -159,12 +150,15 @@
           $.ajax({
             url: "/adminhandle/export-csv",
             type: "POST",
+            headers: {
+              Authorization: `Bearer ${AuthToken}`
+            },
             data: finalObject,
             success: function (response) {
               const blob = new Blob([response], { type: 'text/csv' });
               const link = document.createElement('a');
               link.href = URL.createObjectURL(blob);
-              link.download = 'my.csv';  // The name of the downloaded file
+              link.download = 'Users.csv';  // The name of the downloaded file
               link.click();  // Trigger the download
             },
             error: function (xhr, status, error) {
@@ -185,7 +179,6 @@
               }
             }
           })
-
         })
 
         //Export Data in PDF File
@@ -208,16 +201,25 @@
           // Convert the data to an object format
           const object = data.map((value, index) => [index, value]);
           const finalObject = Object.fromEntries(object);
-
+          iziToast.success({
+            title: "Success",
+            message: "Waiting PDF is Dounloading",
+            position: "topRight",
+            timeout: 3000
+          });
           // AJAX request to generate and download the PDF
           $.ajax({
             url: "/adminhandle/export-pdf", // Make sure this URL is correct
             type: "POST",
+            headers: {
+              Authorization: `Bearer ${AuthToken}`
+            },
             data: finalObject,
             xhrFields: {
               responseType: 'arraybuffer' // Ensures binary response handling
             },
             success: function (response) {
+
               // Create a Blob from the binary data
               const blob = new Blob([response], { type: 'application/pdf' });
 
@@ -226,20 +228,108 @@
               const url = window.URL.createObjectURL(blob);
 
               link.href = url;
-              link.download = 'users.pdf'; // Suggested file name
+              link.download = 'Users.pdf'; // Suggested file name
               link.click(); // Trigger the download
             },
             error: function (xhr, status, error) {
               console.log('Error:', error);
-              iziToast.error({
-                title: "Error",
-                message: "Failed to generate PDF.",
-                position: "topRight",
-                timeout: 3000
-              });
+              if (xhr.responseJSON && xhr.responseJSON.message) {
+                iziToast.error({
+                  title: "Error",
+                  message: xhr.responseJSON.message,
+                  position: "topRight",
+                  timeout: 3000
+                });
+              } else {
+                iziToast.error({
+                  title: "Error",
+                  message: "Failed to generate PDF.",
+                  position: "topRight",
+                  timeout: 3000
+                });
+              }
             }
           });
         });
+
+        // Import Data form Json 
+        $("#importJSON").on("click", function () {
+          var fileinput = $('<input type="file" name="jsonFile" style="display : none;" id="jsonFile">');
+
+          $('body').append(fileinput);
+          fileinput.click();
+          fileinput.on("change", function (event) {
+            var file = event.target.files[0];
+
+            if (file && file.type === "application/json") {
+              var reader = new FileReader();
+              reader.onload = function (e) {
+
+                var jsonData = JSON.parse(e.target.result)
+
+                $.ajax({
+                  url: "/adminhandle/import-json",
+                  type: "POST",
+                  headers: {
+                    Authorization: `Bearer ${AuthToken}`
+                  },
+                  contentType: "application/json",
+                  data: JSON.stringify(jsonData),
+                  success: function (response) {
+                    console.log(response)
+                    if (response.success) {
+                      iziToast.success({
+                        title: "Success",
+                        message: response.message,
+                        position: "topRight",
+                        timeout: 3000
+                      });
+                      adminTable.ajax.reload();
+                    } else {
+                      iziToast.error({
+                        title: "Error",
+                        message: "Somenthing Went Wrong",
+                        position: "topRight",
+                        timeout: 3000
+                      });
+                    }
+                  },
+                  error: function (xhr, status, error) {
+                    console.log('Error:', error);
+                    if (xhr.responseJSON && xhr.responseJSON.message) {
+                      iziToast.error({
+                        title: "Error",
+                        message: xhr.responseJSON.message,
+                        position: "topRight",
+                        timeout: 3000
+                      });
+
+
+                    } else {
+                      iziToast.error({
+                        title: "Error",
+                        message: "Failed to generate PDF.",
+                        position: "topRight",
+                        timeout: 3000
+                      });
+                    }
+                  }
+                })
+              }
+
+              // Error
+              reader.onerror = function (error) {
+                console.log("Error For Reading JSON File")
+                console.log(error)
+              }
+              reader.readAsText(file)
+
+            } else {
+              alert("The JSON File is required")
+            }
+          })
+
+        })
 
         $(document).on("click", "#deleteBtn", function (event) {
           event.preventDefault();

@@ -12,6 +12,6 @@ export const Auth = async (req, res, next) => {
     req.user = User;
     next();
   } catch (error) {
-    res.render("backend/auth/login");
+    res.render("backend/404-error");
   }
 };

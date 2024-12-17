@@ -47,7 +47,7 @@ export const getCategories = async (req, res, next) => {
 //@ Route : api/v1/categorieshandle/add-category
 export const addCategories = async (req, res, next) => {
   try {
-    const { name, status, public_id, description, url } = req.body;
+    const { name, status, public_id, description, url, pcategory } = req.body;
     const { _id } = req.user;
     //validation
     if (!name || !status || !public_id || !description || !url) {
@@ -57,10 +57,11 @@ export const addCategories = async (req, res, next) => {
       });
     }
 
-    const category = await CategoryModel.create({
+    const CategoriesData = {
       name: name,
       description: description,
       isActive: status,
+      parent_category: pcategory,
       image: {
         public_id: public_id,
         url: url,
@@ -68,7 +69,12 @@ export const addCategories = async (req, res, next) => {
       meta: {
         createdBy: _id,
       },
-    });
+    }
+
+    if (!pcategory) {
+      delete CategoriesData.parent_category
+    }
+    const category = await CategoryModel.create(CategoriesData);
     res.status(201).send({
       success: true,
       message: "The Category Added Succefully",

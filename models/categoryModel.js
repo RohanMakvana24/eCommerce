@@ -23,8 +23,11 @@ const categorySchema = new Schema({
       },
     },
   ],
-
-  // Optional: You can add more fields here as needed
+  parent_category: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Category",
+    default: null
+  },
   isActive: {
     type: Number,
     enum: [1, 0],
@@ -32,11 +35,11 @@ const categorySchema = new Schema({
   },
   meta: {
     createdBy: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
     updatedBy: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "User",
     },
     createdAt: {

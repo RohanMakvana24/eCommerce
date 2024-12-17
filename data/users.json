@@ -1,0 +1,103 @@
+[
+    {
+      "firstname": "John",
+      "lastname": "Doe",
+      "email": "john.doe@example.com",
+      "password": "securepassword123",
+      "role": "user",
+      "mobileNo": "+1234567890",
+      "profilePic": [
+        {
+          "public_id": "profile_pic_12345",
+          "url": "https://example.com/images/profile_pic_12345.jpg"
+        }
+      ],
+      "Token": [
+        {
+          "AuthToken": "abcdef1234567890abcdef1234567890"
+        }
+      ],
+      "OTP": 123456
+    },
+    {
+      "firstname": "Jane",
+      "lastname": "Smith",
+      "email": "jane.smith@example.com",
+      "password": "mypassword456",
+      "role": "admin",
+      "mobileNo": "+9876543210",
+      "profilePic": [
+        {
+          "public_id": "profile_pic_67890",
+          "url": "https://example.com/images/profile_pic_67890.jpg"
+        }
+      ],
+      "Token": [
+        {
+          "AuthToken": "ghijk0987654321ghijk0987654321"
+        }
+      ],
+      "OTP": 654321
+    },
+    {
+      "firstname": "Michael",
+      "lastname": "Johnson",
+      "email": "michael.johnson@example.com",
+      "password": "mypassword789",
+      "role": "user",
+      "mobileNo": "+1122334455",
+      "profilePic": [
+        {
+          "public_id": "profile_pic_11223",
+          "url": "https://example.com/images/profile_pic_11223.jpg"
+        }
+      ],
+      "Token": [
+        {
+          "AuthToken": "lmnop1122334455lmnop1122334455"
+        }
+      ],
+      "OTP": 789123
+    },
+    {
+      "firstname": "Emily",
+      "lastname": "Davis",
+      "email": "emily.davis@example.com",
+      "password": "securepassword012",
+      "role": "user",
+      "mobileNo": "+3322114455",
+      "profilePic": [
+        {
+          "public_id": "profile_pic_22334",
+          "url": "https://example.com/images/profile_pic_22334.jpg"
+        }
+      ],
+      "Token": [
+        {
+          "AuthToken": "xyz7890123456xyz7890123456"
+        }
+      ],
+      "OTP": 987654
+    },
+    {
+      "firstname": "David",
+      "lastname": "Miller",
+      "email": "david.miller@example.com",
+      "password": "anotherpassword345",
+      "role": "admin",
+      "mobileNo": "+4455667788",
+      "profilePic": [
+        {
+          "public_id": "profile_pic_33445",
+          "url": "https://example.com/images/profile_pic_33445.jpg"
+        }
+      ],
+      "Token": [
+        {
+          "AuthToken": "qrst6789012345qrst6789012345"
+        }
+      ],
+      "OTP": 112233
+    }
+  ]
+  

@@ -18,10 +18,10 @@ import categoryValid from "../utils/Validation-Schema/categoriesValidation/Categ
 const CategoriesRoute = express.Router();
 
 //Get Add Categories Page 💨
-CategoriesRoute.get("/add-categorsies-page", Auth, add_categories_page);
+CategoriesRoute.get("/add-categorsies-page", Auth, add_categories_page); //✅
 
 //Manage Categories Page 💨
-CategoriesRoute.get("/manage-category", Auth, manage_categories);
+CategoriesRoute.get("/manage-category", Auth, manage_categories); //✅
 
 //Get All Categorie For Parent Select 💨
 CategoriesRoute.get("/get-category", Authenticate, getCategories);

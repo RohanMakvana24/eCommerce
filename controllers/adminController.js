@@ -5,14 +5,13 @@ import { stringify } from 'csv-stringify/sync'
 import path, { resolve } from 'path';
 import fs from 'fs'
 import pdf from 'html-pdf'
-import { response } from "express";
 import AppRootPath from 'app-root-path'
 import ejs from 'ejs'
 // Get the current directory using import.meta.url
 const __filename = new URL(import.meta.url).pathname;
 const __dirname = path.dirname(__filename);
-//ADD ADMIN PAGE
-//GET
+
+// ▁▂▄▅▆▇█ Type : GET || Desc : Get Add Admin Page  █▇▆▅▄▂▁
 export const add_admin_page = (req, res) => {
   try {
     res.render("backend/admin/add-admin");
@@ -24,9 +23,9 @@ export const add_admin_page = (req, res) => {
     });
   }
 };
+// ---------------- ❝ Add Admin Page Get Section End ❞ ----------------- //
 
-//ADD ADMIN PAGE
-//GET
+// ▁▂▄▅▆▇█ Type : GET || Desc : Get Manage Admin Page  █▇▆▅▄▂▁  //
 export const manage_admin = (req, res) => {
   try {
     res.render("backend/admin/manage-admin");
@@ -38,10 +37,10 @@ export const manage_admin = (req, res) => {
     });
   }
 };
+// ---------------- ❝ Manage Admin Page Get Section End ❞ ----------------- //
 
-//Upload Profile When add new User
-//POST
 
+// ▁▂▄▅▆▇█ Type : POST || Desc : Upload New User Profile  █▇▆▅▄▂▁  //
 export const NewUploadProfile = async (req, res) => {
   try {
     const file = await getDataUri(req.file);
@@ -68,8 +67,10 @@ export const NewUploadProfile = async (req, res) => {
     });
   }
 };
+// ---------------- ❝ Upload New User Profile Section End ❞ ----------------- //
 
-//Delete Profile : Uploded at Temp
+
+// ▁▂▄▅▆▇█ Type : POST || Desc : Temp Uploaded Profile Delete  █▇▆▅▄▂▁  //
 export const deleteProfile = async (req, res) => {
   try {
     const { public_id } = req.body;
@@ -101,8 +102,10 @@ export const deleteProfile = async (req, res) => {
     });
   }
 };
+// ---------------- ❝ Temp Uploaded Profile Section End ❞ ----------------- //
 
-//get all admin
+
+// ▁▂▄▅▆▇█ Type : GET || Desc : Get All Admins  █▇▆▅▄▂▁  //
 export const allAdmin = async (req, res) => {
   try {
     const start = parseInt(req.query.start, 10) || 0;
@@ -129,11 +132,15 @@ export const allAdmin = async (req, res) => {
       data: paginatedData,
     });
   } catch (error) {
-    console.log(error);
+    res.status(504).send({
+      success: false,
+      message: "Somenthing Went Wrong"
+    })
   }
 };
+// ---------------- ❝ Get All Admins  Section End ❞ ----------------- //
 
-//delete admin  API
+// ▁▂▄▅▆▇█ Type : DELETE || Desc : Delete Admin   █▇▆▅▄▂▁  //
 export const deleteAdmin = async (req, res) => {
   try {
     const id = req.params.id;
@@ -171,26 +178,10 @@ export const deleteAdmin = async (req, res) => {
     });
   }
 };
+// ---------------- ❝ Delete Admin Section End ❞ ----------------- //
 
-//Edit Admin
-export const EditAdmin = async (req, res) => {
-  try {
-    const id = req.params.id;
-    if (!id) {
-      res.render("backend/admin/manage-admin");
-    }
 
-    const User = await UserModel.findById(id);
-    console.log(User);
-
-    res.render("backend/admin/edit-admin", { data: User });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-// ^ Preview Admin Page ^ //
-// Method : GET //
+// ▁▂▄▅▆▇█ Type : GET || Desc : Preview Admin Page  █▇▆▅▄▂▁  //
 export const getPreviewPageAdmin = async (req, res) => {
   try {
     const id = req.params.id;
@@ -201,9 +192,10 @@ export const getPreviewPageAdmin = async (req, res) => {
     console.log(error)
   }
 }
+// ---------------- ❝ Preview Admin Page Section End ❞ ----------------- //
 
-// ^ Edit Admin Page ^ //
-// Method : GET //
+
+// ▁▂▄▅▆▇█ Type : GET || Desc : Edit Admin Page  █▇▆▅▄▂▁  //
 export const getEditAdminPage = async (req, res) => {
   try {
     const id = req.params.id;
@@ -213,10 +205,9 @@ export const getEditAdminPage = async (req, res) => {
     console.log(error)
   }
 }
+// ---------------- ❝ Edit Admin Page Section End ❞ ----------------- //
 
-
-// ^ Update Admin Page ^ //
-// Method : POST //
+// ▁▂▄▅▆▇█ Type : POST || Desc : Update Admin  █▇▆▅▄▂▁  //
 export const UpdateAdmin = async (req, res) => {
   try {
     const id = req.params.id;
@@ -252,7 +243,6 @@ export const UpdateAdmin = async (req, res) => {
       })
     }
   } catch (error) {
-
     console.log(error)
     return res.status(504).send({
       success: false,
@@ -260,7 +250,10 @@ export const UpdateAdmin = async (req, res) => {
     })
   }
 }
+// ---------------- ❝ Update Admin Section End ❞ ----------------- //
 
+
+// ▁▂▄▅▆▇█ Type : POST || Desc : Export Data In CSV File  █▇▆▅▄▂▁  //
 export const exportCSV = (req, res) => {
   try {
     let column = {
@@ -290,9 +283,9 @@ export const exportCSV = (req, res) => {
     })
   }
 }
+// ---------------- ❝ Export Data In CSV File Section End ❞ ----------------- //
 
-
-// Export Pdf File
+// ▁▂▄▅▆▇█ Type : POST || Desc : Export Data In PDF File  █▇▆▅▄▂▁  //
 export const exportPdf = async (req, res) => {
   try {
     // Prepare the data by excluding unwanted fields
@@ -301,11 +294,8 @@ export const exportPdf = async (req, res) => {
       profilePic: profilePic[0]?.url // Assuming profilePic is an array
     }));
 
-    console.log(UserData); // Check the data format
-
     // Resolve the file path properly using AppRootPath
     const filePathName = path.join(AppRootPath.path, 'views', 'backend', 'admin', 'pdf.ejs');
-    console.log(filePathName);
 
     // Read the EJS file content
     const htmlTemplate = fs.readFileSync(filePathName, 'utf-8');
@@ -316,13 +306,17 @@ export const exportPdf = async (req, res) => {
     // PDF generation options
     const options = {
       format: 'Letter',
+      timeout: 30000
     };
 
     // Generate the PDF and send it directly to the response
     pdf.create(htmlString, options).toBuffer((err, buffer) => {
       if (err) {
         console.error('Error generating PDF:', err);
-        return res.status(500).send('Error generating PDF');
+        return res.status(500).send({
+          success: false,
+          message: 'Error generating PDF'
+        });
       }
 
       // Set response headers for PDF download
@@ -332,6 +326,45 @@ export const exportPdf = async (req, res) => {
     });
   } catch (error) {
     console.log('Error in exportPdf:', error);
-    res.status(500).send('Server Error');
+    res.status(500).send({
+      success: false,
+      message: "PDF Generating Error"
+    });
   }
 };
+// ---------------- ❝ Export Data In PDF File Section End ❞ ----------------- //
+
+
+// ▁▂▄▅▆▇█ Type : POST || Desc : Import JSON Data  █▇▆▅▄▂▁  //
+export const importJSON = async (req, res) => {
+  try {
+    const data = req.body
+    if (!data) {
+      return res.status(400).send({
+        success: false,
+        message: "The Data is required"
+      })
+    }
+
+    if (Array.isArray(data) && data.length > 0) {
+      const result = await UserModel.insertMany(data);
+      return res.status(200).send({
+        success: true,
+        data: result,
+        message: "The Data inserted Succefully"
+      })
+    } else {
+      return res.status(200).send({
+        success: false,
+        data: result,
+        message: "The Data inserted Succefully"
+      })
+    }
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({
+      success: false,
+      message: "Somenthing Went Wrong"
+    })
+  }
+}

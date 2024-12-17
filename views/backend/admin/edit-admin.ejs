@@ -175,6 +175,9 @@
         </script>
         <script>
             $(document).ready(function () {
+
+                const Token = localStorage.getItem("token");
+                const AuthToken = Token.slice(1, -1);
                 //Update Admin Logic 
                 $("#updateAdminForm").validate({
                     rules: {
@@ -209,6 +212,9 @@
                         $.ajax({
                             url: `/adminhandle/update-admin/${id}`,
                             type: "POST",
+                            headers: {
+                                Authorization: `Bearer ${AuthToken}`
+                            },
                             data: formData,
                             success: function (response) {
                                 if (response.success) {
